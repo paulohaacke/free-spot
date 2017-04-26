@@ -9,4 +9,5 @@ file(GLOB_RECURSE CHAPTER_FILES RELATIVE ${CMAKE_SOURCE_DIR} chapters/*.tex)
 add_latex_document(main.tex 
     INPUTS ${CHAPTER_FILES}
     IMAGE_DIRS images
+    BIBFILES bibliography.bib
     )
