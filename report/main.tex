@@ -1,0 +1,179 @@
+\documentclass[
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+    french,             % idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil				% o último idioma é o principal do documento
+	]{abntex2}
+
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+\renewcommand{\backref}{}
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+
+% ---
+% Cover and front pages information
+% ---
+\titulo{Solução para Gerenciar Eficientemente a Ocupação de Vagas em Estacionamentos Privados}
+\autor{Paulo André Haacke}
+\local{Brasil}
+\data{\today}
+\orientador{Cristiano Tonietto Galina}
+\coorientador{Nenhum}
+\instituicao{%
+  Pontifícia Universidade Católica do Rio Grande do Sul -- PUCRS
+  \par
+  Faculdade de Informática
+  \par
+  Especialização em Gerenciamento de Projetos com ênfase em Tecnologia da Informação}
+\tipotrabalho{Trabalho de Conclusão de Curso (Pós-Graduação)}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Solução para Gerenciar Eficientemente a Ocupação de Vagas em Estacionamentos Privados.}
+% ---
+
+% ---
+% PDF appearence configurations
+
+\definecolor{blue}{RGB}{41,5,195}
+
+% PDF information
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+        pdfkeywords={project management}{gerenciamento de projetos}{tecnologia da informação}{estacionamentos}{aplicativo}, 
+		colorlinks=false,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% ---
+
+% --- 
+% Line and paragraph space
+% --- 
+
+% Paragraph size
+\setlength{\parindent}{1.3cm}
+
+% Space between paragraphs
+\setlength{\parskip}{0.2cm}  % try also \onelineskip
+
+% ---
+% Compile index
+% ---
+\makeindex
+% ---
+
+\begin{document}
+
+% Select document language (according to babel packages)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Remove extra space between phrases
+\frenchspacing 
+
+% ----------------------------------------------------------
+% PRETEXTUAL ELEMENTS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Cover
+% ---
+\imprimircapa
+% ---
+
+% ---
+% Front page
+% (The * imply in the existence of a bibliography)
+% ---
+\imprimirfolhaderosto*
+% ---
+
+% ---
+% illustrations list
+% ---
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+% ---
+
+% ---
+% tables list
+% ---
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+% ---
+
+% ---
+% Abbreviations and acronyms list
+% ---
+\begin{siglas}
+  \item[ABNT] Associação Brasileira de Normas Técnicas
+  \item[abnTeX] ABsurdas Normas para TeX
+\end{siglas}
+% ---
+
+% ---
+% Symbols list
+% ---
+\begin{simbolos}
+  \item[$ \Gamma $] Letra grega Gama
+  \item[$ \Lambda $] Lambda
+  \item[$ \zeta $] Letra grega minúscula zeta
+  \item[$ \in $] Pertence
+\end{simbolos}
+% ---
+
+% ---
+% Summary
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+% ----------------------------------------------------------
+% TEXTUAL ELEMENTS
+% ----------------------------------------------------------
+\textual
+
+\input{chapters/introduction.tex}
+
+\end{document}
