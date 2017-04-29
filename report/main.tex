@@ -27,6 +27,7 @@
 \usepackage[alf]{abntex2cite}
 
 \usepackage[colorinlistoftodos]{todonotes}
+\usepackage{styles/vagalivre}
 
 \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
 \renewcommand{\backref}{}
@@ -42,12 +43,12 @@
 % ---
 % Cover and front pages information
 % ---
-\titulo{Solução para Gerenciar Eficientemente a Ocupação de Vagas em Estacionamentos Privados: Planejamento do Projeto}
+\titulo{Vaga Livre: Planejamento do Projeto}
 \autor{Paulo André Haacke}
 \local{Brasil}
 \data{\today}
 \orientador{Cristiano Tonietto Galina}
-\coorientador{Nenhum}
+%\coorientador{Nenhum}
 \instituicao{%
   Pontifícia Universidade Católica do Rio Grande do Sul -- PUCRS
   \par
@@ -258,9 +259,9 @@
 % ABSTRACTS
 % ---
 
-\input{chapters/abstract-ptbr.tex}
+\include{chapters/abstract-ptbr}
 
-\input{chapters/abstract-enus.tex}
+\include{chapters/abstract-enus}
 
 % ---
 % illustrations list
@@ -310,11 +311,11 @@
 % ----------------------------------------------------------
 \textual
 
-\input{chapters/introduction.tex}
+\include{chapters/introduction}
 
-\input{chapters/initiating.tex}
+\include{chapters/initiating}
 
-\input{chapters/planning.tex}
+\include{chapters/planning}
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -323,7 +324,7 @@
 % ----------------------------------------------------------
 \phantompart
 
-\input{chapters/conclusion.tex}
+\include{chapters/conclusion}
 
 % ----------------------------------------------------------
 % POSTEXTUAL ELEMENTS
@@ -355,9 +356,9 @@
 	\end{minipage}
 	% ----------------------------------------------------------
 
-	\input{chapters/market-survey.tex}
+	%\include{chapters/market-survey}
 
-	\input{chapters/business-plan.tex}
+	%\include{chapters/business-plan}
 
 \end{apendicesenv}
 % ---
