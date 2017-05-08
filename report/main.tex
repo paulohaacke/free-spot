@@ -2,7 +2,8 @@
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
 	twoside,			% para impressão em recto e verso. Oposto a oneside
-	a4paper,			% tamanho do papel. 
+	a4paper,			% tamanho do papel.
+	%final,
 	% -- opções da classe abntex2 --
 	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
 	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
@@ -27,7 +28,8 @@
 \usepackage[alf]{abntex2cite}
 
 \usepackage{float}
-\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[obeyFinal,colorinlistoftodos,portuguese]{todonotes}
+\usepackage{ifdraft}
 \usepackage{styles/vagalivre}
 
 \newcommand\foreign[1]{\emph{#1}}
@@ -116,7 +118,9 @@
 % ----------------------------------------------------------
 % PRETEXTUAL ELEMENTS
 % ----------------------------------------------------------
-% \pretextual
+%\pretextual
+\listoftodos
+\clearpage
 
 % ---
 % Cover
@@ -353,13 +357,6 @@
 
 	% Print page indicating the appendix begin
 	\partapendices
-
-	% ----------------------------------------------------------
-	\begin{minipage}[c]{0.95\textwidth}
-		\chapter{Lista de Tarefas Pendentes}
-		\listoftodos[]
-	\end{minipage}
-	% ----------------------------------------------------------
 
 	%\include{chapters/market-survey}
 
