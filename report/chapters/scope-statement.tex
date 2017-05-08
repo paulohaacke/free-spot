@@ -1,7 +1,165 @@
+%---Escopo
+%Descrição dos processos de definição do escopo com base nos requisitos coletados
+%Priorização dos requisitos
+%Apresentação da declaração de escopo do projeto, identificação dos itens fora do escopo do projeto
+%Descrição das premissas e restrições do projeto
+%Matriz de rastreabilidade de requisitos
+%---
+
 \chapter{Declaração de escopo}
 
-\section{Patrocinador}
+\section{Equipe do projeto}
 
-\projectSponsorName.
+\begin{itemize}
+	\item Gerente de projeto: \projectManagerName.
+	\item Desenvolvedor Mobile:
+	\item Desenvolvedor Web Front-End:
+	\item Desenvolvedor Web Back-End:
+	\item Engenheiro de software:
+	\item Arquiteto de solução:
+	\item Arquiteto de software:
+	\item Engenheiro eletricista:
+	\item Patrocinador: \projectSponsorName.
+	\item Usuário chave:
+\end{itemize}
 
-\section{Nome do gerente do projeto}
+% Já estão presentes no termo de abertura, verificar necessidade de estarem aqui também
+%\section{Descrição do projeto}
+%\section{Objetivo do projeto}
+%\section{Justificativa do projeto}
+
+\section{Documentação dos requisitos}
+
+O escopo deste projeto inclui a especificação de duas soluções de software. A primeira prevista através de um aplicativo para smartphone focado no cliente de estacionamentos privados, chamaremos esta solução de \userMobileAppName. A segundo solução prevê a criação de um aplicativo web focado no uso do dono ou gerente de estacionamentos privados, referenciaremos esta solução pelo nome \parkingWebAppName.
+
+Além das soluções de software entra no escopo deste projeto a especificação de dois tipos de projetos de implantação do sistema de sensores.
+
+A seguir estão especificados os requisitos que deverão ser implementados para cada uma destas soluções.
+
+%\subsection{Requisitos de negócio}
+
+%\subsection{Requisitos das partes interessadas}
+
+\subsection{Requisitos de solução}
+
+\subsubsection{Requisitos funcionais}
+
+\begin{itemize}
+	% Android App
+	\item Qualquer pessoa deve poder criar um conta usando o aplicativo \projectName. Para se registrar o consumidor deve entrar com seu endereço de e-mail, uma senha, o primeiro e último nomes, a placa do veículo e um cartão de crédito válido antes que possam fazer qualquer reserva.
+	\item Um consumidor registrado pode realizar reservas nos estacionamentos listados pelo aplicativo, contanto que realize o pagamento de forma antecipada.
+	\item Um consumidor registrado deve ocupar sua vaga no estacionamento para que uma reserva seja considerada realizada.
+	\item Uma câmera deve reconhecer a placa do carro na entrada, e entregar um bilhete contendo a identificação da vaga disponibilizada.
+	\item Um consumidor pode visualizar se existem vagas nos estacionamentos cadastrados.
+	\item O usuário deve ter a possibilidade de verificar o dinheiro gasto até o momento.
+	\item O sistema deve ser capaz de processar pagamentos.
+	\item O consumidor pode cancelar sua reserva em até 1 hora antes do início da mesma.
+	      % Web app
+	\item O sistema deve permitir ao gerente ou dono do estacionamento visualizar o perfil do cliente.
+	\item O sistema deve permitir a criação de um cadastro do estacionamento através de um registro.
+	\item O sistema deve permitir a definição de usuários com permissão para acessar as telas de gerenciamento do estacionamento.
+	\item O sistema deve processar o pagamento baseado no tempo em que o usuário ficou estacionado.
+	\item O sistema deve oferecer opções para gerenciar o estacionamento: definir preço por hora ou mês, multas entre outras definições sobre as características do mesmo.
+	\item O sistema deve identificar tendências em relação a ocupação do estacionamento.
+	\item %O sistema deve possuir integração com aplicativos web e mobile.
+	\item O sistema deve estar integrado com o banco de dados do detran para buscar informações de licença do motorista.
+	\item O administrador do sistema pode verificar a ocupação das vagas no estacionamento.
+	      % Sistema de sensores
+	\item O sistema deve escanear e reconhecer placas veiculares.
+	\item O sistema deve reconhecer usuários cadastrados através da placa do veículo.
+	\item Se a placa do carro não for reconhecida o sistema deve avisar o usuário, oferecendo duas opções: entrar no estacionamento sem identificação de usuário ou digitar seu usuário e senha para ter acesso as facilidades do sistema. Usuários sem identificação não poderão utilizar suas reservas ou qualquer facilidade que necessite de identificação.
+	\item O sistema de sensores deve oferecer um software que centralize as informações e as envie de forma segura para o \parkingWebAppName.
+	\item Caso o estacionamento esteja sem acesso a internet deve existir a capacidade de guardar as informações e enviá-las para a nuvem assim que o acesso for reestabelecido.
+	\item Caso o sistema de sensores identifique um usuário que já tenha realizado o pagamento é preciso abrir a cancela sem qualquer interação com o usuário.
+	\item Problemas na identificação da placa podem ocorrer, nestes casos é preciso oferecer um sistema para interação manual.
+	\item Caso um cliente registrado chegue ao estacionamento e não existam vagas disponíveis o sistema deve avisar o mesmo, em caso de reservas realizadas que não poderão ser realizadas o sistema deve devolver o dinheiro para o cartão de crédito do mesmo.
+    \item Deve existir um sistema de \foreign{overbooking} de modo a permitir a máxima ocupação do estacionamento.
+\end{itemize}
+
+\subsubsection{Requisitos não funcionais}
+
+%\subsubsection{Requisitos tecnológicos e de conformidade com padrões}
+
+%\subsubsection{Requisitos de suporte e treinamento}
+
+%\subsubsection{Requisitos de qualidade}
+
+%\subsection{Requisitos do projeto}
+
+%\subsubsection{Níveis de serviço, desempenho, segurança, conformidade, etc...}
+
+%\subsubsection{Critérios de aceitação}
+
+\subsection{Premissas}
+
+\begin{itemize}
+	\item O cliente irá manter o registro de seu perfil, incluindo a placa do veículo, devidamente atualizados.
+    \item O sistema de leitura de placas irá sempre identificar de maneira correta a placa dos veículo, retornando erro caso a mesma não possa ser identificada, o que pode acontecer devido a sujeira ou falta de placa.
+    \item Em casos que o sistema não possa acomodar o usuário ou o usuário não concorde com os termos de uso e condições do sistema, o usuário será aconselhado a deixar o estacionamento. Nestes casos assume-se que o usuário sempre obedecerá e sairá do estacionamento.
+    \item Um consumidor estaciona sempre na vaga correta, e nunca ocupará duas vagas ao mesmo tempo.
+    \item Os sensores de vagas sempre funcionarão de maneira correta. Os sensores reconhecerão uma vaga como ocupada apenas quando houver um carro na vaga.
+    \item O usuário sairá do estacionamento imediatamente após retirar seu carro da vaga utilizada.
+    % From project-charter
+    \item A equipe está motivida para trabalhar no projeto.
+	\item Os estacionamentos privados de Porto Alegre estão prontos para aderir a este tipo de tecnologia.
+	\item Utilizar base de dados em cloud.
+	\item Utilizar um framework multi-plataforma para o desenvolvimento do aplicativo para dispositivos móveis.
+	\item Disponibilidade do patrocinador: durante o planejamento no mínimo 40\% do tempo, e durante a execução no mínimo 80\% do tempo.
+\end{itemize}
+
+\subsection{Restrições}
+
+\begin{itemize}
+	\item O orçamento é limitado a \maximumBudget.
+	\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
+	\item Data de conclusão do projeto: \maximumDeadline.
+\end{itemize}
+
+\subsection{Limites do projeto e exclusões específicas}
+
+\begin{itemize}
+\item O projeto não tem como objetivo a implantação da solução, apenas a criação de especificações técnicas que possibilitem a implantação do sistema.
+\item Questões de marketing e divulgação do produto não serão tratados neste projeto.
+\end{itemize}
+
+\section{Estrutura Analítica do Projeto}
+
+Verificar apêndice \ref{ch:wbs}.
+
+\section{Dicionário da EAP}
+
+Verificar apêndice \ref{ch:wbs-dictionary}.
+
+\section{Orçamento do projeto}
+
+O orçamento previsto pelo projeto é de \maximumBudget, incluindo reservas gerenciais. Despesas com pessoal e recursos internos estão incluídas dentro deste orçamento.
+
+\section{Principais entregas e critérios de aceitação}
+
+
+
+\section{Controle de Versão}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | X |}
+		\hline
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
+		\hline
+		1                &               & \projectManagerName & Criação do documento     \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
+
+\section{Aprovações}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | c |}
+		\hline
+		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\hline
+		Gerente de projeto & \projectManagerName & \projectManagerSignature &               \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
