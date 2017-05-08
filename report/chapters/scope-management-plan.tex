@@ -2,38 +2,63 @@
 
 \section{Objetivo do documento}
 
-O objetivo deste documento é descrever como será gerenciado o projeto \projectname
+O objetivo deste documento é descrever como será gerenciado o escopo, descrevendo quais ferramentas, técnicas e artefatos serão utilizados para determinar o que deve ser abordado durante o projeto \projectName.
 
 \section{Descrição dos processos de gerenciamento de escopo}
 
 \begin{itemize}
 	\item O gerenciamento do escopo do projeto será realizado com base em 3 documentos: declaração de escopo para o escopo funcional do projeto, EAP para o escopo das atividades a serem realizadas pelo projeto e dicionário da EAP para descrever os pacotes de trabalho.
+	\item Serão consideradas mudanças de escopo apenas as medidas corretivas. Inovações e novas características do produto ou projeto deverão ser tratados de acordo com o plano de gerenciamento da configuração (ver capítulo \ref{ch:configuration-management-plan}).
+	\item Todas as mudanças de escopo deverão ser submetidas por escrito ou através de e-mail, conforme descrito no plano de comunicações do projeto.
 \end{itemize}
 
 \section{Priorização das mudanças de escopo e respostas}
 
+\todo[inline,color=orange]{Criar níveis de priorização para as mudanças de escopo ou referenciar modelo de priorização integrado de mudanças.}
+
 \section{Gerenciamento de configuração}
+
+\todo[inline,color=orange]{Referenciar fluxo de controle integrado de mudanças.}
 
 \section{Frequência de avaliação do escopo do projeto}
 
+O escopo deve ser avaliado semanalmente dentro da reunião do CCM, prevista no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).
+
 \section{Alocação financeira das mudanças de escopo}
+
+As mudanças de escopo podem ser alocadas dentro das reservas gerenciais do projeto de acordo com as necessidades do gerente de projeto.
+
+Para mudanças de escopo prioritárias, em momentos que não existam mais reservas gerenciais disponíveis, deverá ser acionado o patrocinador, já que o gerente de projeto não possui autonomia para decidir utilizar a reserva de contingência de riscos para mudanças de escopo.
 
 \section{Administração do plano de gerenciamento do escopo}
 
+\subsection{Responsável}
+
+\begin{itemize}
+	\item \projectManagerName, gerente de projeto, será o responsável direto pelo plano de gerenciamento de escopo.
+\end{itemize}
+\todo[inline,color=orange]{Verificar necessidade de adicionar suplente responsável.}
+
+\subsection{Frequência de atualização}
+
+O plano de gerenciamento do escopo será reavaliado mensalmente durante a reunião do CCM, juntamente com os outros planos de gerenciamento do projeto.
+
 \section{Outros assuntos relacionados ao gerenciamento do escopo do projeto não previstos neste plano}
+
+As solicitações não previstas neste plano deverão ser submetidas a reunião do CCM para aprovação.
+\todo[inline,color=orange]{Adicionar menção ao plano de mudanças}
 
 \section{Controle de Versão}
 
 \begin{table}[H]
-	\begin{tabularx}{.9\textwidth}{| c | c | X | X |}
+	\begin{tabularx}{\textwidth}{| c | c | X | X |}
 		\hline
 		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
 		\hline
-		1                &               & Paulo André Haacke & Criação do documento     \\
+		1                &               & \projectManagerName & Criação do documento     \\
 		\hline
 	\end{tabularx}
 	\centering
-	\caption{Tabela para controle de versão do termo de abertura.}
 \end{table}
 
 \section{Aprovações}
@@ -41,12 +66,12 @@ O objetivo deste documento é descrever como será gerenciado o projeto \project
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | c |}
 		\hline
-		\textbf{Função} & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
 		\hline
-		Patrocinador      & \projectSponsorName & \projectSponsorSignature &               \\
+		Patrocinador       & \projectSponsorName & \projectSponsorSignature &               \\
+		\hline
+		Gerente de projeto & \projectManagerName & \projectManagerSignature &               \\
 		\hline
 	\end{tabularx}
 	\centering
 \end{table}
-
-\todo[inline,color=red]{Criar plano de gerenciamento do escopo.}
