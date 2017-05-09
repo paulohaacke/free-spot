@@ -16,25 +16,50 @@
 
 \chapter{Plano de gerenciamento do cronograma}
 
-\todo[inline,color=red]{Criar plano de gerenciamento do cronograma.}
-
 \section{Descrição dos processos de gerenciamento de tempo}
 
 \begin{itemize}
-
+	\item O gerenciamento de cronograma será realizado a partir da alocação de precentual completo nas atividades do projeto através da utilização do software \projectManagementSoftwareName.
+    \item Utilizando o método da corrente crítica o gerente de projeto criou o cronograma do projeto. O gráfico de Gannt representando o cronograma encontra-se no apêndice \ref{ch:gannt-chart}.
+	\item A atualização dos prazos do projeto será realizada no sofwtare \projectManagementSoftwareName através da publicação no repositório de documentos do projeto dos seguintes relatórios:
+	      \begin{itemize}
+		      \item Gráfico de Gannt;
+		      \item Diagrama de rede;
+		      \item Percentual completo.
+	      \end{itemize}
+	\item A avaliação de desempenho do projeto será realizada através da análise de valor agregado, onde o custo e o prazo do projeto são acompanhados em um único processo de controle.
+	\item Todas atividades com folga menor ou igual a 3 dias serão consideradas críticas.
+	\item Todas mudanças no prazo inicialmente previsto para o projeto devem ser avaliadas e classificadas de acordo com o sistema de controle integrado de mudanças (ver seção \ref{sec:change-control-system}).
+	\item Atrasos decorrentes de medidas corretivas e que influenciam no sucesso do projeto serão integrados ao plano. Novos recursos terão seus prazos negociados na reunião do CCM.
+	\item Atualizações na linha de base do projeto somente serão permitidas com autorização expressa do gerente de projeto e do patrocinador. A linha de base anterior deve ser arquivada, documentada e publicada para fins de lições aprendidas.
+	\item Solicitações de mudanças no crognorama definido deverão ser realizadas através do formulário de requisição de mudança (ver apêndice \ref{ch:change-request-form}), conforme previsto no plano de gerenciamento das mudanças (ver capítulo \ref{ch:change-management-plan})
 \end{itemize}
 
 \section{Priorização das mudanças nos prazos e respostas}
 
+As mudanças nos prazos deverão ser classificadas de acordo com o modelo de priorização integrada de mudanças (ver seção \ref{sec:integrated-change-priorization}).
+
 \section{Sistema de controle de mudanças de prazos}
 
-\section{Mecanismo adotado para conflitos de recursos}
+Todas as mudanças nos prazos e atrasos/adiantamentos do projeto devem ser tratados segundo o fluxo apresentado pelo sistema de controle integrado das mudanças (ver seção \ref{sec:change-control-system}).
+
+%\section{Mecanismo adotado para conflitos de recursos}
 
 \section{Buffer de tempo do projeto}
 
+O projeto adotará o conceito de corrente crítica, tendo cada atividade seu \emph{pulmão}. Deverão ser criados pulmões de caminho para proteger uma corrente crítica e também pulmões de projeto, para proteger a data final do projeto contra possíveis problemas.
+
+Para gerenciar estes pulmões o gerente de projeto deverá dividir cada pulmão em três partes. Enquanto o uso estiver no primeiro terço se considera que está controlado. No segundo terço o gerente de projeto volta sua atenção para as atividades relacionadas a este pulmão e busca descobrir se existem indícios de que a atividade não irá terminar no prazo, se encontrar tais indícios o gerente de projeto pode trazer os mesmos para serem discutidos durante a reunião semanal do CCM. Se já estiver utilizando o último terço do pulmão o gerente de projeto deve acionar o CCM solicitando uma mudança de prazo ou escopo.
+
 \section{Frequência de avaliação dos prazos do projeto}
 
+Os prazos do projeto deverão ser avaliados e atualizados semanalmente, sendo os resultados publicados no repositório de documentos do projeto e apresentados durante a reunião semanal do CCM, pervista no plano de gerenciamento das comunicações.
+
 \section{Alocação financeira para o gerenciamento de tempo}
+
+As mudanças de recuperação de atraso no projeto que requerem gastos adicionais podem ser alocadas dentro das reservas gerenciais do projeto de acordo com as necessidades do gerente de projeto.
+
+Em caso que haja necesidade de medidas prioritárias para a recuperação de prazos, em momentos que não existam mais reservas gerenciais disponíveis, deverá ser acionado o patrocinador, já que o gerente de projeto não possui autonomia para decidir utilizar a reserva de contingência de riscos para a recuperação de atrasos.
 
 \section{Administração do plano de gerenciamento de tempo}
 
@@ -43,13 +68,14 @@
 \begin{itemize}
 	\item \projectManagerName, gerente de projeto, será o responsável direto pelo plano de gerenciamento do cronograma.
 \end{itemize}
-\todo[inline,color=orange]{Verificar necessidade de adicionar suplente responsável.}
 
 \subsection{Frequência de atualização}
 
 O plano de gerenciamento do cronograma será reavaliado mensalmente durante a reunião do CCM, juntamente com os outros planos de gerenciamento do projeto.
 
 \section{Outros assuntos relacionados ao gerenciamento do cronograma do projeto não previstos neste plano}
+
+Solicitações não previstas neste plano deverão ser submetidas a reunião do CCM para aprovação. O plano de gerenciamento do cronograma deverá ser atualizado com as devidas alterações realizadas.
 
 \section{Controle de Versão}
 
@@ -70,6 +96,8 @@ O plano de gerenciamento do cronograma será reavaliado mensalmente durante a re
 	\begin{tabularx}{\textwidth}{| c | c | X | c |}
 		\hline
 		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\hline
+		Patrocinador       & \projectSponsorName & \projectSponsorSignature &               \\
 		\hline
 		Gerente de projeto & \projectManagerName & \projectManagerSignature &               \\
 		\hline
