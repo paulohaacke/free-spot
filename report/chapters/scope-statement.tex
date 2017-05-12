@@ -20,7 +20,7 @@
 	\item Arquiteto de software:
 	\item Engenheiro eletricista:
 	\item Patrocinador: \projectSponsorName.
-	\item Usuário chave:
+	\item Analista de Testes:
 \end{itemize}
 
 % Já estão presentes no termo de abertura, verificar necessidade de estarem aqui também
@@ -47,7 +47,7 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 \todo[inline,color=orange]{Revisar requisitos funcionais.}
 
 \begin{itemize}
-	% Android App
+		% Android App
 	\item Qualquer pessoa deve poder criar um conta usando o aplicativo \projectName. Para se registrar o consumidor deve entrar com seu endereço de e-mail, uma senha, o primeiro e último nomes, a placa do veículo e um cartão de crédito válido antes que possam fazer qualquer reserva.
 	\item Um consumidor registrado pode realizar reservas nos estacionamentos listados pelo aplicativo, contanto que realize o pagamento de forma antecipada.
 	\item Um consumidor registrado deve ocupar sua vaga no estacionamento para que uma reserva seja considerada realizada.
@@ -56,7 +56,7 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item O usuário deve ter a possibilidade de verificar o dinheiro gasto até o momento.
 	\item O sistema deve ser capaz de processar pagamentos.
 	\item O consumidor pode cancelar sua reserva em até 1 hora antes do início da mesma.
-	      % Web app
+	    % Web app
 	\item O sistema deve permitir ao gerente ou dono do estacionamento visualizar o perfil do cliente.
 	\item O sistema deve permitir a criação de um cadastro do estacionamento através de um registro.
 	\item O sistema deve permitir a definição de usuários com permissão para acessar as telas de gerenciamento do estacionamento.
@@ -66,11 +66,10 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item %O sistema deve possuir integração com aplicativos web e mobile.
 	\item O sistema deve estar integrado com o banco de dados do detran para buscar informações de licença do motorista.
 	\item O administrador do sistema pode verificar a ocupação das vagas no estacionamento.
-	      % Sistema de sensores
+	    % Sistema de sensores
 	\item O sistema deve escanear e reconhecer placas veiculares.
 	\item O sistema deve reconhecer usuários cadastrados através da placa do veículo.
-	\item Se a placa do carro não for reconhecida o sistema deve avisar o usuário, oferecendo duas opções: entrar no estacionamento sem identificação de usuário ou digitar seu usuário e senha para ter acesso as facilidades do sistema. Usuários sem identificação não poderão utilizar suas reservas ou qualquer facilidade que necessite de identificação.
-	\item O sistema de sensores deve oferecer um software que centralize as informações e as envie de forma segura para o \parkingWebAppName.
+	\item O sistema de sensores deve oferecer um software que centralize as informações e as envie de forma segura para a nuvem.
 	\item Caso o estacionamento esteja sem acesso a internet deve existir a capacidade de guardar as informações e enviá-las para a nuvem assim que o acesso for reestabelecido.
 	\item Caso o sistema de sensores identifique um usuário que já tenha realizado o pagamento é preciso abrir a cancela sem qualquer interação com o usuário.
 	\item Problemas na identificação da placa podem ocorrer, nestes casos é preciso oferecer um sistema para interação manual.
