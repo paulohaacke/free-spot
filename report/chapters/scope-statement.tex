@@ -34,7 +34,7 @@ O escopo deste projeto inclui a especificação de duas soluções de software. 
 
 Além das soluções de software entra no escopo deste projeto a especificação de dois tipos de projetos de implantação do sistema de sensores.
 
-A seguir estão especificados os requisitos que deverão ser implementados para cada uma destas soluções.
+A seguir estão especificados os requisitos que deverão ser implementados para entregar esta solução.
 
 %\subsection{Requisitos de negócio}
 
@@ -42,9 +42,9 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 
 \subsection{Requisitos de solução}
 
-\subsubsection{Requisitos funcionais}
+%\subsubsection{Requisitos funcionais}
 
-\todo[inline,color=orange]{Revisar requisitos funcionais.}
+%\todo[inline,color=orange]{Revisar requisitos funcionais.}
 
 \begin{itemize}
 		% Android App
@@ -77,9 +77,9 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
     \item Deve existir um sistema de \foreign{overbooking} de modo a permitir a máxima ocupação do estacionamento.
 \end{itemize}
 
-\subsubsection{Requisitos não funcionais}
+%\subsubsection{Requisitos não funcionais}
 
-\todo[inline,color=orange]{Criar requisitos não funcionais.}
+%\todo[inline,color=orange]{Criar requisitos não funcionais.}
 
 %\subsubsection{Requisitos tecnológicos e de conformidade com padrões}
 
@@ -114,8 +114,12 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 
 \begin{itemize}
 	\item O orçamento é limitado a \maximumBudget.
-	\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
+	%\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
 	\item Data de conclusão do projeto: \maximumDeadline.
+	\item Investimentos em infraestrutura estão fora do escopo.
+	\item A solução deverá utilizar uma plataforma em nuvem para o banco de dados e servidor web.
+	\item O aplicativo móvel deverá rodar sobre a plataforma Android versão 4.0 ou superior.
+	\item O aplicativo web para o estacionamento deverá ser acessado através dos seguintes navegadores: firefox e chrome.
 \end{itemize}
 
 \subsection{Limites do projeto e exclusões específicas}
@@ -139,7 +143,34 @@ O orçamento previsto pelo projeto é de \maximumBudget, incluindo reservas gere
 
 \section{Principais entregas e critérios de aceitação}
 
-\todo[inline,color=orange]{Criar principais entregas.}
+A tabela \ref{tab:entregas} descreve os principais marcos de entrega do projeto.
+
+\begin{table}[h]
+	\begin{tabularx}{.9\textwidth}{| X | X | c |}
+		\hline
+		\textbf{Marco}                               & \textbf{Critério de Aceitação}                     & \textbf{Prazo} \\
+		\hline
+		Planejamento Realizado & Planos de Projeto Criados & 11/07/2017 \\
+		\hline
+		Ambiente de Desenvolvimento Preparado & Ambiente para desenvolvimento do aplicativo móvel, web e do software de centralização preparados & 1 mês \\
+		\hline
+		Ambiente de Testes Preparado & Ambiente para testes para o aplicativo móvel, web e software de centralização preparados & 1 mês \\
+		\hline
+		Ambiente de Produção Preparado & Ambiente de produção para o aplicativo móvel, web e o software de centralização preparados & //2017 \\
+		\hline
+		Aplicativo do Motorista Pronto & Aplicativo do motorista desenvolvido e devidamente testado & //2017 \\
+		\hline
+		Aplicativo do Estacionamento Pronto & Aplicativo do estacionamento desenvolvido e devidamente testado & //2017 \\
+		\hline
+		Software de Centralização Pronto & Software de centralização desenvolvido e devidamente testado & //2017 \\
+		\hline
+		Projeto Finalizado & Projeto executado, entregas realizadas, encerramento realizado e aprovado & //2017 \\
+		\hline
+	\end{tabularx}
+	\centering
+	\caption{Principais datas de entregas do projeto.}
+	\label{tab:entregas}
+\end{table}
 
 \section{Controle de Versão}
 
