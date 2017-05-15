@@ -33,7 +33,7 @@
 		\hline
 	\end{tabularx}
 	\centering
-    \caption{Tabela de responsabilidades na garantia da qualidade.}
+	\caption{Tabela de responsabilidades na garantia da qualidade.}
 \end{table}
 
 \section{Responsabilidades no controle da qualidade}
@@ -49,7 +49,7 @@
 		\hline
 	\end{tabularx}
 	\centering
-    \caption{Tabela de responsabilidades no controle da qualidade.}
+	\caption{Tabela de responsabilidades no controle da qualidade.}
 \end{table}
 
 \section{Processo de gerenciamento da qualidade}
@@ -66,11 +66,58 @@
 
 \section{Planejamento de avaliação de qualidade}
 
-\todo[inline,color=red]{Criar planejamento de avaliação da qualidade.}
+O planejamento de avaliação de qualidade seguirá conforme a tabela \ref{tab:quality-evaluation-plan}.
+
+\begin{table}[h]
+	\begin{tabularx}{.9\textwidth}{| c | X | X |}
+		\hline
+		\textbf{Data} & \textbf{Tipo de Avaliação a ser Realizada} & \textbf{Atividades ou Artefatos a serem Revisados} \\
+		\hline
+		01/08/2017    & Teste Unitário                              & Aplicativo do Motorista                            \\
+		\hline
+		14/08/2017    & Teste Unitário                              & Aplicativo do Estacionamento                       \\
+		\hline
+		21/08/2017    & Teste Unitário                              & Software de Centralização                        \\
+		\hline
+		01/09/2017    & Teste de Integração                        & Aplicativo do Motorista                            \\
+		\hline
+		30/08/2017    & Teste de Integração                        & Aplicativo do Estacionamento                       \\
+		\hline
+		03/10/2017    & Teste de Integração                        & Software de Centralização                        \\
+		\hline
+	\end{tabularx}
+	\centering
+	\caption{Planejamento de avaliação de qualidade.}
+	\label{tab:quality-evaluation-plan}
+\end{table}
 
 \section{Planejamento de testes/inspeções}
 
-\todo[inline,color=red]{Criar planejamento de testes e inspeções.}
+\subsection{Configuração do ambiente de teste}
+
+\begin{description}
+	\item[Plataforma em Nuvem] \hfill
+	\begin{itemize}
+		\item Plataforma em nuvem com suporte ao SGBD MySQL.
+		\item Plataforma em nuvem para disponibilizar aplicativos web.
+	\end{itemize}
+\end{description}
+
+\begin{description}
+	\item[Dispositivo Móvel] \hfill
+	\begin{itemize}
+		\item Android v4.0 ou superior.
+	\end{itemize}
+\end{description}
+
+\subsection{Pré-requisitos}
+
+\begin{itemize}
+	\item Conhecimento de abordagens e técnicas de teste.
+	\item Conhecimento da aplicação e de seu estado.
+	\item Conhecimento de negócio e método de utilização do sistema.
+	\item Capacidade de resolução de problemas.
+\end{itemize}
 
 \section{Frequência de atualização do plano de gerenciamento da qualidade}
 
@@ -102,11 +149,9 @@ As métricas de qualidade encontram-se no apêndice \ref{quality-metrics}.
 	\item \projectManagerName, gerente de projeto, será o responsável direto pelo plano de gerenciamento da qualidade.
 \end{itemize}
 
-\subsection{Frequência de atualização}
-
-O plano de gerenciamento da qualidade será reavaliado mensalmente durante a reunião do CCM, juntamente com os outros planos de gerenciamento do projeto.
-
 \section{Outros assuntos relacionados ao gerenciamento da qualidade do projeto não previstos neste plano}
+
+Solicitações não previstas neste plano deverão passar pela aprovação do CCM. Após aprovada o plano deve ser atualizado pelo gerente do projeto.
 
 \section{Controle de Versão}
 

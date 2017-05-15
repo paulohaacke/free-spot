@@ -16,11 +16,11 @@
 
 \chapter{Plano de gerenciamento do cronograma}
 
-\section{Descrição dos processos de gerenciamento de tempo}
+\section{Descrição dos processos de gerenciamento do cronograma}
 
 \begin{itemize}
 	\item O gerenciamento de cronograma será realizado a partir da alocação de precentual completo nas atividades do projeto através da utilização do software \projectManagementSoftwareName.
-    \item Utilizando o método da corrente crítica o gerente de projeto criou o cronograma do projeto. O gráfico de Gannt representando o cronograma encontra-se no apêndice \ref{ch:gannt-chart}.
+	\item Utilizando o método do caminho crítico o gerente de projeto criou o cronograma do projeto. O gráfico de Gannt representando o cronograma encontra-se no apêndice \ref{ch:gannt-chart}.
 	\item A atualização dos prazos do projeto será realizada no sofwtare \projectManagementSoftwareName através da publicação no repositório de documentos do projeto dos seguintes relatórios:
 	      \begin{itemize}
 		      \item Gráfico de Gannt;
@@ -33,6 +33,19 @@
 	\item Atrasos decorrentes de medidas corretivas e que influenciam no sucesso do projeto serão integrados ao plano. Novos recursos terão seus prazos negociados na reunião do CCM.
 	\item Atualizações na linha de base do projeto somente serão permitidas com autorização expressa do gerente de projeto e do patrocinador. A linha de base anterior deve ser arquivada, documentada e publicada para fins de lições aprendidas.
 	\item Solicitações de mudanças no crognorama definido deverão ser realizadas através do formulário de requisição de mudança (ver apêndice \ref{ch:change-request-form}), conforme previsto no plano de gerenciamento das mudanças (ver capítulo \ref{ch:change-management-plan})
+	\item A estimativa de tempo para cada atividade foi determinada utilizando a técnica de PERT, conforme equação \ref{eq:pert}.
+
+	      \begin{equation}\label{eq:pert}
+		      DE = \frac{O+4MP+P}{6}
+	      \end{equation}
+
+	      \begin{description}
+		      \item[Duração Estimada (DE):] a melhor estimativa da duração necessária para completar a atividade, levando em consideração o fato de que o projeto nem sempre corre conforme o planejado.
+		      \item[Duração Mais Provável (MP):] a melhor estimativa da duração necessária para completar a atividade, assumindo que tudo ocorrerá normalmente.
+		      \item[Duração Otimista (O):] o menor tempo em que é possível completar a atividade, assumindo que tudo ocorra melhor do que é normalmente esperado.
+		      \item[Duração Pessimista (P):] a maior duração possível para completar a atividade, considerando que tudo que possa dar errado aconteça (excluindo o caso de catástrofes extremamente raras).
+	      \end{description}
+		  
 \end{itemize}
 
 \section{Priorização das mudanças nos prazos e respostas}
@@ -47,9 +60,11 @@ Todas as mudanças nos prazos e atrasos/adiantamentos do projeto devem ser trata
 
 \section{Buffer de tempo do projeto}
 
-O projeto adotará o conceito de corrente crítica, tendo cada atividade seu \emph{pulmão}. Deverão ser criados pulmões de caminho para proteger uma corrente crítica e também pulmões de projeto, para proteger a data final do projeto contra possíveis problemas.
+O projeto adotará o conceito de caminho crítico, sendo assim o projeto não prevê a criação de uma folga ou atraso no término do projeto baseado nos conceitos de corrente crítica.
 
-Para gerenciar estes pulmões o gerente de projeto deverá dividir cada pulmão em três partes. Enquanto o uso estiver no primeiro terço se considera que está controlado. No segundo terço o gerente de projeto volta sua atenção para as atividades relacionadas a este pulmão e busca descobrir se existem indícios de que a atividade não irá terminar no prazo, se encontrar tais indícios o gerente de projeto pode trazer os mesmos para serem discutidos durante a reunião semanal do CCM. Se já estiver utilizando o último terço do pulmão o gerente de projeto deve acionar o CCM solicitando uma mudança de prazo ou escopo.
+%Deverão ser criados pulmões de caminho para proteger uma corrente crítica e também pulmões de projeto, para proteger a data final do projeto contra possíveis problemas.
+
+%Para gerenciar estes pulmões o gerente de projeto deverá dividir cada pulmão em três partes. Enquanto o uso estiver no primeiro terço se considera que está controlado. No segundo terço %o gerente de projeto volta sua atenção para as atividades relacionadas a este pulmão e busca descobrir se existem indícios de que a atividade não irá terminar no prazo, se encontrar %tais indícios o gerente de projeto pode trazer os mesmos para serem discutidos durante a reunião semanal do CCM. Se já estiver utilizando o último terço do pulmão o gerente de projeto %deve acionar o CCM solicitando uma mudança de prazo ou escopo.
 
 \section{Frequência de avaliação dos prazos do projeto}
 
