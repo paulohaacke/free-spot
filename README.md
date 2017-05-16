@@ -28,7 +28,7 @@ O sistema para os gerente permite integração com seu sistema de controle de va
 |:-----------------------:| ---------------------------------------------------------- |:------------------:|:------:|
 | 10/04/2017              | Definição de trabalho e orientador                         | Aluno ou orientador| **OK** |
 | 28/04/2017              | Indicar avaliador                                          | Orientador         |        |
-| 08/05/2017              | Entrega do relatório de andamento                          | Aluno              |        |
+| 15/05/2017              | Entrega do relatório de andamento                          | Aluno              | **OK** |
 | 19/05/2017              | Entrega das avaliações de relatório de andamento           | Avaliador          |        |
 | 26/06/2017              | Definição da banca de avaliação                            | Orientador         |        |
 | 17/07/2017              | Entrega do projeto                                         | Aluno              |        |

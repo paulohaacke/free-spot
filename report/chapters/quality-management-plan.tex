@@ -31,6 +31,10 @@
 		\hline
 		Gerente de projeto & Especificar o cronograma do projeto incluindo testes \\
 		\hline
+		Desenvolvedores & Desenvolver e realizar testes unitários  \\
+		\hline
+		Analistas de Testes & Definir os testes necessários e realizar testes de integração \\
+		\hline
 	\end{tabularx}
 	\centering
 	\caption{Tabela de responsabilidades na garantia da qualidade.}
@@ -47,6 +51,10 @@
 		\hline
 		Gerente de projeto & Especificar o cronograma do projeto incluindo testes \\
 		\hline
+		Analista de testes & Coletar e gerenciar os dados resultantes dos testes. \\ %Coletar indicadores de métricas de qualidade. \\
+		\hline
+		Equipe do Projeto & Realizar reuniões para levantar sugestões de melhoria no processo. \\
+		\hline
 	\end{tabularx}
 	\centering
 	\caption{Tabela de responsabilidades no controle da qualidade.}
@@ -54,13 +62,19 @@
 
 \section{Processo de gerenciamento da qualidade}
 
-\todo[inline,color=red]{Criar processo para gerenciamento da qualidade.}
+O processo de gerenciamento da qualidade deve seguir o fluxo mostrado na figura \ref{img:quality-management-process}.
+
+\begin{figure}[h]
+	\includegraphics[width=\textwidth]{images/processo-gerenciamento-qualidade}
+	\label{img:quality-management-process}
+	\caption{Processo de gerenciamento da qualidade.}
+\end{figure}
 
 \section{Política de gerenciamento da qualidade}
 
 \begin{itemize}
 	\item O sistema de controle de mudanças da qualidade deve ser utilizado para verificar e classificar alterações nos requisitos de qualidade.
-	\item Mudanças corretivas que impactem no sucesso do proejto serão incorporadas ao plano.
+	\item Mudanças corretivas que impactem no sucesso do projeto serão incorporadas ao plano.
 	\item Todas as solicitações de mudanças devem ser realizadas de acordo com o plano de gerenciamento das mudanças (ver capítulo \ref{ch:change-management-plan}).
 \end{itemize}
 
@@ -137,9 +151,9 @@ As mudanças nos requisitos de qualidade deverão ser classificadas de acordo co
 
 Todas as mudanças nos requisitos de qualidade do projeto devem ser tratados segundo o fluxo apresentado pelo sistema de controle integrado das mudanças (ver seção \ref{sec:change-control-system}).
 
-\section{Métricas de qualidade}
+%\section{Métricas de qualidade}
 
-As métricas de qualidade encontram-se no apêndice \ref{quality-metrics}.
+%As métricas de qualidade encontram-se no apêndice \ref{quality-metrics}.
 
 \section{Administração do plano de gerenciamento da qualidade}
 
