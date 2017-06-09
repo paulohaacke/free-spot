@@ -35,10 +35,26 @@ O plano de gerenciamento dos custos descreve como os custos do projeto serão pl
 \todo[inline,color=red]{Continuar descrição dos processos de gerenciamento de custos}
 
 \begin{itemize}
-\item A avaliação dos custos será feito por meio da comparação entre 3 estimativas: valor planejado, valor real e valor agregado. 
-\item O controle dos custos será feito tomando como base as estimativas de valor agregado.
-\item A atualização e gerenciamento dos custos do projeto será realizada utilizando o software \projectManagementSoftwareName.
-\item O gerente do projeto irá acompanhar a utilização de horas do projeto 
+	% Estimar custos
+	% Ver custo da qualidade (PMBOK 8.1.2.2)
+	\item As estimativas de custos serão realizadas utilizando o método \"bottom-up\" com base na opinião especializada.
+	\item Custos que possuam incertezas e riscos significantes deverão utilizar a análise de PERT, conforme equação \ref{eq:cost-pert}.
+	      \begin{equation}\label{eq:cost-pert}
+		      CE = \frac{CO+4CMP+CP}{6}
+	      \end{equation}
+
+	      \begin{description}
+		      \item[Custo Estimado (DE):] a melhor estimativa do custo necessário para completar a atividade, levando em consideração o fato de que o projeto nem sempre corre conforme o planejado.
+		      \item[Custo Mais Provável (MP):] custo da atividade baseado em um esforço de avaliação realista para o trabalho necessário e quaisquer outros gastos previstos.
+		      \item[Custo Otimista (O):] custo da atividade baseado na análise do melhor cenário possível para a atividade.
+		      \item[Custo Pessimista (P):] custo da atividade baseado na análise do pior cenário para a atividade.
+	      \end{description}
+	\item A atualização e gerenciamento dos custos do projeto será realizada utilizando o software \projectManagementSoftwareName.
+	% Determinar o orçamento
+	% Controlar custos
+	\item A avaliação dos custos será feito por meio da comparação entre 3 estimativas: valor planejado, valor real e valor agregado.
+	\item O controle dos custos será feito tomando como base as estimativas de valor agregado.
+	\item O gerente do projeto irá acompanhar a utilização de horas do projeto
 \end{itemize}
 
 \section{Frequência de avaliação do orçamento do projeto e das reservas gerenciais}
