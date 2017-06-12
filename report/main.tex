@@ -34,7 +34,19 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{pdflscape}
+\usepackage{tikz}
+%\usepackage{chngcntr}
+%\counterwithin{figure}{section}
+
 \usepackage{styles/vagalivre}
+
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{startstop} = [rectangle, draw=black, fill=red!30, text width=5em, text centered, rounded corners, minimum height=2em]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, draw, fill=blue!20, text width=8em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{decision} = [diamond, draw, fill=blue!20, text width=6.5em, text badly centered, inner sep=0pt]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{line} = [draw, thick, ->, >=stealth, -latex']
 
 \newcommand*\rot{\rotatebox{90}}
 \newcommand\foreign[1]{\emph{#1}}

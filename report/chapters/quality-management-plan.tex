@@ -38,6 +38,7 @@
 	\end{tabularx}
 	\centering
 	\caption{Tabela de responsabilidades na garantia da qualidade.}
+	\label{tab:responsability-quality-guarantee}
 \end{table}
 
 \section{Responsabilidades no controle da qualidade}
@@ -58,16 +59,44 @@
 	\end{tabularx}
 	\centering
 	\caption{Tabela de responsabilidades no controle da qualidade.}
+	\label{tab:responsability-quality-control}
 \end{table}
 
 \section{Processo de gerenciamento da qualidade}
 
-O processo de gerenciamento da qualidade deve seguir o fluxo mostrado na figura \ref{img:quality-management-process}.
+O processo de gerenciamento da qualidade deve seguir o fluxo mostrado na figura \ref{fig:quality-management-process}.
 
 \begin{figure}[h]
-	\includegraphics[width=\textwidth]{images/processo-gerenciamento-qualidade}
-	\label{img:quality-management-process}
-	\caption{Processo de gerenciamento da qualidade.}
+\centering
+\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
+	\node (begin) [startstop] {Início};
+	\node (new-module) [process, below= of begin] {Novo Módulo};
+	\node (project) [process, right= of new-module] {Projeto e Arquitetura};
+	\node (develop) [process, below= of project] {Desenvolver Módulo};
+	\node (unit-test) [process, right= of develop] {Testes Unitários};
+	\node (is-unit-test-done) [decision, below= of unit-test] {Passou?};
+	\node (integration-test) [process, below= of is-unit-test-done] {Teste Integrado (Inclui Teste de Aceitação)};
+	\node (is-integ-test-done) [decision, left= of integration-test] {Passou?};
+	\node (end-of-module) [process, below= of is-integ-test-done] {Módulo Finalizado};
+	\node (more-modules) [decision, left= of end-of-module] {Existem módulos para desenvolver?};
+	\node (end) [startstop, below= of more-modules] {Fim};
+
+	\path [line] (begin) -- (new-module);
+	\path [line] (new-module) -- (project);
+	\path [line] (project) -- (develop);
+	\path [line] (develop) -- (unit-test);
+	\path [line] (unit-test) -- (is-unit-test-done);
+	\path [line] (is-unit-test-done) -- node [near start] {sim} (integration-test);
+	\path [line] (is-unit-test-done) -| node [near start] {não} (develop);
+	\path [line] (integration-test) -- (is-integ-test-done);
+	\path [line] (is-integ-test-done) -- node [near start] {sim} (end-of-module);
+	\path [line] (is-integ-test-done) -- node [near start] {não} ++(-3cm,0) |- (develop);
+	\path [line] (end-of-module) -- (more-modules);
+	\path [line] (more-modules) -- node [near start] {sim} (new-module);
+	\path [line] (more-modules) -- node [near start] {não} (end);
+\end{tikzpicture}
+\caption{Processo de gerenciamento da qualidade.}
+\label{fig:quality-management-process}
 \end{figure}
 
 \section{Política de gerenciamento da qualidade}
