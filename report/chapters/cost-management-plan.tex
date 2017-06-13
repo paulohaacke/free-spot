@@ -25,26 +25,24 @@
 \chapter{Plano de gerenciamento dos custos}
 
 \todo[inline,color=red]{Revisar plano de gerenciamento dos custos.}
-\todo[inline,color=red]{Criar análise de valor agregado simulada.}
-\todo[inline,color=red]{Apresentação da composição de valores que totalizam o custo do projeto.}
 
 \section{Visão Geral}
 
-O plano de gerenciamento dos custos descreve como os custos do projeto serão planejados, estruturados e controlados fornecendo detalhes sobre os processos e ferramentas utilizados para gerenciar questões relacionadas a custos. 
+O plano de gerenciamento dos custos descreve como os custos do projeto serão planejados, estruturados e controlados fornecendo detalhes sobre os processos e ferramentas utilizados para gerenciar questões relacionadas a custos.
 
-Os processos e ferramentas descritos neste plano envolvem a realização das atividades vistas na figura \ref{fig:cost-management-plan-flowchart}.
+Os processos e ferramentas descritos neste plano orientam o gerenciamento das atividades vistas na figura \ref{fig:cost-management-plan-flowchart}.
 
 \begin{figure}[h]
-\centering
-\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
-	\node (estimate) [process] {Estimar Custos};
-	\node (determine-budget) [process, right= of estimate] {Determinar Orçamento};
-	\node (control-costs) [process, right= of determine-budget] {Controlar Custos};
-	\path [line] (estimate) -- (determine-budget);
-	\path [line] (determine-budget) -- (control-costs);
-\end{tikzpicture}
-\caption{Processo para gerenciamento dos custos do projeto.}
-\label{fig:cost-management-plan-flowchart}
+	\centering
+	\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
+		\node (estimate) [process] {Estimar Custos};
+		\node (determine-budget) [process, right= of estimate] {Determinar Orçamento};
+		\node (control-costs) [process, right= of determine-budget] {Controlar Custos};
+		\path [line] (estimate) -- (determine-budget);
+		\path [line] (determine-budget) -- (control-costs);
+	\end{tikzpicture}
+	\caption{Processo para gerenciamento dos custos do projeto.}
+	\label{fig:cost-management-plan-flowchart}
 \end{figure}
 
 \section{Descrição dos processos de gerenciamento de custos}
@@ -74,15 +72,26 @@ Os processos e ferramentas descritos neste plano envolvem a realização das ati
 	\item O controle dos custos será feito tomando como base as estimativas de valor agregado.
 	\item O gerente do projeto irá acompanhar a utilização de horas do projeto
 \end{itemize}
-\todo[inline,color=red]{Verificar se custos indiretos serão incluídos no projeto.}
+\todo[inline,color=red]{Revisar se custos indiretos serão incluídos no projeto.}
 
 \section{Frequência de avaliação do orçamento do projeto e das reservas gerenciais}
 
 O orçamento, assim como o uso de reservas gerenciais, do projeto será avaliado semanalmente pelo gerente do projeto.
 
+\section{Taxa padrão dos recursos}
+
+\begin{longtable}{ l l l l l }
+	\toprule
+	\textbf{Recurso} & \textbf{Cargo} & \textbf{Experência} & \textbf{Tipo} & \textbf{Taxa Padrão} \\
+	\midrule
+	  &   &   &   &   \\
+	\bottomrule
+	\centering
+\end{longtable}
+
 \section{Reservas gerenciais}
 
-Uma reserva gerencial de 15\% do orçamento estará diponível para contemplar riscos desconhecidos e atividades não identificadas no escopo.
+Além da linha de base de custos, o gerente do projeto contará com uma reserva gerencial de 15\% sobre o valor da linha de base, a qual estará diponível em casos de riscos desconhecidos e atividades não identificadas no escopo.
 
 \section{Autonomias}
 
