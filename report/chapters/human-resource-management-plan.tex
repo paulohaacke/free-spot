@@ -22,34 +22,41 @@
 
 \section{Organograma do projeto}
 
-	%\item Gerente de projeto
-	%\item Desenvolvedor mobile 1
-	%\item Desenvolvedor mobile 2
-	%\item Desenvolvedor web front-end
-	%\item Desenvolvedor web back-end
-	%\item Engenheiro de software
-	%\item Arquiteto de solução
-	%\item Arquiteto de software
-	%\item Engenheiro eletricista
-	%\item Analista de Testes 1
-	%\item Analista de Testes 2
-	%\item Analista de Banco de Dados 
-	%\item Desenvolvedor de Sistema
-	%\item Patrocinador
+O organograma do projeto é apresentado na figura \ref{fig:organization-chart}.
 
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
 	\node (sponsor) [process] {Patrocinador};
 	\node (project-manager) [process, below= of sponsor] {Gerente do Projeto};
+	% Left side
     \node (mobile-dev-one) [process, below left= of project-manager] {Desenvolvedor mobile 1};
 	\node (mobile-dev-two) [process, below= of mobile-dev-one] {Desenvolvedor mobile 2};
 	\node (front-end-web-dev) [process, below= of mobile-dev-two] {Desenvolvedor web front-end};
 	\node (back-end-web-dev) [process, below= of front-end-web-dev] {Desenvolvedor web back-end};
 	\node (software-engineer) [process, below= of back-end-web-dev] {Software engineer};
+	\node (system-developer) [process, below= of software-engineer] {Desenvolvedor de sistema};
+	% Right side
+	\node (solution-architect) [process, below right= of project-manager] {Arquiteto de solução};
+	\node (software-architect) [process, below= of solution-architect] {Arquiteto de software};
+	\node (eletric-engineer) [process, below= of software-architect] {Engenheiro eletricista};
+	\node (test-analyst-1) [process, below= of eletric-engineer] {Analista de testes 1};
+	\node (test-analyst-2) [process, below= of test-analyst-1] {Analista de testes 2};
+	\node (database-analyst) [process, below= of test-analyst-2] {Analista de banco de dados};
 
 	\path [line] (sponsor) -- (project-manager);
-	\path [line] (project-manager) -- (mobile-dev-one);
+	\path [line] (project-manager) |- (mobile-dev-one);
+	\path [line] (project-manager) |- (mobile-dev-two);
+	\path [line] (project-manager) |- (front-end-web-dev);
+	\path [line] (project-manager) |- (back-end-web-dev);
+	\path [line] (project-manager) |- (software-engineer);
+	\path [line] (project-manager) |- (system-developer);
+	\path [line] (project-manager) |- (solution-architect);
+	\path [line] (project-manager) |- (software-architect);
+	\path [line] (project-manager) |- (eletric-engineer);
+	\path [line] (project-manager) |- (test-analyst-1);
+	\path [line] (project-manager) |- (test-analyst-2);
+	\path [line] (project-manager) |- (database-analyst);
 \end{tikzpicture}
 \caption{Organograma do projeto.}
 \label{fig:organization-chart}
@@ -57,13 +64,36 @@
 
 \section{Diretório do time do projeto}
 
-\todo[inline,color=red]{Diretório do time do projeto.}
+\begin{longtable}{ l p{0.25\textwidth} p{0.13\textwidth} p{0.28\textwidth} p{0.2\textwidth} }
+	\toprule
+	\thead[c]{\textbf{No}} & \thead[c]{\textbf{Nome}} & \thead[c]{\textbf{Área}} & \thead[c]{\textbf{E-mail}} & \thead[c]{\textbf{Telefone}} \\
+	\midrule
+	1  & \ceoName{} & CEO & \email{} & \phone{} \\
+	2  & \projectManagerName{} & Gerente do Projeto & \email{} & \phone{} \\
+	3  & \mobDevOneName{} & Membro da equipe & \email{} & \phone{} \\
+	4  & \mobDevTwoName{} & Membro da equipe & \email{} & \phone{} \\
+	5  & \frontWebDevName{} & Membro da equipe & \email{} & \phone{} \\
+	6  & \backWebDevName{} & Membro da equipe & \email{} & \phone{} \\
+	7  & \softEngName{} & Membro da equipe & \email{} & \phone{} \\
+	8  & \sysDevName{} & Membro da equipe & \email{} & \phone{} \\
+	9  & \solArcName{} & Membro da equipe & \email{} & \phone{} \\
+	10  & \softArcName{} & Membro da equipe & \email{} & \phone{} \\
+	11  & \elecEngName{} & Membro da equipe & \email{} & \phone{} \\
+	12  & \testAnalOneName{} & Membro da equipe & \email{} & \phone{} \\
+	13  & \testAnalTwoName{} & Membro da equipe & \email{} & \phone{} \\
+	14  & \dbAnalName{} & Membro da equipe & \email{} & \phone{} \\
+	\bottomrule
+	\caption{Diretório do time do projeto.}
+	\centering
+\end{longtable}
 
 \section{Matriz de responsabilidades}
 
 \todo[inline,color=red]{Matriz de responsabilidades}
 
 \section{Novos recursos, re-alocação e substituição dos membros do time}
+
+
 
 \todo[inline,color=red]{Criar processo para novos recursos no plano de RH.}
 

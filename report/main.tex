@@ -35,6 +35,10 @@
 \usepackage{longtable}
 \usepackage{pdflscape}
 \usepackage{tikz}
+\usepackage{makecell}
+\def\theadfont{\bfseries}
+
+% Makes figure count by section
 %\usepackage{chngcntr}
 %\counterwithin{figure}{section}
 
@@ -232,8 +236,9 @@
 	Trabalho aprovado. \imprimirlocal, 02 de agosto de 2017:
 
 	\assinatura{\textbf{\imprimirorientador} \\ Orientador}
-	\assinatura{\textbf{Professor} \\ Convidado 1}
-	\assinatura{\textbf{Professor} \\ Convidado 2}
+	\assinatura{\textbf{Osmar A. M. Pedrozo} \\ Avaliador}
+	\assinatura{\textbf{Fábio Giordani} \\ Avaliador}
+	\todo[inline,color=red]{Fábio Giordani é orientador???}
 	%\assinatura{\textbf{Professor} \\ Convidado 3}
 	%\assinatura{\textbf{Professor} \\ Convidado 4}
 
@@ -393,7 +398,7 @@
 
 	%\include{chapters/quality-checklists}
 
-	%\include{chapters/quality-metrics}
+	\include{chapters/quality-metrics}
 
 \end{apendicesenv}
 % ---
