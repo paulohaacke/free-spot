@@ -14,5 +14,119 @@
 % Descrever o modelo de gerenciamento de segurança do projeto: Integridade física, Confidencialidade das informações
 
 \chapter{Plano de gerenciamento dos recursos humanos}
+\label{ch:human-resource-management-plan}
 
-\todo[inline,color=green]{Criar plano de gerenciamento dos recursos humanos.}
+\section{Visão geral}
+
+\todo[inline,color=red]{Visão geral do plano de RH.}
+
+\section{Organograma do projeto}
+
+\item Gerente de projeto
+	\item Desenvolvedor mobile 1
+	\item Desenvolvedor mobile 2
+	\item Desenvolvedor web front-end
+	\item Desenvolvedor web back-end
+	\item Engenheiro de software
+	\item Arquiteto de solução
+	\item Arquiteto de software
+	\item Engenheiro eletricista
+	\item Analista de Testes 1
+	\item Analista de Testes 2
+	\item Analista de Banco de Dados 
+	\item Desenvolvedor de Sistema
+	\item Patrocinador
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
+	\node (sponsor) [process] {Patrocinador};
+	\node (project-manager) [process, below= of sponsor] {Gerente do Projeto};
+    \node (mobile-dev-one) [process, below left= of project-manager] {Desenvolvedor mobile 1};
+	\node (mobile-dev-two) [process, below= of mobile-dev-one] {Desenvolvedor mobile 2};
+	\node (front-end-web-dev) [process, below= of mobile-dev-two] {Desenvolvedor web front-end};
+	\node (back-end-web-dev) [process, below= of front-end-web-dev] {Desenvolvedor web back-end};
+	\node (software-engineer) [process, below= of back-end-web-dev] {Software engineer};
+
+	\path [line] (sponsor) -- (project-manager);
+	\path [line] (project-manager) -- (mobile-dev-one);
+\end{tikzpicture}
+\caption{Organograma do projeto.}
+\label{fig:organization-chart}
+\end{figure}
+
+\section{Diretório do time do projeto}
+
+\todo[inline,color=red]{Diretório do time do projeto.}
+
+\section{Matriz de responsabilidades}
+
+\todo[inline,color=red]{Matriz de responsabilidades}
+
+\section{Novos recursos, re-alocação e substituição dos membros do time}
+
+\todo[inline,color=red]{Criar processo para novos recursos no plano de RH.}
+
+\section{Treinamento}
+
+\todo[inline,color=red]{Criar seção treinamento do plano de RH.}
+
+\section{Avaliação de resultados}
+
+\todo[inline,color=red]{Método de avaliação de resultados do plano de RH.}
+
+\section{Bonificação}
+
+\todo[inline,color=red]{Método de bonificação do plano de RH.}
+
+\section{Frequência de avaliação consolidada dos resultados do time}
+
+\todo[inline,color=red]{Frequência de avaliação consolidada dos resultados do time.}
+
+\section{Alocações financeiras para o gerenciamento de RH}
+
+\todo[inline,color=red]{Alocação financeira plano de RH.}
+
+\section{Administração do plano de gerenciamento de recursos humanos}
+
+\subsection{Responsável pelo plano}
+
+\begin{itemize}
+	\item \projectManagerName, gerente de projeto, será o responsável direto pelo plano de gerenciamento de RH.
+\end{itemize}
+
+\subsection{Frequência de atualização do plano de gerenciamento de RH}
+
+O plano de gerenciamento de RH será reavaliado mensalmente durante a reunião do CCM, juntamente com os outros planos de gerenciamento do projeto.
+
+\section{Outros assuntos relacionados ao gerenciamento de custos do projeto não previstos neste plano}
+
+Solicitações não previstas neste plano deverão passar pela aprovação do CCM. Após aprovada o plano deve ser atualizado pelo gerente do projeto.
+
+\section{Controle de versão}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | X |}
+		\hline
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
+		\hline
+		1                &               & \projectManagerName & Criação do documento     \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
+
+\section{Aprovações}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | c |}
+		\hline
+		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\hline
+		Patrocinador       & \projectSponsorName & \projectSponsorSignature &               \\
+		\hline
+		Gerente de projeto & \projectManagerName & \projectManagerSignature &               \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
