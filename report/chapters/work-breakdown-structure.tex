@@ -20,9 +20,10 @@
 \begin{tikzpicture}[node distance = 0.3cm and 0.1cm, auto, scale=0.6, every node/.style={scale=0.6}]
 	% Project management
 	\node (project-management) [wbsblock] {Gerenciamento do projeto};
-	\node (planning) [wbsblock, below right= of project-management, xshift=-6em] {Planejamento};
-	\node (scope-approval) [wbsblock, below= of planning] {Aprovação do escopo};
-	\node (project-monitoring) [wbsblock, below= of scope-approval] {Monitoramento do projeto};
+	\node (initiation) [wbsblock, below right= of project-management, xshift=-6em] {Iniciação};
+	\node (planning) [wbsblock, below = of initiation] {Planejamento};
+	\node (scope-approval) [wbsblock, below = of planning] {Aprovação do escopo};
+	\node (project-monitoring) [wbsblock, below = of scope-approval] {Monitoramento do projeto};
 	% Infraestrutura
 	\node (infrastructure) [wbsblock, right = of project-management, xshift=1.5em] {Infraestrutura};
 	\node (dev-env) [wbsblock, below right = of infrastructure, xshift=-6em] {Ambiente de desenvolvimento};
@@ -58,41 +59,41 @@
 	% WBS root
 	\node (free-spot) [wbsblock, above = of drivers-app, yshift=4em] {Vaga livre};
 
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (project-management);
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (infrastructure);
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (database);
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (drivers-app);
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (parking-app);
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (auditing);
-	\path [line] (free-spot.south) |- ++(0,-1cm) -| (closure);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (project-management);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (infrastructure);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (database);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (drivers-app);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (parking-app);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (auditing);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (closure);
 
-	\path [line] (project-management.215) |- (planning);
-	\path [line] (project-management.215) |- (scope-approval);
-	\path [line] (project-management.215) |- (project-monitoring);
+	\path [simpleline] (project-management.215) |- (planning);
+	\path [simpleline] (project-management.215) |- (scope-approval);
+	\path [simpleline] (project-management.215) |- (project-monitoring);
 
-	\path [line] (infrastructure.215) |- (dev-env);
-	\path [line] (infrastructure.215) |- (test-env);
-	\path [line] (infrastructure.215) |- (prod-env);
+	\path [simpleline] (infrastructure.215) |- (dev-env);
+	\path [simpleline] (infrastructure.215) |- (test-env);
+	\path [simpleline] (infrastructure.215) |- (prod-env);
 
-	\path [line] (drivers-app.215) |- (authentication);
-	\path [line] (drivers-app.215) |- (spot-reservation);
-	\path [line] (drivers-app.215) |- (parking-list);
-	\path [line] (drivers-app.215) |- (payment-process);
-	\path [line] (drivers-app.215) |- (user-management);
+	\path [simpleline] (drivers-app.215) |- (authentication);
+	\path [simpleline] (drivers-app.215) |- (spot-reservation);
+	\path [simpleline] (drivers-app.215) |- (parking-list);
+	\path [simpleline] (drivers-app.215) |- (payment-process);
+	\path [simpleline] (drivers-app.215) |- (user-management);
 
-	\path [line] (parking-app.215) |- (user-auth-management);
-	\path [line] (parking-app.215) |- (client-management);
-	\path [line] (parking-app.215) |- (system-register);
-	\path [line] (parking-app.215) |- (parking-management);
-	\path [line] (parking-app.215) |- (reports);
-	\path [line] (parking-app.215) |- (DETRAN-integration);
-	\path [line] (parking-management.215) |- (garage-register);
-	\path [line] (parking-management.215) |- (spot-state);
-	\path [line] (parking-management.215) |- (automation-integration);
-	\path [line] (parking-management.215) |- (parking-configuration);
+	\path [simpleline] (parking-app.215) |- (user-auth-management);
+	\path [simpleline] (parking-app.215) |- (client-management);
+	\path [simpleline] (parking-app.215) |- (system-register);
+	\path [simpleline] (parking-app.215) |- (parking-management);
+	\path [simpleline] (parking-app.215) |- (reports);
+	\path [simpleline] (parking-app.215) |- (DETRAN-integration);
+	\path [simpleline] (parking-management.215) |- (garage-register);
+	\path [simpleline] (parking-management.215) |- (spot-state);
+	\path [simpleline] (parking-management.215) |- (automation-integration);
+	\path [simpleline] (parking-management.215) |- (parking-configuration);
 
-	\path [line] (auditing.215) |- (unit-test);
-	\path [line] (auditing.215) |- (integration-test);
+	\path [simpleline] (auditing.215) |- (unit-test);
+	\path [simpleline] (auditing.215) |- (integration-test);
 
 \end{tikzpicture}
 \caption{Estrutura analítica do projeto.}

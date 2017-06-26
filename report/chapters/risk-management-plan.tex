@@ -1,5 +1,6 @@
 % Descrição do processo de gerenciamento de riscos empregado no projeto
 % Descrição do processo de identificação dos riscos
+
 % Lista de riscos do projeto
 % Priorização dos riscos do projeto
 % Apresentar a EAR do projeto
@@ -17,3 +18,168 @@
 \chapter{Plano de gerenciamento dos riscos}
 
 \todo[inline,color=green]{Criar plano de gerenciamento dos riscos.}
+
+\section{Descrição dos processos de gerenciamento de riscos}
+
+\begin{itemize}
+%\item Atividades de alto risco deverão tornar-se prioritárias, de modo que sejam desenvolvidas o mais cedo possível durante a execução do projeto.
+%\item Projetos de software com ciclo de vida adaptativo escolhem requisitos e histórias de usuário do backlog, o qual pode sofrer frequentes repriorizações; o que permite o gerenciamento de risco o mais cedo possível no projeto, minimizando efeitos de atraso e composição.
+\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da EAR (ver seção \ref), sugere-se a utilização das seguintes técnicas:
+\begin{itemize} 
+\item Brainstorming. 
+\item Grupo nominal. 
+\item Slip de Crawford.
+\todo[inline,color=red]{Descrever técnicas de identificação de risco.}
+\end{itemize} 
+\item Os riscos do projeto serão gerenciados com base nos riscos identificados previamente, assim como no monitoramento e controle de novos riscos que podem não ter sido identificados anteriormente.
+\item Todos os riscos não previstos no plano devem ser incluídos ao projeto de acordo com sistema de controle de mudanças de riscos (ver seção \ref{sec:risk-change-control-system}).
+\item A identificação, a avaliação e o monitoramento de riscos devem ser feitos por escrito ou através de e-mail, conforme descrito no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).
+\item Durante a reunião do CCM serão avaliados e monitorados os riscos do projeto.
+\end{itemize}
+
+\section{Estrutura analítica de riscos para identificação dos riscos}
+
+Para auxiliar na compreensão, gerenciamento e comunicação de riscos em projetos, a melhor forma de apresentar as informações referentes aos riscos de um projeto, é de forma estruturada \cite{hillson2002risk}, sistemática e explícita \cite{gusmao2007modelo}.
+
+Com o objetivo de auxiliar o gerente de projetos na identificação dos riscos será utilizado o modelo de estrutura analítica de riscos proposta em \cite{dorofee1996continuous}, a qual pode ser vista na figura \ref{fig:rbs}. Esta estrutura ajuda a equipe do projeto a considerar muitas fontes a partir dos quais os riscos podem surgir.
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance = 0.3cm and 0.7cm, auto]
+
+\node (prodeng) [wbsblock] {Engenharia de produto};
+\node (devenv) [wbsblock, right = of prodeng, xshift=2.5em] {Ambiente de desenvolvimento};
+\node (constraints) [wbsblock, right = of devenv, xshift=2.5em] {Restrições};
+% Engenharia de Produto
+\node (req) [wbsblock, below right = of prodeng, xshift=-6em] {Requisitos};
+\node (design) [wbsblock, below = of req] {Projeto};
+\node (code) [wbsblock, below = of design] {Código e testes unitários};
+\node (integ) [wbsblock, below = of code] {Testes de integração};
+\node (engattr) [wbsblock, below = of integ] {Propriedades de Engenharia};
+% Ambiente de Desenvolvimento
+\node (devproc) [wbsblock, below right = of devenv, xshift=-6em] {Processo de desenvolvimento};
+\node (devsys) [wbsblock, below = of devproc] {Sistema de desenvolvimento};
+\node (mngtproc) [wbsblock, below = of devsys] {Processo de gerenciamento};
+\node (mngtmet) [wbsblock, below = of mngtproc] {Métodos de gerenciamento};
+\node (workenv) [wbsblock, below = of mngtmet] {Ambiente de trabalho};
+% Restrições
+\node (resources) [wbsblock, below right = of constraints, xshift=-6em] {Recursos};
+\node (contracts) [wbsblock, below = of resources] {Contratos};
+\node (interfaces) [wbsblock, below = of contracts] {Interfaces};
+% RBS root
+\node (projrisk) [wbsblock, above = of devenv, yshift=3em] {Risco do Projeto};
+
+\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (prodeng);
+\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (devenv);
+\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (constraints);
+
+\path [simpleline] (prodeng.215) |- (req);
+\path [simpleline] (prodeng.215) |- (design);
+\path [simpleline] (prodeng.215) |- (code);
+\path [simpleline] (prodeng.215) |- (integ);
+\path [simpleline] (prodeng.215) |- (engattr);
+
+\path [simpleline] (devenv.215) |- (devproc);
+\path [simpleline] (devenv.215) |- (devsys);
+\path [simpleline] (devenv.215) |- (mngtproc);
+\path [simpleline] (devenv.215) |- (mngtmet);
+\path [simpleline] (devenv.215) |- (workenv);
+
+\path [simpleline] (constraints.215) |- (resources);
+\path [simpleline] (constraints.215) |- (contracts);
+\path [simpleline] (constraints.215) |- (interfaces);
+
+\end{tikzpicture}
+\caption{Estrutura analítica de riscos.}
+\label{fig:rbs}
+\end{figure}
+
+\section{Riscos identificados}
+
+Os riscos identificados no projeto, segundo a EAP do projeto e a EAR apresentada, estão listados a seguir.
+
+\begin{enumerate}
+\item Projeto Vaga Livre
+\begin{enumerate}
+\item Gerenciamento do projeto
+\item Infraestrutura
+\item Banco de dados
+\item Aplicativo do motorista
+\item Aplicativo do estacionamento
+\item Auditoria
+\item Encerramento
+\end{enumerate}
+\end{enumerate}
+
+\section{Qualificação dos riscos}
+
+Os riscos identificados serão classificados de acordo com sua probabilidade de ocorrência e impacto de seus resultados, conforme descrito a seguir.
+
+\subsection{Probabilidade de ocorrência}
+
+\begin{description}
+\item [Baixa] A probabilidade de o risco ocorrer é considerada pequena, menor que 25\%.
+\item [Média] Existe razoável probabilidade de o risco ocorrer, entre 25\% e 60\%.
+\item [Alta] O risco possui alta probabilidade de ocorrência, maior que 60\%. 
+\end{description}
+
+\subsection{Impacto}
+
+\begin{description}
+\item [Baixo] Caso o evento venha a ocorrer, o impacto no projeto é insignificante, podendo ser facilmente resolvido.
+\item [Médio] A ocorrência do evento de risco pode causar impacto relevante no projeto, sendo necessário um gerenciamento mais preciso, sob pena de prejudicar o resultado do projeto.
+\item [Alto] A ocorrência do evento de risco impacta de forma extremamente significativa no projeto, exigindo ação precisa e imediata por parte da equipe do projeto, os resultados estarão comprometidos.
+\end{description}
+
+\section{Quantificação dos riscos}
+
+\section{Sistema de controle de mudanças de riscos}
+\label{sec:risk-change-control-system}
+
+\section{Respostas planejadas aos riscos}
+
+\section{Reservas de contingência}
+
+\section{Frequência de avaliação dos riscos do projeto}
+
+\section{Alocação financeira para o gerenciamento de riscos}
+
+\section{Administração do plano de gerenciamento de riscos}
+
+\subsection{Responsável}
+
+\begin{itemize}
+	\item \projectManagerName{}, gerente de projeto, será o responsável direto pelo plano de gerenciamento de riscos.
+\end{itemize}
+
+\section{Outros assuntos relacionados ao gerenciamento de riscos do projeto não previstos neste plano}
+
+Solicitações não previstas neste plano deverão passar pela aprovação do CCM. Após aprovada o plano deve ser atualizado pelo gerente do projeto.
+
+\section{Controle de Versão}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | X |}
+		\hline
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
+		\hline
+		1                &               & \projectManagerName{} & Criação do documento     \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
+
+\section{Aprovações}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | c |}
+		\hline
+		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\hline
+		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
+		\hline
+		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
