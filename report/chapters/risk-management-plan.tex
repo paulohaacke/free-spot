@@ -1,9 +1,9 @@
-% Descrição do processo de gerenciamento de riscos empregado no projeto
-% Descrição do processo de identificação dos riscos
+% Descrição do processo de gerenciamento de riscos empregado no projeto 10
+% Descrição do processo de identificação dos riscos 8
 
 % Lista de riscos do projeto
 % Priorização dos riscos do projeto
-% Apresentar a EAR do projeto
+% Apresentar a EAR do projeto 9
 % Apresentar a matriz de probabilidade e impactos
 % Apresentar a relação de ameaças e oportunidades do projeto
 % Desenvolver uma análise numérica dos riscos do projeto: Análise qualitativa, Análise quantitativa
@@ -17,18 +17,18 @@
 
 \chapter{Plano de gerenciamento dos riscos}
 
-\todo[inline,color=green]{Criar plano de gerenciamento dos riscos.}
+\todo[inline,color=red]{Remeter ao controle integrado de mudnaças em algum lugar.}
 
 \section{Descrição dos processos de gerenciamento de riscos}
 
 \begin{itemize}
 %\item Atividades de alto risco deverão tornar-se prioritárias, de modo que sejam desenvolvidas o mais cedo possível durante a execução do projeto.
 %\item Projetos de software com ciclo de vida adaptativo escolhem requisitos e histórias de usuário do backlog, o qual pode sofrer frequentes repriorizações; o que permite o gerenciamento de risco o mais cedo possível no projeto, minimizando efeitos de atraso e composição.
-\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da EAR (ver seção \ref), sugere-se a utilização das seguintes técnicas:
+\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da EAR (ver seção \ref{sec:rbs}), sugere-se a utilização das seguintes técnicas:
 \begin{itemize} 
-\item Brainstorming. 
+\item \foreign{Brainstorming}. 
 \item Grupo nominal. 
-\item Slip de Crawford.
+\item \foreign{Slip} de \foreign{Crawford}.
 \todo[inline,color=red]{Descrever técnicas de identificação de risco.}
 \end{itemize} 
 \item Os riscos do projeto serão gerenciados com base nos riscos identificados previamente, assim como no monitoramento e controle de novos riscos que podem não ter sido identificados anteriormente.
@@ -38,6 +38,7 @@
 \end{itemize}
 
 \section{Estrutura analítica de riscos para identificação dos riscos}
+\label{sec:rbs}
 
 Para auxiliar na compreensão, gerenciamento e comunicação de riscos em projetos, a melhor forma de apresentar as informações referentes aos riscos de um projeto, é de forma estruturada \cite{hillson2002risk}, sistemática e explícita \cite{gusmao2007modelo}.
 
@@ -97,6 +98,7 @@ Com o objetivo de auxiliar o gerente de projetos na identificação dos riscos s
 \section{Riscos identificados}
 
 Os riscos identificados no projeto, segundo a EAP do projeto e a EAR apresentada, estão listados a seguir.
+\todo[inline,color=red]{Identificar riscos.}
 
 \begin{enumerate}
 \item Projeto Vaga Livre
@@ -131,16 +133,58 @@ Os riscos identificados serão classificados de acordo com sua probabilidade de 
 \item [Alto] A ocorrência do evento de risco impacta de forma extremamente significativa no projeto, exigindo ação precisa e imediata por parte da equipe do projeto, os resultados estarão comprometidos.
 \end{description}
 
+\todo[inline,color=red]{Criar gráfico PxI.}
+
 \section{Quantificação dos riscos}
+
+Não foi realizada a análise quantitativa dos riscos.
 
 \section{Sistema de controle de mudanças de riscos}
 \label{sec:risk-change-control-system}
 
+Toda identificação de riscos e alterações em riscos já identificados devem ser tratados segundo o fluxo apresentado na figura \ref{fig:risk-change-control-system}, o qual deve ter suas conclusões apresentadas durante a reunião semanal do CCM, com suas conclusões prioridades e ações relacionadas.
+
+\todo[inline,color=red]{Criar sistema de crontrole de mudanças de riscos ou remeter a plano integrado de mudanças.}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance = 0.3cm and 0.7cm, auto]
+
+\node (begin) [startstop] {Início};
+
+\node (end) [startstop] {Fim};
+
+\end{tikzpicture}
+\caption{Sistema de controle de mudanças de riscos.}
+\label{fig:risk-change-control-system}
+\end{figure}
+
 \section{Respostas planejadas aos riscos}
+
+Para os riscos identificados e qualificados, optou-se por diferentes estratégias de resposta para cada necessidade, conforme pode ser visto na tabela \ref{tab:risk-answers}.
+
+\todo[inline,color=red]{Preencher tabela com resposta a riscos.}
+
+\begin{longtable}{ l l l l l l l l }
+	\toprule
+	\textbf{Item} & \textbf{Fase} & \textbf{Risco} & \textbf{Probabilidade} & \textbf{Gravidade} & \textbf{Resposta} & \textbf{Descrição} & \textbf{Custo} \\
+	\midrule
+	  &   &   &   &   &   &   &   \\
+	\bottomrule
+	\caption{Respostas planejadas aos riscos.}
+	\centering
+    \label{tab:risk-answers}
+\end{longtable}
 
 \section{Reservas de contingência}
 
+Conforme descrito no plano de gerenciamento de custos (ver capítulo \ref{ch:cost-management-plan}), as reservas de contingências estão reservadas para uso exclusivo do processo de gerenciamento de riscos.
+\todo[inline,color=red]{Revisar reservas de contingência.}
+%As reservas de contingência totalizam ........, o gerente de projeto possui as autonomias descritas na tabela \ref{} para utilização das reservas.
+
 \section{Frequência de avaliação dos riscos do projeto}
+
+Os riscos identificados no projeto devem ser avaliados durante a reunião do CCM, previsto no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).
 
 \section{Alocação financeira para o gerenciamento de riscos}
 
