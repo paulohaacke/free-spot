@@ -10,9 +10,9 @@
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
-	english,			% idioma adicional para hifenização
     french,             % idioma adicional para hifenização
 	spanish,			% idioma adicional para hifenização
+	english,			% idioma adicional para hifenização
 	brazil				% o último idioma é o principal do documento
 	]{abntex2}
 
@@ -45,8 +45,6 @@
 
 \usepackage{styles/vagalivre}
 
-\setcounter{tocdepth}{0}
-
 \usetikzlibrary{shapes.geometric, arrows}
 \tikzstyle{startstop} = [rectangle, draw=black, fill=red!30, text width=5em, text centered, rounded corners, minimum height=2em]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
@@ -56,6 +54,8 @@
 \tikzstyle{line} = [draw, thick, ->, >=stealth, -latex']
 \tikzstyle{simpleline} = [draw, thick, >=stealth]
 \tikzstyle{wbsblock} = [rectangle, draw, fill=blue!20, text width=7em, text centered, rounded corners, minimum height=4em]
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 
 \newcommand*\rot{\rotatebox{90}}
 \newcommand\foreign[1]{\emph{#1}}
