@@ -1,0 +1,55 @@
+\begin{landscape}
+\setlength\LTcapwidth{\textwidth} % default: 4in (rather less than \textwidth...)
+\setlength\LTleft{0pt}            % default: \parindent
+\setlength\LTright{0pt}  
+
+\chapter{Registro das partes interessadas}
+\label{ch:stakeholder-register}
+
+\section{Informações de identificação e avaliação}
+
+\todo[inline,color=red]{Preencher identificação das partes interessadas.}
+
+\newcounter{pow}
+\newcounter{int}
+\newcounter{inf}
+\newcounter{imp}
+\begin{longtable}{@{\extracolsep{\fill}} c >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.3\textwidth} }
+    \toprule
+	\textbf{Tipo} & \textbf{Nome} & \textbf{Organização} & \textbf{Posição} & \rot{\textbf{\parbox{3cm}{Interesse}}} & \rot{\textbf{\parbox{3cm}{Poder}}} & \rot{\textbf{\parbox{3cm}{Influência}}} & \rot{\textbf{\parbox{3cm}{Impacto}}} & \rot{\textbf{\parbox{3cm}{Importância\\Ponderada}}} & \textbf{Expectativas} \\
+	\midrule
+	Externo & Parte Interessada 1 & Cliente & Gerente & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
+    \bottomrule
+	\caption{Registro das partes interessadas.}
+	\centering
+\end{longtable}
+
+\section{Controle de versão}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | X |}
+		\hline
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão} \\
+		\hline
+		1                &               & \projectManagerName{} & Criação do documento     \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
+
+\section{Aprovações}
+
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | c |}
+		\hline
+		\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
+		\hline
+		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
+		\hline
+		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
+		\hline
+	\end{tabularx}
+	\centering
+\end{table}
+
+\end{landscape}

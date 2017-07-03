@@ -20,7 +20,15 @@
 
 \chapter{Plano de gerenciamento da qualidade}
 
-\section{Responsabilidades na garantia da qualidade}
+\section{Descrição dos processos de gerenciamento da qualidade}
+
+\begin{itemize}
+	\item Qualquer profissional que participar do projeto é responsável por manter a qualidade do mesmo. É responsabilidade do gerente do projeto esclarecer este ponto para todos que venham a participar do projeto.
+	\item Serão aplicadas auditorias quinzenais sobre o projeto, seguindo o modelo padrão de lista de verificação da qualidade, conforme apêndice \ref{quality-checklist}.
+	\item Os itens avaliados durante a auditoria de qualidade devem sempre obter uma nota total maior ou igual a 75 pontos. Caso esta nota não seja atingida o gerente do projeto deve efetuar um alinhamento geral sobre o processo com a equipe.
+\end{itemize}
+
+\section{Responsabilidades no controle da qualidade}
 
 %\todo[inline,color=red]{Terminar definição dos responsáveis pela garantia da qualidade.}
 
@@ -33,7 +41,7 @@
 		\hline
 		Desenvolvedores & Desenvolver e realizar testes unitários  \\
 		\hline
-		Analistas de Testes & Definir os testes necessários e realizar testes de integração \\
+		Analistas de Testes & Definir os testes necessários, realizar testes de integração, gerenciar os dados resultantes dos testes e e coletar indicadores de métricas de qualidade \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -41,7 +49,7 @@
 	\label{tab:responsability-quality-guarantee}
 \end{table}
 
-\section{Responsabilidades no controle da qualidade}
+\section{Responsabilidades na garantia da qualidade}
 
 %\todo[inline,color=red]{Terminar definição dos responsáveis pelo controle da qualidade.}
 
@@ -50,11 +58,11 @@
 		\hline
 		\textbf{Papel}     & \textbf{Responsabilidade}                            \\
 		\hline
-		Gerente de projeto & Especificar o cronograma do projeto incluindo testes \\
+		Gerente de projeto & Especificar o cronograma do projeto incluindo auditorias \\
 		\hline
-		Analista de testes & Coletar e gerenciar os dados resultantes dos testes. \\ %Coletar indicadores de métricas de qualidade. \\
+		Analista de testes & Realizar auditorias \\
 		\hline
-		Equipe do Projeto & Realizar reuniões para levantar sugestões de melhoria no processo. \\
+		Equipe do Projeto & Realizar reuniões para levantar sugestões de melhoria no processo \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -98,14 +106,6 @@ O processo de gerenciamento da qualidade deve seguir o fluxo mostrado na figura 
 \caption{Processo de gerenciamento da qualidade.}
 \label{fig:quality-management-process}
 \end{figure}
-
-\section{Política de gerenciamento da qualidade}
-
-\begin{itemize}
-	\item O sistema de controle de mudanças da qualidade deve ser utilizado para verificar e classificar alterações nos requisitos de qualidade.
-	\item Mudanças corretivas que impactem no sucesso do projeto serão incorporadas ao plano.
-	\item Todas as solicitações de mudanças devem ser realizadas de acordo com o plano de gerenciamento das mudanças (ver capítulo \ref{ch:change-management-plan}).
-\end{itemize}
 
 \section{Planejamento de avaliação de qualidade}
 
@@ -170,7 +170,7 @@ Os requisitos de qualidade do projeto devem ser avaliados semanalmente durante a
 
 As mudanças nos requisitos de qualidade podem ser alocadas dentro das reservas gerenciais do projeto.
 
-Em caso de mudanças prioritárias nos requisitos de qualidade do projeto, quando não existem reservas gerenciais disponíveis, deverá ser acionado o patrocinador.
+Em caso de mudanças prioritárias nos requisitos de qualidade do projeto, quando não existem reservas gerenciais disponíveis, deverá ser acionado o patrocinador, conforme previsto no plano de gerenciamento dos custos (ver capítulo \ref{ch:cost-management-plan}).
 
 \section{Priorização das mudanças nos requisitos de qualidade e respostas}
 
@@ -181,7 +181,6 @@ As mudanças nos requisitos de qualidade deverão ser classificadas de acordo co
 Todas as mudanças nos requisitos de qualidade do projeto devem ser tratados segundo o fluxo apresentado pelo sistema de controle integrado das mudanças (ver seção \ref{sec:change-control-system}).
 
 \section{Métricas de qualidade}
-
 
 As métricas de qualidade encontram-se no apêndice \ref{quality-metrics}.
 

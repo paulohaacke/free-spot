@@ -24,20 +24,27 @@
 	\node (planning) [wbsblock, below = of initiation] {Planejamento};
 	\node (scope-approval) [wbsblock, below = of planning] {Aprovação do escopo};
 	\node (project-monitoring) [wbsblock, below = of scope-approval] {Monitoramento do projeto};
+	\node (closure) [wbsblock, below = of project-monitoring] {Encerramento};
 	% Infraestrutura
 	\node (infrastructure) [wbsblock, right = of project-management, xshift=1.5em] {Infraestrutura};
 	\node (dev-env) [wbsblock, below right = of infrastructure, xshift=-6em] {Ambiente de desenvolvimento};
 	\node (test-env) [wbsblock, below = of dev-env] {Ambiente de testes};
 	\node (prod-env) [wbsblock, below = of test-env] {Ambiente de produção};
 	% Banco de dados
-	\node (database) [wbsblock, right = of infrastructure, xshift=1.5em] {Banco de dados};
+	\node (webapi) [wbsblock, right = of infrastructure, xshift=1.5em] {Web API};
+	\node (cloudplat) [wbsblock, below right = of webapi, xshift=-6em] {Contratar plataforma na nuvem};
+	\node (database) [wbsblock, below = of cloudplat] {Banco de dados};
+	\node (apistruct) [wbsblock, below = of database] {Definir estrutura da API};
+	\node (resroute) [wbsblock, below = of apistruct] {Criar rotas para recursos};
+	\node (wa-tests) [wbsblock, below = of resroute] {Testes};
 	% Aplicativo do motorista
-	\node (drivers-app) [wbsblock, right = of database, xshift=1.5em] {Aplicativo do motorista};
+	\node (drivers-app) [wbsblock, right = of webapi, xshift=1.5em] {Aplicativo do motorista};
 	\node (authentication) [wbsblock, below right = of drivers-app, xshift=-6em] {Autenticação};
 	\node (spot-reservation) [wbsblock, below = of authentication] {Reserva de vagas};
 	\node (parking-list) [wbsblock, below = of spot-reservation] {Lista de estacionamentos};
 	\node (payment-process) [wbsblock, below = of parking-list] {Processamento de pagamento};
 	\node (user-management) [wbsblock, below = of payment-process] {Gerência de usuário};
+	\node (am-tests) [wbsblock, below = of user-management] {Testes};
 	% Aplicativo do estacionamento
 	\node (parking-app) [wbsblock, right = of drivers-app, xshift=1.5em] {Aplicativo do estacionamento};
 	\node (user-auth-management) [wbsblock, below right = of parking-app, xshift=-6em] {Autenticação e gerência de usuários};
@@ -50,36 +57,41 @@
 	\node (parking-configuration) [wbsblock, below = of automation-integration] {Configurações do estacionamento};
 	\node (reports) [wbsblock, below left = of parking-configuration, xshift=6em] {Relatórios};
 	\node (DETRAN-integration) [wbsblock, below = of reports] {Integração com DETRAN};
-	% Auditoria
-	\node (auditing) [wbsblock, right = of parking-app, xshift=1.5em] {Auditoria};
-	\node (unit-test) [wbsblock, below right = of auditing, xshift=-6em] {Testes unitários};
-	\node (integration-test) [wbsblock, below = of unit-test] {Testes de integração};
-	% Encerramento
-	\node (closure) [wbsblock, right = of auditing, xshift=1.5em] {Encerramento};
+	\node (ae-tests) [wbsblock, below = of DETRAN-integration] {Testes};
+	% Garantia da qualidade
+	\node (quality-assurance) [wbsblock, right = of parking-app, xshift=1.5em] {Auditoria da qualidade};
 	% WBS root
-	\node (free-spot) [wbsblock, above = of drivers-app, yshift=4em] {Vaga livre};
+	\node (free-spot) [wbsblock, above = of webapi, yshift=4em] {Vaga livre};
 
 	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (project-management);
 	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (infrastructure);
-	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (database);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (webapi);
 	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (drivers-app);
 	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (parking-app);
-	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (auditing);
-	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (closure);
+	\path [simpleline] (free-spot.south) |- ++(0,-1cm) -| (quality-assurance);
 
+	\path [simpleline] (project-management.215) |- (initiation);
 	\path [simpleline] (project-management.215) |- (planning);
 	\path [simpleline] (project-management.215) |- (scope-approval);
 	\path [simpleline] (project-management.215) |- (project-monitoring);
+	\path [simpleline] (project-management.215) |- (closure);
 
 	\path [simpleline] (infrastructure.215) |- (dev-env);
 	\path [simpleline] (infrastructure.215) |- (test-env);
 	\path [simpleline] (infrastructure.215) |- (prod-env);
+
+	\path [simpleline] (webapi.215) |- (cloudplat);
+	\path [simpleline] (webapi.215) |- (database);
+	\path [simpleline] (webapi.215) |- (apistruct);
+	\path [simpleline] (webapi.215) |- (resroute);
+	\path [simpleline] (webapi.215) |- (wa-tests);
 
 	\path [simpleline] (drivers-app.215) |- (authentication);
 	\path [simpleline] (drivers-app.215) |- (spot-reservation);
 	\path [simpleline] (drivers-app.215) |- (parking-list);
 	\path [simpleline] (drivers-app.215) |- (payment-process);
 	\path [simpleline] (drivers-app.215) |- (user-management);
+	\path [simpleline] (drivers-app.215) |- (am-tests);
 
 	\path [simpleline] (parking-app.215) |- (user-auth-management);
 	\path [simpleline] (parking-app.215) |- (client-management);
@@ -87,13 +99,12 @@
 	\path [simpleline] (parking-app.215) |- (parking-management);
 	\path [simpleline] (parking-app.215) |- (reports);
 	\path [simpleline] (parking-app.215) |- (DETRAN-integration);
+	\path [simpleline] (parking-app.215) |- (ae-tests);
+
 	\path [simpleline] (parking-management.215) |- (garage-register);
 	\path [simpleline] (parking-management.215) |- (spot-state);
 	\path [simpleline] (parking-management.215) |- (automation-integration);
 	\path [simpleline] (parking-management.215) |- (parking-configuration);
-
-	\path [simpleline] (auditing.215) |- (unit-test);
-	\path [simpleline] (auditing.215) |- (integration-test);
 
 \end{tikzpicture}
 \caption{Estrutura analítica do projeto.}
