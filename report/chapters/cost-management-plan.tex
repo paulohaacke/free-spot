@@ -25,26 +25,26 @@
 \chapter{Plano de gerenciamento dos custos}
 \label{ch:cost-management-plan}
 
-\todo[inline,color=red]{Revisar plano de gerenciamento dos custos.}
+%\todo[inline,color=red]{Revisar plano de gerenciamento dos custos.}
 
-\section{Visão geral}
+%\section{Visão geral}
 
-O plano de gerenciamento dos custos descreve como os custos do projeto serão planejados, estruturados e controlados fornecendo detalhes sobre os processos e ferramentas utilizados para gerenciar questões relacionadas a custos.
+%O plano de gerenciamento dos custos descreve como os custos do projeto serão planejados, estruturados e controlados fornecendo detalhes sobre os processos e ferramentas utilizados para gerenciar questões relacionadas a custos.
 
-Os processos e ferramentas descritos neste plano orientam o gerenciamento das atividades vistas na figura \ref{fig:cost-management-plan-flowchart}.
+%Os processos e ferramentas descritos neste plano orientam o gerenciamento das atividades vistas na figura \ref{fig:cost-management-plan-flowchart}.
 
-\begin{figure}[h]
-	\centering
-	\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
-		\node (estimate) [process] {Estimar Custos};
-		\node (determine-budget) [process, right= of estimate] {Determinar Orçamento};
-		\node (control-costs) [process, right= of determine-budget] {Controlar Custos};
-		\path [line] (estimate) -- (determine-budget);
-		\path [line] (determine-budget) -- (control-costs);
-	\end{tikzpicture}
-	\caption{Processo para gerenciamento dos custos do projeto.}
-	\label{fig:cost-management-plan-flowchart}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
+%		\node (estimate) [process] {Estimar Custos};
+%		\node (determine-budget) [process, right= of estimate] {Determinar Orçamento};
+%		\node (control-costs) [process, right= of determine-budget] {Controlar Custos};
+%		\path [line] (estimate) -- (determine-budget);
+%		\path [line] (determine-budget) -- (control-costs);
+%	\end{tikzpicture}
+%	\caption{Processo para gerenciamento dos custos do projeto.}
+%	\label{fig:cost-management-plan-flowchart}
+%\end{figure}
 
 \section{Descrição dos processos de gerenciamento de custos}
 
@@ -53,7 +53,7 @@ Os processos e ferramentas descritos neste plano orientam o gerenciamento das at
 \begin{itemize}
 	% Estimar custos
 	% Ver custo da qualidade (PMBOK 8.1.2.2)
-	\item Utilizando-se o método \"bottom-up\" devem ser estimados os custos para cada uma das atividades presentes na EAP.
+	\item Utilizando-se o método \foreign{bottom-up} devem ser estimados os custos para cada uma das atividades presentes na EAP.
 	\item A estimativativa de custos será conduzida pelo gerente de projetos e apoiada pela opinião especializada da equipe técnica.
 	\item Custos que possuam incertezas e riscos significantes deverão utilizar a análise de PERT, conforme equação \ref{eq:cost-pert}.
 	      \begin{equation}\label{eq:cost-pert}
@@ -79,57 +79,80 @@ Os processos e ferramentas descritos neste plano orientam o gerenciamento das at
 
 O orçamento, assim como o uso de reservas gerenciais, do projeto será avaliado semanalmente pelo gerente do projeto.
 
+\section{Orçamento do projeto}
+
+\todo[inline,color=red]{Substituir maximumBudget por budget correta.}
+
+O orçamento do projeto é de \maximumBudget{}, o que abrange os gastos internos com recursos, aquisições e reservas gerenciais.
+
 \section{Taxa padrão dos recursos}
 
 \begin{longtable}{ p{0.2\textwidth} p{0.2\textwidth} l l l }
 	\toprule
-	\textbf{Recurso}      & \textbf{Cargo}             & \textbf{Experência} & \textbf{Tipo} & \textbf{Taxa Padrão} \\
+	\textbf{Recurso}      & \textbf{Cargo}              & \textbf{Experência} & \textbf{Tipo} & \textbf{Taxa Padrão} \\
 	\midrule
-	\ceoName{}            & CEO                        & N/A                  & Trabalho      & R\$ 0,00/hr           \\
+	\ceoName{}            & CEO                         & N/A                  & Trabalho      & R\$ 0,00/hr           \\
 	\midrule
-	\projectManagerName{} & Gerente do projeto         & Pleno                & Trabalho      & R\$ 40,00/hr          \\
+	\projectManagerName{} & Gerente do projeto          & Pleno                & Trabalho      & R\$ 61,00/hr          \\
 	\midrule
-	\mobDevOneName{}      & Desenvolvedor              & Pleno                & Trabalho      & R\$ 30,00/hr          \\
+	\mobDevOneName{}      & Desenvolvedor mobile        & Pleno                & Trabalho      & R\$ 42,00/hr          \\
 	\midrule
-	\mobDevTwoName{}      & Desenvolvedor              & Pleno                & Trabalho      & R\$ 30,00/hr          \\
+	\mobDevTwoName{}      & Desenvolvedor mobile        & Pleno                & Trabalho      & R\$ 42,00/hr          \\
 	\midrule
-	\frontWebDevName{}    & Desenvolvedor              & Pleno                & Trabalho      & R\$ 25,00/hr          \\
+	\frontWebDevName{}    & Desenvolvedor web front-end & Pleno                & Trabalho      & R\$ 38,00/hr          \\
 	\midrule
-	\backWebDevName{}     & Desenvolvedor              & Pleno                & Trabalho      & R\$ 30,00/hr          \\
+	\backWebDevName{}     & Desenvolvedor web back-end  & Pleno                & Trabalho      & R\$ 43,00/hr          \\
 	\midrule
-	\softEngName{}        & Engenheiro de software     & Sênior              & Trabalho      & R\$ 40,00/hr          \\
+	\softEngName{}        & Engenheiro de software      & Sênior              & Trabalho      & R\$ 61,00/hr          \\
 	\midrule
-	\sysDevName{}         & Desenvolvedor              & Pleno                & Trabalho      & R\$ 30,00/hr          \\
+	\sysDevName{}         & Desenvolvedor de sistemas   & Pleno                & Trabalho      & R\$ 37,00/hr          \\
 	\midrule
-	\solArcName{}         & Arquiteto de solução     & Pleno                & Trabalho      & R\$ 30,00/hr          \\
+	\solArcName{}         & Arquiteto de solução      & Pleno                & Trabalho      & R\$ 43,00/hr          \\
 	\midrule
-	\softArcName{}        & Arquiteto de software      & Pleno                & Trabalho      & R\$ 30,00/hr          \\
+	\softArcName{}        & Arquiteto de software       & Pleno                & Trabalho      & R\$ 42,00/hr          \\
 	\midrule
-	\elecEngName{}        & Engenheiro eletricista     & Pleno                & Trabalho      & R\$ 40,00/hr          \\
+	\elecEngName{}        & Engenheiro eletricista      & Pleno                & Trabalho      & R\$ 50,00/hr          \\
 	\midrule
-	\testAnalOneName{}    & Analista de testes         & Sênior              & Trabalho      & R\$ 25,00/hr          \\
+	\testAnalOneName{}    & Analista de testes          & Sênior              & Trabalho      & R\$ 39,00/hr          \\
 	\midrule
-	\testAnalTwoName{}    & Analista de testes         & Pleno                & Trabalho      & R\$ 25,00/hr          \\
+	\testAnalTwoName{}    & Analista de testes          & Pleno                & Trabalho      & R\$ 39,00/hr          \\
 	\midrule
-	\dbAnalName{}         & Analista de banco de dados & Sênior              & Trabalho      & R\$ 30,00/hr          \\
+	\dbAnalName{}         & Analista de banco de dados  & Sênior              & Trabalho      & R\$ 60,00/hr          \\
 	\bottomrule
 	\caption{Taxa padrão dos recursos.}
 	\centering
 \end{longtable}
 
+\section{Custos do projeto por atividade}
 
 
+O documento descrevendo o custo de cada atvidade no projeto encontra-se no apêndice \ref{ch:activities-cost}.
 \section{Reservas gerenciais}
 
-Além da linha de base de custos, o gerente do projeto contará com uma reserva gerencial de 15\% sobre o valor da linha de base, a qual estará diponível em casos de riscos desconhecidos e atividades não identificadas no escopo.
+Além da linha de base de custos, o gerente do projeto contará com uma reserva gerencial de 10\% sobre o valor da linha de base, a qual estará diponível em casos de riscos desconhecidos e atividades não identificadas no escopo.
 
 \section{Autonomias}
 
 O gerente do projeto possui autonomia total para uso da reserva contingencial.
 
-O gerente do projeto possui autonomia parcial sobre o uso da reserva gerencial em diversas ocorrências. Para cada situação em que haja necessidade de utilizar a reserva gerencial o gerente do projeto possui autonomia conforme descrito na tabela \ref{tab:project-manager-cost-autonomy}.
+O gerente do projeto possui autonomia sobre o uso da reserva gerencial em diferentes eventos. Para cada evento em que haja necessidade de utilizar a reserva gerencial o gerente do projeto possui autonomia conforme descrito na tabela \ref{tab:project-manager-cost-autonomy}.
 
-\todo[inline,color=red]{Tabela de autonomias do gerente de projetos no plano de custos.}
+\begin{table}[H]
+	\begin{tabularx}{\textwidth}{| c | c | X | X |}
+		\hline
+		\textbf{Uso da Reserva Gerencial} & \textbf{Autonomia}                                   \\
+		\hline
+		Até R\$ 3.000,00                 & Gerente do projeto                                   \\
+		\hline
+		Até R\$ 7.000,00                 & Gerente do projeto com autorização do patrocinador \\
+		\hline
+		Acima de R\$ 7.000,00             & Apenas o patrocinador                                \\
+		\hline
+	\end{tabularx}
+	\caption{Autonomias do gerente de projetos sobre a reserva gerencial.}
+	\centering
+	\label{tab:project-manager-cost-autonomy}
+\end{table}
 
 A reserva gerencial pode ser utilizada de forma cumulativa. Quando for atingido o limite de 50\% de uso da reserva gerencial o gerente do projeto deve informar o patrocinador.
 
