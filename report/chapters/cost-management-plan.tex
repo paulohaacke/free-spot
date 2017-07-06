@@ -48,8 +48,6 @@
 
 \section{Descrição dos processos de gerenciamento de custos}
 
-\todo[inline,color=red]{Revisar descrição dos processos de gerenciamento de custos}
-
 \begin{itemize}
 	% Estimar custos
 	% Ver custo da qualidade (PMBOK 8.1.2.2)
@@ -71,8 +69,8 @@
 	      % Controlar custos
 	\item A avaliação dos custos será feito por meio da comparação entre 3 estimativas: valor planejado, valor real e valor agregado.
 	\item O controle dos custos será feito tomando como base a estimativa de valor agregado (ver apêndice \ref{project-monitoring-report}).
+	\item Custos recorrentes, como a contratação de um servidor em nuvem, serão considerados custos indiretos e não entrarão no orçamentos deste projeto.
 \end{itemize}
-\todo[inline,color=red]{Revisar se custos indiretos serão incluídos no projeto.}
 
 \section{Frequência de avaliação do orçamento do projeto e das reservas gerenciais}
 
@@ -80,9 +78,7 @@ O orçamento, assim como o uso de reservas gerenciais, do projeto será avaliado
 
 \section{Orçamento do projeto}
 
-\todo[inline,color=red]{Substituir maximumBudget por budget correta.}
-
-O orçamento do projeto é de \maximumBudget{}, o que abrange os gastos internos com recursos, aquisições e reservas gerenciais.
+O orçamento do projeto é de \realBudget{}, o que abrange os gastos internos com recursos, aquisições e reservas gerenciais.
 
 \section{Taxa padrão dos recursos}
 
@@ -116,9 +112,13 @@ O orçamento do projeto é de \maximumBudget{}, o que abrange os gastos internos
 	\centering
 \end{longtable}
 
-\section{Custos do projeto por atividade}
+\section{Custos dos recursos do projeto por atividade}
 
 O documento descrevendo o custo de cada atividade no projeto encontra-se no apêndice \ref{ch:activities-cost}.
+
+\section{Aquisições}
+
+Conforme descrito no plano de gerenciamento das aquisições o projeto, estima-se que o projeto terá um gasto de \procurementBudget{} para a contratação do servidor em nuvem durante o período do projeto. Este valor estará incluso no orçamento do projeto.
 
 \section{Reservas gerenciais}
 
@@ -130,8 +130,9 @@ O gerente do projeto possui autonomia total para uso da reserva contingencial.
 
 O gerente do projeto possui autonomia sobre o uso da reserva gerencial em diferentes eventos. Para cada evento em que haja necessidade de utilizar a reserva gerencial o gerente do projeto possui autonomia conforme descrito na tabela \ref{tab:project-manager-cost-autonomy}.
 
-\begin{table}[H]
-	\begin{tabularx}{\textwidth}{| c | c | X | X |}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{| l | l |}
 		\hline
 		\textbf{Uso da Reserva Gerencial} & \textbf{Autonomia}                                   \\
 		\hline
@@ -141,9 +142,8 @@ O gerente do projeto possui autonomia sobre o uso da reserva gerencial em difere
 		\hline
 		Acima de R\$ 7.000,00             & Apenas o patrocinador                                \\
 		\hline
-	\end{tabularx}
+	\end{tabular}
 	\caption{Autonomias do gerente de projetos sobre a reserva gerencial.}
-	\centering
 	\label{tab:project-manager-cost-autonomy}
 \end{table}
 

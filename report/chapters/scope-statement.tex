@@ -11,20 +11,17 @@
 \section{Equipe do projeto}
 
 \begin{itemize}
-	\item Gerente de projeto
-	\item Desenvolvedor mobile 1
-	\item Desenvolvedor mobile 2
-	\item Desenvolvedor web front-end
-	\item Desenvolvedor web back-end
-	\item Engenheiro de software
-	\item Arquiteto de solução
-	\item Arquiteto de software
-	\item Engenheiro eletricista
-	\item Analista de Testes 1
-	\item Analista de Testes 2
-	\item Analista de Banco de Dados 
-	\item Desenvolvedor de Sistema
-	\item Patrocinador
+	\item \projectManagerName{} - Gerente de projeto
+	\item \mobDevOneName{} - Desenvolvedor mobile 1
+	\item \mobDevTwoName{} - Desenvolvedor mobile 2
+	\item \frontWebDevName{} - Desenvolvedor web front-end
+	\item \backWebDevName{} - Desenvolvedor web back-end
+	\item \softEngName{} - Engenheiro de software
+	\item \softArcName{} - Arquiteto de software
+	\item \testAnalOneName{} - Analista de Testes 1
+	\item \testAnalTwoName{} - Analista de Testes 2
+	\item \dbAnalName{} - Analista de Banco de Dados 
+	\item \projectSponsorName{} - Patrocinador
 \end{itemize}
 
 % Já estão presentes no termo de abertura, verificar necessidade de estarem aqui também
@@ -36,26 +33,17 @@
 
 O escopo deste projeto inclui a especificação de duas soluções de software. A primeira prevista através de um aplicativo para smartphone focado no cliente de estacionamentos privados, chamaremos esta solução de \userMobileAppName{}. A segundo solução prevê a criação de um aplicativo web focado no uso do dono ou gerente de estacionamentos privados, referenciaremos esta solução pelo nome \parkingWebAppName{}.
 
-Além das soluções de software entra no escopo deste projeto a especificação de dois tipos de projetos de implantação do sistema de sensores.
-
 A seguir estão especificados os requisitos que deverão ser implementados para entregar esta solução.
-
-%\subsection{Requisitos de negócio}
-
-%\subsection{Requisitos das partes interessadas}
 
 \subsection{Requisitos de solução}
 
 \subsubsection{Requisitos funcionais}
-
-%\todo[inline,color=orange]{Revisar requisitos funcionais.}
 
 \begin{itemize}
 		% Android App
 	\item Qualquer pessoa deve poder criar um conta usando o aplicativo \projectName{}. Para se registrar o consumidor deve entrar com seu endereço de e-mail, uma senha, o primeiro e último nomes, a placa do veículo e um cartão de crédito válido antes que possam fazer qualquer reserva.
 	\item Um consumidor registrado pode realizar reservas nos estacionamentos listados pelo aplicativo, contanto que realize o pagamento de forma antecipada.
 	\item Um consumidor registrado deve ocupar sua vaga no estacionamento para que uma reserva seja considerada realizada.
-	\item Uma câmera deve reconhecer a placa do carro na entrada, e entregar um bilhete contendo a identificação da vaga disponibilizada.
 	\item Um consumidor pode visualizar se existem vagas nos estacionamentos cadastrados.
 	\item O usuário deve ter a possibilidade de verificar o dinheiro gasto até o momento.
 	\item O sistema deve ser capaz de processar pagamentos.
@@ -67,18 +55,9 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item O sistema deve processar o pagamento baseado no tempo em que o usuário ficou estacionado.
 	\item O sistema deve oferecer opções para gerenciar o estacionamento: definir preço por hora ou mês, multas entre outras definições sobre as características do mesmo.
 	\item O sistema deve identificar tendências em relação a ocupação do estacionamento.
-	\item %O sistema deve possuir integração com aplicativos web e mobile.
+	%\item O sistema deve possuir integração com aplicativos web e mobile.
 	\item O sistema deve estar integrado com o banco de dados do detran para buscar informações de licença do motorista.
 	\item O administrador do sistema pode verificar a ocupação das vagas no estacionamento.
-	    % Sistema de sensores
-	\item O sistema deve escanear e reconhecer placas veiculares.
-	\item O sistema deve reconhecer usuários cadastrados através da placa do veículo.
-	\item O sistema de sensores deve oferecer um software que centralize as informações e as envie de forma segura para a nuvem.
-	\item Caso o estacionamento esteja sem acesso a internet deve existir a capacidade de guardar as informações e enviá-las para a nuvem assim que o acesso for reestabelecido.
-	\item Caso o sistema de sensores identifique um usuário que já tenha realizado o pagamento é preciso abrir a cancela sem qualquer interação com o usuário.
-	\item Problemas na identificação da placa podem ocorrer, nestes casos é preciso oferecer um sistema para interação manual.
-	\item Caso um cliente registrado chegue ao estacionamento e não existam vagas disponíveis o sistema deve avisar o mesmo, em caso de reservas realizadas que não poderão ser realizadas o sistema deve devolver o dinheiro para o cartão de crédito do mesmo.
-    \item Deve existir um sistema de \foreign{overbooking} de modo a permitir a máxima ocupação do estacionamento.
 \end{itemize}
 
 \subsubsection{Requisitos não funcionais}
@@ -86,33 +65,19 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 \begin{itemize}
 	\item Utilizar base de dados em cloud.
 	\item Utilizar um framework multi-plataforma para o desenvolvimento do aplicativo para dispositivos móveis.
+	\item A solução deverá utilizar uma plataforma em nuvem para o banco de dados e servidor web.
+	\item O aplicativo móvel deverá rodar sobre a plataforma Android versão 4.0 ou superior.
 \end{itemize}
-
-%\todo[inline,color=orange]{Criar requisitos não funcionais.}
-
-%\subsubsection{Requisitos tecnológicos e de conformidade com padrões}
-
-%\subsubsection{Requisitos de suporte e treinamento}
-
-%\subsubsection{Requisitos de qualidade}
-
-%\subsection{Requisitos do projeto}
-
-%\subsubsection{Níveis de serviço, desempenho, segurança, conformidade, etc...}
-
-%\subsubsection{Critérios de aceitação}
 
 \subsection{Premissas}
 
 \begin{itemize}
 	\item O cliente irá manter o registro de seu perfil, incluindo a placa do veículo, devidamente atualizados.
-    \item O sistema de leitura de placas irá sempre identificar de maneira correta a placa dos veículo, retornando erro caso a mesma não possa ser identificada, o que pode acontecer devido a sujeira ou falta de placa.
     \item Em casos que o sistema não possa acomodar o usuário ou o usuário não concorde com os termos de uso e condições do sistema, o usuário será aconselhado a deixar o estacionamento. Nestes casos assume-se que o usuário sempre obedecerá e sairá do estacionamento.
     \item Um consumidor estaciona sempre na vaga correta, e nunca ocupará duas vagas ao mesmo tempo.
-    \item Os sensores de vagas sempre funcionarão de maneira correta. Os sensores reconhecerão uma vaga como ocupada apenas quando houver um carro na vaga.
+    \item Os sistemas de detecção de ocupação de vagas sempre funcionarão de maneira correta. Os sistemas reconhecerão uma vaga como ocupada apenas quando houver um carro na vaga.
     \item O usuário sairá do estacionamento imediatamente após retirar seu carro da vaga utilizada.
     % From project-charter
-    \item A equipe está motivida para trabalhar no projeto.
 	\item Os estacionamentos privados de Porto Alegre estão prontos para aderir a este tipo de tecnologia.
 	\item Utilizar base de dados em cloud.
 	\item Utilizar um framework multi-plataforma para o desenvolvimento do aplicativo para dispositivos móveis.
@@ -126,8 +91,6 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	%\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
 	\item Data de conclusão do projeto: \maximumDeadline{}.
 	\item Investimentos em infraestrutura estão fora do escopo.
-	\item A solução deverá utilizar uma plataforma em nuvem para o banco de dados e servidor web.
-	\item O aplicativo móvel deverá rodar sobre a plataforma Android versão 4.0 ou superior.
 	\item O aplicativo web para o estacionamento deverá ser acessado através dos seguintes navegadores: firefox e chrome.
 \end{itemize}
 
@@ -148,7 +111,7 @@ Verificar apêndice \ref{ch:wbs-dictionary}.
 
 \section{Orçamento do projeto}
 
-O orçamento previsto pelo projeto é de \maximumBudget{}, incluindo reservas gerenciais. Despesas com pessoal e recursos internos estão incluídas dentro deste orçamento.
+O orçamento previsto pelo projeto é de \maximumBudget{}, incluindo reservas gerenciais. Despesas com pessoal estão inclusas dentro deste orçamento.
 
 \section{Principais entregas e critérios de aceitação}
 
@@ -159,21 +122,25 @@ A tabela \ref{tab:entregas} descreve os principais marcos de entrega do projeto.
 		\hline
 		\textbf{Marco}                               & \textbf{Critério de Aceitação}                     & \textbf{Prazo} \\
 		\hline
-		Planejamento Realizado & Planos de Projeto Criados & 20/06/2017 \\
+		Planejamento realizado & Planos de projeto criados & 20/06/2017 \\
 		\hline
-		Ambiente de Desenvolvimento Preparado & Ambiente para desenvolvimento do aplicativo móvel, web e do software de centralização preparados & 23/06/2017 \\
+		Ambiente de desenvolvimento preparado & Ambiente para desenvolvimento do aplicativo móvel, web e do software de centralização preparados & 13/06/2017 \\
 		\hline
-		Ambiente de Testes Preparado & Ambiente para testes para o aplicativo móvel, web e software de centralização preparados & 04/07/2017 \\
+		Ambiente de testes preparado & Ambiente para testes para o aplicativo móvel, web e software de centralização preparados & 15/06/2017 \\
 		\hline
-		Ambiente de Produção Preparado & Ambiente de produção para o aplicativo móvel, web e o software de centralização preparados & 25/07/2017 \\
+		Ambiente de produção preparado & Ambiente de produção para o aplicativo móvel, web e o software de centralização preparados & 19/07/2017 \\
 		\hline
-		Aplicativo do Motorista Pronto & Aplicativo do motorista desenvolvido e devidamente testado & 08/08/2017 \\
+		Plataforma de nuvem contratada & Selecionada e contratada o servidor em nuvem & 22/06/2017 \\
 		\hline
-		Aplicativo do Estacionamento Pronto & Aplicativo do estacionamento desenvolvido e devidamente testado & 06/09/2017 \\
+		Banco de dados criado & Banco de dados planejado e criado & 12/07/2017\\
 		\hline
-		Software de Centralização Pronto & Software de centralização desenvolvido e devidamente testado & 16/08/2017 \\
+		Web API pronta & Web API desenvolvida e devidamente testada & 29/08/2017 \\
 		\hline
-		Projeto Finalizado & Projeto executado, entregas realizadas, encerramento realizado e aprovado & 30/11/2017 \\
+		Aplicativo do motorista pronto & Aplicativo do motorista desenvolvido e devidamente testado & 25/12/2017 \\
+		\hline
+		Aplicativo do estacionamento pronto & Aplicativo do estacionamento desenvolvido e devidamente testado & 20/10/2017 \\
+		\hline
+		Projeto Finalizado & Projeto executado, entregas realizadas, encerramento realizado e aprovado & 01/01/2018 \\
 		\hline
 	\end{tabularx}
 	\centering
