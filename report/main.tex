@@ -27,6 +27,8 @@
 \usepackage[brazilian,hyperpageref]{backref}
 \usepackage[alf]{abntex2cite}
 
+\usepackage{amssymb}
+\usepackage{multirow}
 \usepackage{float}
 \usepackage[obeyFinal,colorinlistoftodos,portuguese]{todonotes}
 \usepackage{ifdraft}
@@ -41,7 +43,7 @@
 
 % Makes figure count by section
 %\usepackage{chngcntr}
-%\counterwithin{figure}{section}
+%\counterwithin{figure}{chapter}
 
 \usepackage{styles/vagalivre}
 
@@ -288,6 +290,8 @@
 		% - "Não há nada permanente, exceto as mudanças." Heráclito, 500 a.C.
 		% - "Lost time is never found again." Benjamin Franklin
 		% - "Se eu tivesse oito horas para derrubar uma árvore, passaria seis afiando meu machado." Abraham Lincoln
+		% - "To be honest, the fact that people trust you gives you a lot of power over people. Having another person's trust is more powerful than all other management techniques put together." - Linus Torvalds
+		%
 	\end{flushright}
 \end{epigrafe}
 % ---
@@ -403,6 +407,8 @@
 	\include{chapters/quality-checklists}
 
 	\include{chapters/quality-metrics}
+
+	\include{chapters/raci-matrix}
 
 	\include{chapters/team-evaluation-form}
 

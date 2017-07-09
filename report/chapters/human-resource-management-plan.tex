@@ -16,7 +16,7 @@
 \chapter{Plano de gerenciamento dos recursos humanos}
 \label{ch:human-resource-management-plan}
 
-\section{Visão geral}
+%\section{Visão geral}
 
 %\todo[inline,color=red]{Visão geral do plano de RH.}
 
@@ -27,36 +27,40 @@ O organograma do projeto é apresentado na figura \ref{fig:organization-chart}.
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
-		\node (sponsor) [process] {Patrocinador};
-		\node (project-manager) [process, below= of sponsor] {Gerente do Projeto};
-		% Left side
-		\node (mobile-dev-one) [process, below left= of project-manager] {Desenvolvedor mobile 1};
-		\node (mobile-dev-two) [process, below= of mobile-dev-one] {Desenvolvedor mobile 2};
-		\node (front-end-web-dev) [process, below= of mobile-dev-two] {Desenvolvedor web front-end};
-		\node (back-end-web-dev) [process, below= of front-end-web-dev] {Desenvolvedor web back-end};
-		\node (software-engineer) [process, below= of back-end-web-dev] {Engenheiro de software};
-		\node (system-developer) [process, below= of software-engineer] {Desenvolvedor de sistema};
-		% Right side
-		\node (solution-architect) [process, below right= of project-manager] {Arquiteto de solução};
-		\node (software-architect) [process, below= of solution-architect] {Arquiteto de software};
-		\node (eletric-engineer) [process, below= of software-architect] {Engenheiro eletricista};
-		\node (test-analyst-1) [process, below= of eletric-engineer] {Analista de testes 1};
-		\node (test-analyst-2) [process, below= of test-analyst-1] {Analista de testes 2};
-		\node (database-analyst) [process, below= of test-analyst-2] {Analista de banco de dados};
+		\node (mobile-dev-one) [process] {Desenvolvedor mobile 1};
+		\node (mobile-dev-two) [process, right= of mobile-dev-one] {Desenvolvedor mobile 2};
+		\node (front-end-web-dev) [process, right= of mobile-dev-two] {Desenvolvedor web front-end};
+		\node (back-end-web-dev) [process, right= of front-end-web-dev] {Desenvolvedor web back-end};
+		\node (test-analyst-1) [process, below= of back-end-web-dev, xshift=-5.25em] {Analista de testes 1};
+		\node (test-analyst-2) [process, left= of test-analyst-1] {Analista de testes 2};
+		\node (database-analyst) [process, left= of test-analyst-2] {Analista de banco de dados};
 
-		\path [line] (sponsor) -- (project-manager);
-		\path [line] (project-manager) |- (mobile-dev-one);
-		\path [line] (project-manager) |- (mobile-dev-two);
-		\path [line] (project-manager) |- (front-end-web-dev);
-		\path [line] (project-manager) |- (back-end-web-dev);
-		\path [line] (project-manager) |- (software-engineer);
-		\path [line] (project-manager) |- (system-developer);
-		\path [line] (project-manager) |- (solution-architect);
-		\path [line] (project-manager) |- (software-architect);
-		\path [line] (project-manager) |- (eletric-engineer);
-		\path [line] (project-manager) |- (test-analyst-1);
-		\path [line] (project-manager) |- (test-analyst-2);
-		\path [line] (project-manager) |- (database-analyst);
+		\node (software-engineer) [process, above= of database-analyst, yshift=6em] {Engenheiro de software};
+		\node (software-architect) [process, above= of test-analyst-1, yshift=6em] {Arquiteto de software};
+
+		\node (project-manager) [process, above right= of software-engineer] {Gerente do Projeto};
+
+		\node (sponsor) [process, above= of project-manager] {Patrocinador};
+
+		\path [simpleline] (sponsor) -- (project-manager);
+		\path [simpleline] (project-manager) |- ++(0,-3em) -| (software-engineer);
+		\path [simpleline] (project-manager) |- ++(0,-3em) -| (software-architect);
+
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (mobile-dev-one);
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (mobile-dev-two);
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (front-end-web-dev);
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (back-end-web-dev);
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (test-analyst-1);
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (test-analyst-2);
+		\path [simpleline] (software-engineer) |- ++(0,-3em) -| (database-analyst);
+
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (mobile-dev-one);
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (mobile-dev-two);
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (front-end-web-dev);
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (back-end-web-dev);
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (test-analyst-1);
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (test-analyst-2);
+		\path [simpleline] (software-architect) |- ++(0,-3em) -| (database-analyst);
 	\end{tikzpicture}
 	\caption{Organograma do projeto.}
 	\label{fig:organization-chart}
@@ -68,6 +72,10 @@ O organograma do projeto é apresentado na figura \ref{fig:organization-chart}.
 	\toprule
 	\thead[c]{\textbf{No}} & \thead[c]{\textbf{Nome}} & \thead[c]{\textbf{Área}} & \thead[c]{\textbf{E-mail}} & \thead[c]{\textbf{Telefone}} \\
 	\midrule
+	\endhead
+	\multicolumn{5}{c}{{\textit{Continua na próxima página.}}} \\
+	\endfoot
+	\endlastfoot
 	1                      & \ceoName{}               & CEO                       & \email{}                   & \phone{}                     \\
 	2                      & \projectManagerName{}    & Gerente do Projeto        & \email{}                   & \phone{}                     \\
 	3                      & \mobDevOneName{}         & Membro da equipe          & \email{}                   & \phone{}                     \\
@@ -86,19 +94,7 @@ O organograma do projeto é apresentado na figura \ref{fig:organization-chart}.
 
 \section{Matriz de responsabilidades}
 
-\todo[inline,color=red]{Preencher matriz de responsabilidades}
-
-\begin{longtable}{ l | p{0.025\textwidth} p{0.025\textwidth}  p{0.025\textwidth}  p{0.025\textwidth}  p{0.025\textwidth} p{0.025\textwidth} p{0.025\textwidth} p{0.025\textwidth}  p{0.025\textwidth}  p{0.025\textwidth}  p{0.025\textwidth} p{0.025\textwidth} p{0.025\textwidth} p{0.025\textwidth} }
-	\toprule
-	\textbf{Atividade} & \rot{\textbf{\parbox{6cm}{Patrocinador}}} & \rot{\textbf{\parbox{6cm}{Gerente do Projeto}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor mobile 1}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor mobile 2}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor web front-end}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor web back-end}}} & \rot{\textbf{\parbox{6cm}{Engenheiro de software}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor de sistema}}} & \rot{\textbf{\parbox{6cm}{Arquiteto de solução}}} & \rot{\textbf{\parbox{6cm}{Arquiteto de software}}} & \rot{\textbf{\parbox{6cm}{Engenheiro eletricista}}} & \rot{\textbf{\parbox{6cm}{Analista de testes 1}}} & \rot{\textbf{\parbox{6cm}{Analista de testes 2}}} & \rot{\textbf{\parbox{6cm}{Analista de banco de dados}}} \\
-	\midrule
-	Atividade 1 & R &   &   &   &   &   &   &   &   &   &   &   &  &   \\
-	Atividade 2 & A &   &   &   &   &   &   &   &   &   &   &   &  &   \\
-	Atividade 3 &   & R & A & R &   &   &   &   &   &   &   &   &  &   \\
-	\bottomrule
-	\caption{Matriz de responsabilidades.}
-	\centering
-\end{longtable}
+A matriz de responsabilidades pode ser encontrada no apêndice \ref{raci-matrix}.
 
 \section{Novos recursos, re-alocação e substituição dos membros do time}
 
@@ -106,23 +102,23 @@ O gerente de projeto deve buscar manter a permanência de todos integrantes da e
 
 Em caso de re-alocação de um profissional integrante da equipe do projeto, caberá ao gerente do projeto, juntamente com o restante da equipe do projeto, encontrar e identificar um substituto em comum acordo com as diretrizes do projeto e a função a ser exercida. 
 
-Cabe ao patrocinador autorizar a contratação de novos recursos.
+A contratação de novos recursos deverá ser previamente autorizada pelo patrocinador. Os custos de novas contratações deverão ser absorvidos pelas reservas gerenciais do projeto.
 
 \section{Treinamento}
 
 Não estão previstos treinamentos para a equipe do projeto. O gerente de projeto deve autorizar qualquer necessidade de treinamento, de modo que os custos serão alocados dentro das reservas gerenciais de acordo com as orientações do plano de gerenciamento de custos (ver capítulo \ref{ch:cost-management-plan}).
 
+\section{Segurança}
+
+As atividades realizadas durante o projeto deverá seguir e estar de acordo com os regulamentos governamentais e orgãos reguladores, as convenções sindicais e as normas internas da empresa.
+
+As normas de segurança estipuladas para cada área de trabalho deverá ser seguida por todos os colaboradores, empresas e consultorias contratados. O não cumprimento de normas de segurança deverá gerar as devidas punições.
+
 \section{Avaliação de resultados}
 
-A avaliação de resultados será realizada sobre a equipe do projeto e de forma individual. 
+A avaliação de resultados será realizada sobre cada membro da equipe do projeto e será realizada trimestralmente através da utilização do formulário de avaliação de desempenho, apresentado no apêndice \ref{ch:team-evaluation-form}.
 
-A avaliação da equipe do projeto será realizada trimestralment através da utilização do formulário de avaliação de desempenho da equipe (ver apêndice \ref{ch:team-evaluation-form}), o qual deve ser preenchido por cada membro da equipe do projeto.
-
-Mensalmente será realizada também uma avaliação do desempenho individual de cada membro da equipe por seu superior hierárquico no organograma do projeto. Os membros da equipe serão avaliados pelo gerente do projeto. Já o gerente do projeto será avaliado pelo patrocinador. Este tipo de avaliação será realizada através de reuniões individuais com cada membro da equipe.
-
-\section{Bonificação}
-
-\todo[inline,color=red]{Método de bonificação do plano de RH.}
+Cada integrante do time do projeto será avaliado pelo gerente do projeto e por dois outros colaboradores de sua escolha, além disso o próprio membro realizará uma auto-avaliação. Os nomes dos colaboradores escolhido pelo integrante avaliado deverá ser entregue ao gerente do projeto, o qual estará encarregado de realizar as solicitações de avaliação. O gerente do projeto também deverá ser avaliado pelo patrocinador.
 
 \section{Frequência de avaliação consolidada dos resultados do time}
 
