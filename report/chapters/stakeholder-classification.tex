@@ -3,7 +3,83 @@
 \section{Grau de poder/interesse}
 \label{sec:power-interest-grade}
 
-\todo[inline,color=red]{Criar gráfico para grau de poder/interesse.}
+\begin{figure}[h]
+	\begin{tabularx}{\textwidth}{ c | >{\centering\arraybackslash}X  >{\centering\arraybackslash}X l}
+		\textbf{Poder} & \cellcolor{blue!10!}\textbf{Manter Satisfeito} & \cellcolor{red!10!}\textbf{Gerenciar de Perto}  &                    \\
+		\textbf{Alto} &
+		% Poder Alto e Interesse Baixo
+		\cellcolor{blue!10!}\begin{tabular}{@{}p{0.35\textwidth}@{}}
+			17.Estafácil                             \\
+			18.Estacionamento Quality Park            \\
+			19.Garagem São Rafael                    \\
+			20.Garagem Siqueira Campos                \\
+			21.Indigo Center                          \\
+			22.Estacionamento Rua da Praia Shopping   \\
+			23.Garagem Porto Belo Ltda                \\
+			24.Ok Park Estacionamento                 \\
+			25.Pare Bem Estacionamentos               \\
+			26.Estacionamento Piovezani               \\
+			27.Estacionamento AZ Park                 \\
+			28.Outros Estacionamentos em Porto Alegre \\
+			37.Localiza                               \\
+			38.Unidas                                 \\
+			39.Alamo                                  \\
+			40.Outras locadoras de automóveis        \\
+			41.Governo Federal                        \\
+			42.Governo Estadual                       \\
+			44.Uber                                   \\
+			45.Cabify                                 \\
+		\end{tabular} &
+		% Poder Alto e Interesse Alto
+		\cellcolor{red!10!}\begin{tabular}{@{}p{0.35\textwidth}@{}}
+			1.\projectSponsorName{}                          \\
+			2.\projectManagerName{}                          \\
+			3.Equipe do projeto                              \\
+			12.Donos de estacionamentos privados             \\
+			43.Ministério do Meio Ambiente                  \\
+			46.Empresa Pública de Transporte e Circulação \\
+			47.Governo do Município de Porto Alegre         \\
+		\end{tabular} &   \\
+		               & \cellcolor{green!10!}\textbf{Monitorar}        & \cellcolor{orange!10!}\textbf{Manter Informado} &                    \\
+		\textbf{Baixo}&
+		% Poder Baixo e Interesse Baixo
+		\cellcolor{green!10!}\begin{tabular}{@{}p{0.35\textwidth}@{}}
+			6.Fórum Permanente de Responsabilidade Social do Rio Grande do Sul \\
+			7.Fundação CEPA                                                   \\
+			8.Instituto Brasil Ambiental                                        \\
+			9.Instituto Urbano Ambiental                                        \\
+			10.Outras ONGs relacionadas a preservação do meio ambiente        \\
+		\end{tabular} &
+		% Poder Baixo e Interesse Alto
+		\cellcolor{orange!10!}\begin{tabular}{@{}p{0.35\textwidth}@{}}
+			4.Motoristas                                                             \\
+			5.Pessoas jurídicas que contratam serviços de estacionamentos privados \\
+			11.Funcionários de empresas de estacionamento privado                   \\
+		\end{tabular} &    \\
+		\hline
+		               & \textbf{Baixo}                                 & \textbf{Alto}                                   & \textbf{Interesse} \\
+	\end{tabularx}
+	\caption{Matriz de classificação das partes interessadas em grau de poder/interesse.}
+	\label{tab:power-interest-grade}
+	\centering
+\end{figure}
+
+Utilizando o registro das partes interessadas foi realizada a classificação das mesmas de acordo com o grau de poder/interesse. O resultado obtido pode ser visto na matriz descrita pela figura \ref{tab:power-interest-grade}.
+
+A classificação segue os seguintes graus de poder/interesse:
+
+\begin{description}
+	\item[Poder] \mbox{}
+	\begin{description}
+		\item[Alto] Poder entre 70\% e 100\%.
+		\item[Baixo] Poder entre 30\% e 70\%.
+	\end{description}
+	\item[Interesse] \mbox{}
+	\begin{description}
+		\item[Alto] Interesse entre 70\% e 100\%.
+		\item[Baixo] Interesse entre 30\% e 70\%.
+	\end{description}
+\end{description}
 
 %\section{Grau de poder/influência}
 
@@ -14,32 +90,37 @@
 \section{Nível de engajamento das partes interessadas}
 \label{sec:stakeholder-engagement}
 
-O nível de engajamento atual será documentado utilizando a matriz de avaliação do nível de engajamento das partes interessadas, como mostrado na tabela \ref{tab:stakeholder-engagement-level}), onde C indica o nível de engajamento atual e D indica o nível de engajamento desejado.
+O nível de engajamento atual será documentado utilizando a matriz de avaliação do nível de engajamento das partes interessadas, como mostrado na tabela \ref{tab:stakeholder-engagement-level}), onde A indica o nível de engajamento atual e D indica o nível de engajamento desejado.
 
 O nível de engajamento das partes interessadas será classificado conforme segue:
 
 \begin{description}
-\item[Desinformado] Sem conhecimento do projeto e impactos potenciais.
-\item[Resistente] Ciente do projeto e dos impactos potenciais e resistente à mudança.
-\item[Neutro] Ciente do projeto e mesmo assim não dá apoio ou resistente.
-\item[Dá apoio] Ciente do projeto e dos impactos potenciais e dá apoio à mudança.
-\item[Lidera] Ciente do projeto e dos impactos potenciais e ativamente engajado em garantir o êxito do projeto.
+	\item[Desinformado] Sem conhecimento do projeto e impactos potenciais.
+	\item[Resistente] Ciente do projeto e dos impactos potenciais e resistente ao empreendimento.
+	\item[Neutro] Ciente do projeto e mesmo assim não dá apoio ou resistente.
+	\item[Dá apoio] Ciente do projeto e dos impactos potenciais e dá apoio ao empreendimento.
+	\item[Lidera] Ciente do projeto e dos impactos potenciais e ativamente engajado em garantir o êxito do projeto.
 \end{description}
+
+Apenas as partes interessadas que devem ser gerenciadas de perto (conforme classificação realizada na seção \ref{sec:power-interest-grade}) serão analisadas em relação ao nível de engajamento.
 
 \begin{longtable}{ l | >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} }
 	\toprule
-	\thead[c]{\textbf{Parte interessada}} & \rot{\textbf{\parbox{4cm}{Não informado}}} & \rot{\textbf{\parbox{4cm}{Resistente}}}& \rot{\textbf{\parbox{4cm}{Neutro}}} & \rot{\textbf{\parbox{4cm}{Apoiador}}} & \rot{\textbf{\parbox{4cm}{Lidera}}} \\
+	\thead[c]{\textbf{Parte interessada}}         & \rot{\textbf{\parbox{4cm}{Não informado}}} & \rot{\textbf{\parbox{4cm}{Resistente}}} & \rot{\textbf{\parbox{4cm}{Neutro}}} & \rot{\textbf{\parbox{4cm}{Apoiador}}} & \rot{\textbf{\parbox{4cm}{Lidera}}} \\
 	\midrule
 	\endhead
 	\multicolumn{6}{c}{{\textit{Continua na próxima página.}}} \\
 	\endfoot
 	\endlastfoot
-	Parte Interessada 1                   & C                                  &                                & D                          &                               &                            \\
-	Parte Interessada 2                   &                                    & D C                            &                            &                               &                            \\
+	\projectSponsorName{}                         &                                             &                                         &                                     &                                       & D A                                 \\
+	\projectManagerName{}                         &                                             &                                         &                                     &                                       & D A                                 \\
+	Equipe do projeto                             &                                             &                                         & A                                   &                                       & D                                   \\
+	Donos de estacionamentos privados             &                                             &                                         & A                                   & D                                     &                                     \\
+	Ministério do Meio Ambiente                  &                                             &                                         & A                                   & D                                     &                                     \\
+	Empresa Pública de Transporte e Circulação &                                             &                                         & A                                   & D                                     &                                     \\
+	Governo do Município de Porto Alegre         &                                             &                                         & A                                   & D                                     &                                     \\
 	\bottomrule
 	\caption{Matriz de avaliação do nível de engajamento das partes interessadas.}
-    \label{tab:stakeholder-engagement-level}
+	\label{tab:stakeholder-engagement-level}
 	\centering
 \end{longtable}
-
-\todo[inline,color=red]{Preencher tabela com nível de engajamento das partes interessadas.}

@@ -1,150 +1,150 @@
 \begin{landscape}
-\setlength\LTcapwidth{\textwidth} % default: 4in (rather less than \textwidth...)
-\setlength\LTleft{0pt}            % default: \parindent
-\setlength\LTright{0pt}  
+	\setlength\LTcapwidth{\textwidth} % default: 4in (rather less than \textwidth...)
+	\setlength\LTleft{0pt}            % default: \parindent
+	\setlength\LTright{0pt}
 
-\chapter{Registro das partes interessadas}
-\label{ch:stakeholder-register}
+	\chapter{Registro das partes interessadas}
+	\label{ch:stakeholder-register}
 
-\section{Informações de identificação e avaliação}
+	\section{Informações de identificação e avaliação}
 
-\todo[inline,color=red]{Preencher identificação das partes interessadas.}
+	\newcounter{pow}
+	\newcounter{int}
+	\newcounter{inf}
+	\newcounter{imp}
+	\begin{longtable}{@{\extracolsep{\fill}} c c >{\centering\arraybackslash}p{0.3\textwidth} >{\centering\arraybackslash}p{0.1\textwidth} >{\centering\arraybackslash}p{0.04\textwidth} >{\centering\arraybackslash}p{0.04\textwidth} >{\centering\arraybackslash}p{0.04\textwidth} >{\centering\arraybackslash}p{0.04\textwidth} >{\centering\arraybackslash}p{0.04\textwidth} >{\centering\arraybackslash}p{0.3\textwidth} }
+		\toprule
+		\textbf{ID} & \textbf{Tipo} & \textbf{Nome} & \textbf{Esfera} & \rot{\textbf{\parbox{3cm}{Interesse}}} & \rot{\textbf{\parbox{3cm}{Poder}}} & \rot{\textbf{\parbox{3cm}{Influência}}} & \rot{\textbf{\parbox{3cm}{Impacto}}} & \rot{\textbf{\parbox{3cm}{Importância\\Ponderada}}} & \textbf{Expectativas} \\
+		\midrule
+		\endhead
+		\multicolumn{10}{c}{{\textit{Continua na próxima página.}}} \\
+		\endfoot
+		\endlastfoot
 
-\newcounter{pow}
-\newcounter{int}
-\newcounter{inf}
-\newcounter{imp}
-\begin{longtable}{@{\extracolsep{\fill}} c >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.15\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.05\textwidth} >{\centering\arraybackslash}p{0.3\textwidth} }
-    \toprule
-	\textbf{Tipo} & \textbf{Nome} & \textbf{Organização} & \textbf{Posição} & \rot{\textbf{\parbox{3cm}{Interesse}}} & \rot{\textbf{\parbox{3cm}{Poder}}} & \rot{\textbf{\parbox{3cm}{Influência}}} & \rot{\textbf{\parbox{3cm}{Impacto}}} & \rot{\textbf{\parbox{3cm}{Importância\\Ponderada}}} & \textbf{Expectativas} \\
-	\midrule
-	\endhead
-	\multicolumn{10}{c}{{\textit{Continua na próxima página.}}} \\
-	\endfoot
-	\endlastfoot
+		1 & Interno & \projectSponsorName{} & Indivíduo & \setcounter{int}{100}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{100}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Recompensa financeira, reconhecimento profissional e do empreendimento \\
+		\midrule
+		2 & Interno & \projectManagerName{} & Indivíduo & \setcounter{int}{100}\arabic{int}\% & \setcounter{pow}{95}\arabic{pow}\% & \setcounter{inf}{98}\arabic{inf}\% & \setcounter{imp}{98}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Recompensa financeira, reconhecimento profissional \\
+		\midrule
+		3 & Interno & Equipe do projeto & Coletivo & \setcounter{int}{100}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{100}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Recompensa financeira, reconhecimento profissional \\
+		\midrule
+		4 & Externo & Motoristas & Coletivo & \setcounter{int}{80}\arabic{int}\% & \setcounter{pow}{50}\arabic{pow}\% & \setcounter{inf}{100}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Encontrar vagas de estacionamento vagas, diminuir o tempo no trânsito \\
+		\midrule
+		5 & Externo & Pessoas jurídicas que contratam serviços de estacionamentos privados & Organização & \setcounter{int}{80}\arabic{int}\% & \setcounter{pow}{60}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{90}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, diminuir custos, disponibilizar vagas para seus funcionários \\
+		\midrule
+		6 & Externo & Fórum Permanente de Responsabilidade Social do Rio Grande do Sul & Associação & \setcounter{int}{40}\arabic{int}\% & \setcounter{pow}{50}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{90}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Cumprir com seus papel social, produção eco-sustentável\\
+		\midrule
+		7 & Externo & Fundação CEPA & Associação & \setcounter{int}{40}\arabic{int}\% & \setcounter{pow}{50}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{90}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Controle e diminuição dos danos ambientais \\
+		\midrule
+		8 & Externo & Instituto Brasil Ambiental & Associação & \setcounter{int}{20}\arabic{int}\% & \setcounter{pow}{50}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{90}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Controle e diminuição de danos ambientais, educação ambiental, preservação e proteção da vida selvagem \\
+		\midrule
+		9 & Externo & Instituto Urbano Ambiental & Associação & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{50}\arabic{pow}\% & \setcounter{inf}{50}\arabic{inf}\% & \setcounter{imp}{90}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Controle e diminuição de danos ambientais, educação ambiental, preservação cultural e histórica \\
+		\midrule
+		10 & Externo & Outras ONGs relacionadas a preservação do meio ambiente & Associação & \setcounter{int}{40}\arabic{int}\% & \setcounter{pow}{50}\arabic{pow}\% & \setcounter{inf}{60}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Preservação do meio ambiente \\
+		\midrule
+		11 & Externo & Funcionários de empresas de estacionamento privado & Coletivo & \setcounter{int}{80}\arabic{int}\% & \setcounter{pow}{65}\arabic{pow}\% & \setcounter{inf}{85}\arabic{inf}\% & \setcounter{imp}{90}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Facilitar o exercerc de sua função, remuneração e reconhecimento \\
+		\midrule
+		12 & Externo & Donos de estacionamentos privados & Coletivo & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Reconhecimento de seu empreendimento, retorno financeiro \\
+		\midrule
+		13 & Externo & Carris & Organização & \setcounter{int}{20}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, diminuir custos, melhorar qualidade do serviço de transporte público \\
+		\midrule
+		14 & Externo & Unibus & Organização & \setcounter{int}{20}\arabic{int}\% & \setcounter{pow}{85}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, diminuir custos, melhorar qualidade do serviço de transporte público \\
+		\midrule
+		15 & Externo & STS & Organização & \setcounter{int}{20}\arabic{int}\% & \setcounter{pow}{85}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, diminuir custos, melhorar qualidade do serviço de transporte público \\
+		\midrule
+		16 & Externo & Conorte & Organização & \setcounter{int}{20}\arabic{int}\% & \setcounter{pow}{85}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, diminuir custos, melhorar qualidade do serviço de transporte público \\
+		\midrule
+		17 & Externo & EstaFácil & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		18 & Externo & Estacionamento Quality Park & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		19 & Externo & Garagem São Rafael & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		20 & Externo & Garagem Siqueira Campos & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		21 & Externo & Indigo Center & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		22 & Externo & Estacionamento Rua da Praia Shopping & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		23 & Externo & Garagem Porto Belo Ltda & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		24 & Externo & Ok Park Estacionamento & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		25 & Externo & Pare Bem Estacionamentos & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		26 & Externo & Estacionamento Piovezani & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		27 & Externo & Estacionamento AZ Park & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		28 & Externo & Outros estacionamentos em Porto Alegre & Organização & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{80}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		29 & Externo & General Motors Company & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		30 & Externo & Grupo Volkswagen AG & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		31 & Externo & Toyota Motor Corporation & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		32 & Externo & Hyundai Motor & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		33 & Externo & Ford Motor Company & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		34 & Externo & Nissan & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		35 & Externo & Fiat Chrysler Auomobiles & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		36 & Externo & Outros grupos de fabricantes de automóveis & Organização & \setcounter{int}{10}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{30}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		37 & Externo & Localiza & Organização & \setcounter{int}{50}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		38 & Externo & Unidas & Organização & \setcounter{int}{50}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		39 & Externo & Alamo & Organização & \setcounter{int}{50}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		40 & Externo & Outras locadoras de automóveis & Organização & \setcounter{int}{50}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		41 & Externo & Governo Federal & Governo & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Melhoria da gestão dos interesses públicos na esfera federal \\
+		\midrule
+		42 & Externo & Governo Estadual & Governo & \setcounter{int}{60}\arabic{int}\% & \setcounter{pow}{98}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Melhoria da gestão dos interesses públicos na esfera estadual \\
+		\midrule
+		43 & Externo & Ministério do Meio Ambiente & Governo & \setcounter{int}{70}\arabic{int}\% & \setcounter{pow}{95}\arabic{pow}\% & \setcounter{inf}{40}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Preservação do meio ambiente \\
+		\midrule
+		44 & Externo & Uber & Organização & \setcounter{int}{25}\arabic{int}\% & \setcounter{pow}{100}\arabic{pow}\% & \setcounter{inf}{35}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		45 & Externo & Cabify & Organização  & \setcounter{int}{25}\arabic{int}\% & \setcounter{pow}{80}\arabic{pow}\% & \setcounter{inf}{35}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Maximizar seus lucros, melhorar a qualidade do serviço oferecido, diminuir custos \\
+		\midrule
+		46 & Externo & Empresa Pública de Transporte e Circulação & Governo & \setcounter{int}{75}\arabic{int}\% & \setcounter{pow}{95}\arabic{pow}\% & \setcounter{inf}{70}\arabic{inf}\% & \setcounter{imp}{100}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Melhoria do transporte e circulação em Porto Alegre \\
+		\midrule
+		47 & Externo & Governo do Município de Porto Alegre & Governo & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Melhoria da gestão dos interesses públicos no município de Porto Alegre \\
+		\bottomrule
+		\caption{Registro das partes interessadas.}
+		\centering
+	\end{longtable}
 
-	Interno & Parte Interessada 1 & Cliente & CEO e Patrocinador & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Parte Interessada 1 & Organização & Gerente do projeto & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Interno & Equipe do projeto & Organização & Variada & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Motoristas & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Pessoas jurídicas que contratam serviços de estacionamentos privados & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Fórum Permanente de Responsabilidade Social do Rio Grande do Sul & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Fundação CEPA & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Instituto Brasil Ambiental & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Instituto Urbano Ambiental & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & ONGs relacionadas a preservação do meio ambiente & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Funcionários de empresas de estacionamento privado & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Donos de estacionamentos privados & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Carris & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Unibus & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & STS & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Conorte & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & EstaFácil & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Estacionamento Quality Park & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Garagem São Rafael & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Garagem Siqueira Campos & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Indigo Center & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Estacionamento Rua da Praia Shopping & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Garagem Porto Belo Ltda & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Ok Park Estacionamento & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Pare Bem Estacionamentos & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Estacionamento Piovezani & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Estacionamento AZ Park & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Outros estacionamentos em Porto Alegre & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & General Motors Company & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Grupo Volkswagen AG & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Toyota Motor Corporation & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Hyundai Motor & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Ford Motor Company & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Nissan & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Fiat Chrysler Auomobiles & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Outros grupos de fabricantes de automóveis & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Localiza & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Unidas & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Alamo & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Outras locadoras de carros & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Governo Federal & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Governo Estadual & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Ministério do Meio Ambiente & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Uber & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & Cabify & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-	\midrule
-	Externo & EPTC & Organização & CEO & \setcounter{int}{90}\arabic{int}\% & \setcounter{pow}{90}\arabic{pow}\% & \setcounter{inf}{90}\arabic{inf}\% & \setcounter{imp}{80}\arabic{imp}\% & \the\numexpr\value{pow}*\value{int}*\value{inf}*\value{imp}/1000000\relax\% & Expectativas \\
-    \bottomrule
-	\caption{Registro das partes interessadas.}
-	\centering
-\end{longtable}
+	\section{Controle de versão}
 
-\section{Controle de versão}
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| c | c | X | X |}
+			\hline
+			\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão} \\
+			\hline
+			1                &               & \projectManagerName{} & Criação do documento     \\
+			\hline
+		\end{tabularx}
+		\centering
+	\end{table}
 
-\begin{table}[H]
-	\begin{tabularx}{\textwidth}{| c | c | X | X |}
-		\hline
-		\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão} \\
-		\hline
-		1                &               & \projectManagerName{} & Criação do documento     \\
-		\hline
-	\end{tabularx}
-	\centering
-\end{table}
+	\section{Aprovações}
 
-\section{Aprovações}
-
-\begin{table}[H]
-	\begin{tabularx}{\textwidth}{| c | c | X | c |}
-		\hline
-		\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
-		\hline
-		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
-		\hline
-		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
-		\hline
-	\end{tabularx}
-	\centering
-\end{table}
+	\begin{table}[H]
+		\begin{tabularx}{\textwidth}{| c | c | X | c |}
+			\hline
+			\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
+			\hline
+			Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
+			\hline
+			Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
+			\hline
+		\end{tabularx}
+		\centering
+	\end{table}
 
 \end{landscape}
