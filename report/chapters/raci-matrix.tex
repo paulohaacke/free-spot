@@ -1,20 +1,101 @@
 \chapter{Matriz de responsabilidades}
 \label{raci-matrix}
 
-\todo[inline,color=red]{Preencher matriz de responsabilidades}
+A matriz de responsabilidade pode ser vista na tabela \ref{raci-matrix}. Para relacionar os recursos e as atividades utiliza-se a seguinte classificação:
 
-\begin{longtable}{ l | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} | p{0.025\textwidth} }
+\begin{description}
+	\item[Responsável(R)] O recurso fica responsável por executar a atividade.
+	\item[Aprovador(A)] É o responsável pelo aceite formal da atividade.
+	\item[Consultado(C)] É alguém que deve ser consultado, participando das decisões ou da execução da atividade.
+	\item[Informado(I)] Indica a pessoa que deve ser informada sobre algo em relação à atividade.
+\end{description}
+
+\begin{longtable}{ l p{0.3\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} >{\centering\arraybackslash}>{\columncolor{gray!10}}p{0.025\textwidth} >{\centering\arraybackslash}p{0.025\textwidth} }
 	\toprule
-	\textbf{Atividade} & \rot{\textbf{\parbox{6cm}{Patrocinador}}} & \rot{\textbf{\parbox{6cm}{Gerente do Projeto}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor mobile 1}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor mobile 2}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor web front-end}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor web back-end}}} & \rot{\textbf{\parbox{6cm}{Engenheiro de software}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor de sistema}}} & \rot{\textbf{\parbox{6cm}{Arquiteto de solução}}} & \rot{\textbf{\parbox{6cm}{Arquiteto de software}}} & \rot{\textbf{\parbox{6cm}{Engenheiro eletricista}}} & \rot{\textbf{\parbox{6cm}{Analista de testes 1}}} & \rot{\textbf{\parbox{6cm}{Analista de testes 2}}} & \rot{\textbf{\parbox{6cm}{Analista de banco de dados}}} \\
-	\midrule
+	\thead[c]{\textbf{ID}} & \thead[c]{\textbf{Atividade}} & \rot{\textbf{\parbox{6cm}{Patrocinador}}} & \rot{\textbf{\parbox{6cm}{Gerente do Projeto}}} & \rot{\textbf{\parbox{6cm}{Engenheiro de software}}} & \rot{\textbf{\parbox{6cm}{Arquiteto de software}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor mobile 1}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor mobile 2}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor web front-end}}} & \rot{\textbf{\parbox{6cm}{Desenvolvedor web back-end}}} & \rot{\textbf{\parbox{6cm}{Analista de banco de dados}}} & \rot{\textbf{\parbox{6cm}{Analista de testes 1}}} & \rot{\textbf{\parbox{6cm}{Analista de testes 2}}} \\*
+	\hline
 	\endhead
-	\multicolumn{15}{c}{{\textit{Continua na próxima página.}}} \\
+	\multicolumn{13}{c}{{\textit{Continua na próxima página.}}} \\*
+	\caption{Matriz de responsabilidades.}
 	\endfoot
 	\endlastfoot
-	Atividade 1 & R &   &   &   &   &   &   &   &   &   &   &   &  &   \\
-	Atividade 2 & A &   &   &   &   &   &   &   &   &   &   &   &  &   \\
-	Atividade 3 &   & R & A & R &   &   &   &   &   &   &   &   &  &   \\
+	1       & \textbf{Gerenciamento do projeto}                                 &   &   &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	1.1     & Iniciação                                              &  A &  R &  C & C  &  I &  I & I  & I  &  I &  I & I     \\*
+	\hline
+	1.2     & Planejamento                                             & A  & R  &  C &  C &  I &  I & I  & I  & I  & I  & I     \\*
+	\hline
+	1.3     & Aprovação do escopo                                    &  A &  R &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	1.4     & Monitoramento do projeto                                 & A  & R  & I  &  I &  I &  I &  I &  I &  I &  I & I     \\*
+	\hline
+	1.5     & Encerramento                                             & A  & R  &  I &  I & I  &  I &  I &  I &  I &  I & I     \\*
+	\hline
+	2       & \textbf{Infraestrutura}                                           &   &   &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	2.1     & Ambiente de desenvolvimento                              & I  & A  &  R &  C &  C &  C &  C &  C &  C &  C & C     \\*
+	\hline
+	2.2     & Ambiente de testes                                       & I  & A  & C  &  R &  I &  I &  I &  I &  I &  C &  C    \\*
+	\hline
+	2.3     & Ambiente de produção                                   & I & A & C &  R &  I &  I &  I &  I &  I &  I & I     \\*
+	\hline
+	3       & \textbf{Web API}                                                  &   &   &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	3.1     & Contratar plataforma na nuvem                            &   &  A &   &  R &   &   &  C &   &  C &   &      \\*
+	\hline
+	3.2     & Banco de dados                                           &   & A  & C  & C  &  I &  I &  I &  I &  R & I  & I     \\*
+	\hline
+	3.3     & Definir estrutura da API                                 &   & A  & C  &  C &  I &  I &  I & R  & C  & I  & I     \\*
+	\hline
+	3.4     & Criar rotas para recursos                                &   & A  &  C &  C &  I &  I &  I &  R &  I &  I & I     \\*
+	\hline
+	3.5     & Testes                                                   &  I & A  & C  & C  & C  & C  & C  & C  & C  & R  & C     \\*
+	\hline
+	4       & \textbf{Aplicativo do motorista}                                  &   &   &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	4.1     & Autenticação                                           &   & A  &  C &   &  R &   &   &   & C  &   &      \\*
+	\hline
+	4.2     & Reserva de vaga                                          &   &  A & C  &   & R  &   &   &   & C  &   &      \\*
+	\hline
+	4.3     & Lista de estacionamentos                                 &   & A  &  C &   &  R &   &   &   & C  &   &      \\*
+	\hline
+	4.4     & Processamento de pagamentos                              &   & A  &  C &   &   &  R &   &   & C  &   &      \\*
+	\hline
+	4.5     & Gerência do usuário                                    &   & A  &  C &   &   &   &  R &   & C  &   &      \\*
+	\hline
+	4.6     & Testes                                                   & I  &  A &  C &  C &  C &  C &  C &  C &  C & C  & R     \\*
+	\hline
+	5       & \textbf{Aplicativo estacionamento}                                &   &   &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	5.1     & Autenticação e gerência de usuários do estacionamento &   &   & A  & C  & C  &   & R  & C  & C  &   &      \\*
+	\hline
+	5.2     & Gerenciamento dos clientes                               &   & A  & C  &  C &   & R  &  C &   &  C &   &      \\*
+	\hline
+	5.3     & Solicitação de cadastro no sistema                     &   & A  &  C &  C &   &   & R  & C  &  C &   &      \\*
+	\hline
+	5.4     & Gerenciamento do estacionamento                          &   &   &   &   &   &   &   &   &   &   &      \\*
+	\hline
+	5.4.1   & Gerenciamento de garagens                                &   & A  & C  &  C &   &   & R  & C  & C  &   &      \\*
+	\hline
+	5.4.1.1 & Cadastro e gerência de garagens                         &   & A  &  C &  C &   &   & R  & C  & C  &   &      \\*
+	\hline
+	5.4.1.2 & Situação das vagas                                     &   &  A & C  &  C &   &   & R  &  C & C  &   &      \\*
+	\hline
+	5.4.1.3 & Integração com sistema de automação                  &   & A  & C  &  C &   &   & R  & C & C  &   &      \\*
+	\hline
+	5.4.2   & Configurações do estacionamento                        &   & A  & C  & C  &   &   &  R & C  &  C &   &      \\*
+	\hline
+	5.5     & Relatórios                                              &   & A  & C  & C  &   &   & R  & C  &  C &   &      \\*
+	\hline
+	5.5.1   & Tendências em relação a ocupação do estacionamento   &   & A  & C  & C  &   &   & R  & C  &  C &  &    \\*
+	\hline
+	5.6     & Integração com DETRAN                                  &   & A  & C  &  C &   &   & R  & C  &   &   &      \\*
+	\hline
+	5.7     & Testes                                                   & I  & A  & C  &  C &  C &  C & C  &  C &  C & R  & R     \\*
+	\hline
+	6       & \textbf{Auditoria da qualidade}                                   & C &  A &  I &  I &  I &  I &  I &  I & I  &  R & R     \\*
 	\bottomrule
 	\caption{Matriz de responsabilidades.}
+	\label{raci-matrix}
 	\centering
 \end{longtable}
