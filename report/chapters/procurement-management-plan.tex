@@ -14,25 +14,26 @@
 %   Eventos listados na Matriz de Comunicações
 %   Remete ao Controle Integrado de Mudanças em caso de divergência planejado x realizado 
 % Apresentação do procedimento de Encerramento das Aquisições
- 
+
 \chapter{Plano de gerenciamento das aquisições}
 
 \section{Descrição dos processos de gerenciamento das aquisições}
 
 \begin{itemize}
 	\item O gerenciamento das aquisições estará focado na contratação de um servidor em nuvem.
+	\item Durante a execução do projeto todos os custos com o servidor em nuvem deverão estar incluídos no orçamento do projeto.
 	\item A autonomia sobre os contratos é de exclusiva competência do gerente do projeto, que deve assinar todos os contratos e medições de serviços.
 	\item Os aspectos éticos do processo de aquisição serão rigorosamente acompanhados, respeitado os seguintes princípios:
-	\begin{itemize}
-		\item Legalidade.
-		\item Igualdade.
-		\item Publicidade.
-		\item Impessoalidade.
-		\item Imparcialidade.
-		\item Moralidade.
-		\item Probidade administrativa.
-		\item Lealdade à empresa.
-	\end{itemize}
+	      \begin{itemize}
+		      \item Legalidade.
+		      \item Igualdade.
+		      \item Publicidade.
+		      \item Impessoalidade.
+		      \item Imparcialidade.
+		      \item Moralidade.
+		      \item Probidade administrativa.
+		      \item Lealdade à empresa.
+	      \end{itemize}
 	\item Quaisquer infrações aos aspectos éticos serão consideradas faltas gravíssimas pelo gerente do projeto e pelo patrocinador.
 	\item No gerenciamento das aquisições serão considerados apenas as aquisições diretamente relacionadas ao escopo do projeto. Inovações e novos recursos não serão tratados pelo gerenciamento das aquisições.
 	\item Quaisquer solicitações de mudança no processo de aquisições ou nos objetos a serem adquiridos devem ser feitas de acordo com plano de gerenciamento das mudanças (ver capítulo \ref{ch:change-management-plan}).
@@ -41,26 +42,55 @@
 \section{Gerenciamento e tipos de contratos}
 
 \begin{itemize}
-\item Vazio.
+	\item Todas as cláusulas contratuais devem ser respeitadas rigorosamente, principalmente no que diz respeito a atendimento dos requisitos solicitados.
+	\item A elaboração e avaliação de contratos é de responsabilidade da área jurídica da empresa.
+	\item Os contratos deste projeto são de tempo e material, visto que os recursos em nuvem são disponibilizados conforme uma cotação fixa e são cobrados de forma proporcional ao seu uso.
 \end{itemize}
-
-\todo[inline,color=red]{Criar gerenciamento e tipos de contratos.}
 
 \section{Critérios de avaliação de cotações e propostas.}
 
-\todo[inline,color=red]{Criar critérios de avaliação de cotações e propostas.}
+\begin{itemize}
+	\item Para toda aquisição deverão ser avaliadas um mínimo de 3 propostas de diferentes fornecedores.
+	\item As propostas deverão ser priorizadas e cada fornecedor receberá um pontuação, de acordo com os requisitos desejados, o custo e outros aspectos, conforme tabela \ref{procurement-evaluation-criteria}.
+	\item O valor máximo para ser gasto com o servidor em nuvem durante o projeto é de \procurementBudget{}.
+\end{itemize}
+
+\begin{longtable}{ll}
+	\toprule
+	\thead[c]{Critério de Avaliação} & \thead[c]{Peso} \\
+	\midrule
+	Custo                               & 30\%            \\
+	\midrule
+	Atendimento aos requisitos          & 50\%            \\
+	\midrule
+	Suporte                             & 10\%            \\
+	\midrule
+	Condição de Pagamento             & 10\%            \\
+	\bottomrule
+	\caption{Critérios para avaliação de fornecedores.}
+	\label{procurement-evaluation-criteria}
+	\centering
+\end{longtable}
 
 \section{Avaliação de fornecedores}
 
-\todo[inline,color=red]{Criar método para avaliação de fornecedores.}
+O gerente do projeto deve acompanhar, próximo a equipe do projeto, se a qualidade do serviço oferecido está de acordo com os níveis de serviço acordados.
+
+Em caso de não cumprimento de itens do contrato, devem ser tomadas as seguintes medidas:
+
+\begin{description}
+\item[Advertência] Em casos pouco graves e que não comprometam o andamento do projeto.
+\item[Suspensão] Em casos de desvios de gravidade média que comprometam parcialmente o andamento do projeto, ou para fornecedores já advertidos.
+\item[Cancelamento] Em casos graves que comprometam o projeto e que tornem necessário a intervenção do gerente do projeto e do patrocinador.
+\end{description}
 
 \section{Frequência de avaliação dos processos de aquisições}
 
-\todo[inline,color=red]{Descrever frequência de avaliação dos processos de aquisições.}
+Os processos de aquisição serão avaliados semanalmente durante a reunião do CCM, prevista no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).
 
 \section{Alocação financeira para o gerenciamento das aquisições}
 
-\todo[inline,color=red]{Descrever método para aloação financeira do plano de aquisições.}
+Necessidades de aquisições não previstas no orçamento deve ser alocada dentro das reservas gerenciais do projeto, conforme plano de gerenciamento dos custos (ver capítulo \ref{ch:cost-management-plan}).
 
 \section{Administração do plano de gerenciamento das aquisições}
 
