@@ -6,7 +6,7 @@
 	\chapter{Métricas de qualidade}
 	\label{quality-metrics}
 
-	\begin{longtable}{@{\extracolsep{\fill}} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} }
+	\begin{longtable}{@{\extracolsep{\fill}} >{\centering\arraybackslash}p{0.11\textwidth} >{\centering\arraybackslash}p{0.13\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.04\textwidth}  >{\centering\arraybackslash}p{0.04\textwidth} >{\centering\arraybackslash}p{0.12\textwidth} >{\centering\arraybackslash}p{0.12\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.09\textwidth}  >{\centering\arraybackslash}p{0.11\textwidth} >{\centering\arraybackslash}p{0.09\textwidth} >{\centering\arraybackslash}p{0.1\textwidth} }
 		\toprule
 		\rot{\textbf{\parbox{4cm}{Nome da\\ Métrica}}} & \rot{\textbf{\parbox{4cm}{Descrição}}} & \rot{\textbf{\parbox{4cm}{Forma de\\ Cálculo}}} & \rot{\textbf{\parbox{4cm}{Unidade}}} & \rot{\textbf{\parbox{4cm}{Meta}}} & \rot{\textbf{\parbox{4cm}{Periodicidade\\ da Coleta}}} & \rot{\textbf{\parbox{4cm}{Responsável\\ pela Coleta}}} & \rot{\textbf{\parbox{4cm}{Local de\\ Coleta}}} & \rot{\textbf{\parbox{4cm}{Armazenamento\\ do Resultado}}} & \rot{\textbf{\parbox{4cm}{Procedimento\\ para Análise}}} & \rot{\textbf{\parbox{4cm}{Responsável\\ pela Análise}}} & \rot{\textbf{\parbox{4cm}{Frequência de\\ Divulgação}}} & \rot{\textbf{\parbox{4cm}{Destinatário\\ da Informação}}} \\
 		\midrule
@@ -15,7 +15,23 @@
 		\caption{Métricas de qualidade.}
 		\endfoot
 		\endlastfoot
-        Esforço realizado & Total de esforço realizado no projeto & Métrica básica & Horas & N/A & A cada semana & Gerente do projeto & Sistema de lançamento de horas & Planilha de controle de métricas & N/A & N/A & Não divulgar & N/A \\
+		Fator de coesão & Mede a coesão dos métodos e classes do código &Métrica básica & \% & Maior que 90\% & Quinzenal & De\-sen\-vol\-ve\-dor & Ambiente de desenvolvimento & Planilha de controle de métricas & Comparar com a meta & Engenheiro de software & Quinzenal & Engenheiro de Software \\
+		\midrule
+		Fator de acoplamento & Mede o acoplamento do código  & Métrica básica & \% & Menor que 30\% & Quinzenal & De\-sen\-vol\-ve\-dor & Ambiente de desenvolvimento & Planilha de controle de métricas & Comparar com a meta & Engenheiro de software & Quinzenal & Engenheiro de Software \\
+		\midrule
+		Esforço realizado (E) & Total de esforço realizado no projeto & Métrica básica & Horas & N/A & Quinzenal & Gerente do projeto & Sistema de lançamento de horas & Planilha de controle de métricas & N/A & N/A & Não divulgar & N/A \\
+		\midrule
+		Esforço nas revisões (ER) & Esforço total realizado nas revisões dos artefatos do projeto & Métrica básica & Horas & N/A & Quinzenal & Gerente do projeto & Sistema de lançamento de horas & Planilha de controle de métricas & N/A & N/A & Não divulgar & N/A \\
+		\midrule
+		Esforço na correção de defeitos (ECD) & Esforço gasto na correção de defeitos & Métrica básica & Horas & N/A & Quinzenal & Analista de testes & Sistema de lançamento de horas & Planilha de controle de métricas & N/A & N/A & Não divulgar & N/A \\
+		\midrule
+		Percentual de esforço em correção de defeitos & Percentual de esforço realizado na correção de defeitos & $100*\frac{ECD}{ER}$ & \% & Menor que 10\% & Quinzenal & Analista de testes & Planilha de controle de métricas & Planilha de controle de métricas & Realizar cálculo e comparar com meta & Analista de testes & Quinzenal & Engenheiro de software \\
+		\midrule
+		Esforço gasto em mudanças (EGM) & Esforço gasto na implementação de mudanças & Métrica básica & Horas & N/A & Quinzenal & Gerente do projeto & Sistema de lançamento de horas & Planilha de controle de métricas & N/A & N/A & Não divulgar & N/A \\
+		\midrule
+		Percentual de esforço gasto em mudanças & Percentual de esforço realizado na implementação de mudanças & $100*\frac{EGM}{ER}$ & \% & Menor que 25\% & Quinzenal & Gerente do projeto & Planilha de controle de métricas & Planilha de controle de métricas & Realizar cálculo e comparar com meta & Gerente do projeto & Quinzenal & Pa\-tro\-ci\-na\-dor \\
+		\midrule
+		Custo do projeto & Avaliar custo do projeto até a entrega & Soma dos valores gastos & R\$ & Valores orçados & Quinzenal & Gerente do projeto & Planilha de custos & Planilha de custos & Comparar valor entregue e orçado & Gerente do projeto & Quinzenal & Pa\-tro\-ci\-na\-dor \\
         \bottomrule
 		\caption{Métricas de qualidade.}
 		\centering

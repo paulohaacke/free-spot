@@ -17,24 +17,22 @@
 
 \chapter{Plano de gerenciamento dos riscos}
 
-\todo[inline,color=red]{Remeter ao controle integrado de mudnaças em algum lugar.}
-
 \section{Descrição dos processos de gerenciamento de riscos}
 
 \begin{itemize}
-%\item Atividades de alto risco deverão tornar-se prioritárias, de modo que sejam desenvolvidas o mais cedo possível durante a execução do projeto.
-%\item Projetos de software com ciclo de vida adaptativo escolhem requisitos e histórias de usuário do backlog, o qual pode sofrer frequentes repriorizações; o que permite o gerenciamento de risco o mais cedo possível no projeto, minimizando efeitos de atraso e composição.
-\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da EAR (ver seção \ref{sec:rbs}), sugere-se a utilização das seguintes técnicas:
-\begin{itemize} 
-\item \foreign{Brainstorming}. 
-\item Grupo nominal. 
-\item \foreign{Slip} de \foreign{Crawford}.
-\todo[inline,color=red]{Descrever técnicas de identificação de risco.}
-\end{itemize} 
-\item Os riscos do projeto serão gerenciados com base nos riscos identificados previamente, assim como no monitoramento e controle de novos riscos que podem não ter sido identificados anteriormente.
-\item Todos os riscos não previstos no plano devem ser incluídos ao projeto de acordo com sistema de controle de mudanças de riscos (ver seção \ref{sec:risk-change-control-system}).
-\item A identificação, a avaliação e o monitoramento de riscos devem ser feitos por escrito ou através de e-mail, conforme descrito no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).
-\item Durante a reunião do CCM serão avaliados e monitorados os riscos do projeto.
+	%\item Atividades de alto risco deverão tornar-se prioritárias, de modo que sejam desenvolvidas o mais cedo possível durante a execução do projeto.
+	%\item Projetos de software com ciclo de vida adaptativo escolhem requisitos e histórias de usuário do backlog, o qual pode sofrer frequentes repriorizações; o que permite o gerenciamento de risco o mais cedo possível no projeto, minimizando efeitos de atraso e composição.
+	\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da EAR (ver seção \ref{sec:rbs}), sugere-se a utilização das seguintes técnicas:
+	      \begin{itemize}
+		      \item \foreign{Brainstorming}.
+		      \item Grupo nominal.
+		      \item \foreign{Slip} de \foreign{Crawford}.
+	      \end{itemize}
+	\item Os riscos do projeto serão gerenciados com base nos riscos identificados previamente, assim como no monitoramento e controle de novos riscos que podem não ter sido identificados oportunamente.
+	\item Todos os riscos não previstos no plano devem ser incluídos ao projeto de acordo com sistema de controle de mudanças de riscos (ver seção \ref{sec:risk-change-control-system}).
+	\item A identificação, a avaliação e o monitoramento de riscos devem ser feitos por escrito ou através de e-mail, conforme descrito no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).
+	\item Durante a reunião do CCM serão avaliados e monitorados os riscos do projeto.
+	\item Mudanças relacionadas ao plano de gerenciamento de riscos, que não são a inclusão ou atualização de riscos,  deverão ser tratadas conforme o plano de gerenciamento das mudanças, apresentado no capítulo \ref{ch:change-management-plan}.
 \end{itemize}
 
 \section{Estrutura analítica de riscos para identificação dos riscos}
@@ -45,146 +43,447 @@ Para auxiliar na compreensão, gerenciamento e comunicação de riscos em projet
 Com o objetivo de auxiliar o gerente de projetos na identificação dos riscos será utilizado o modelo de estrutura analítica de riscos proposta em \cite{dorofee1996continuous}, a qual pode ser vista na figura \ref{fig:rbs}. Esta estrutura ajuda a equipe do projeto a considerar muitas fontes a partir dos quais os riscos podem surgir.
 
 \begin{figure}[h]
-\centering
-\begin{tikzpicture}[node distance = 0.3cm and 0.7cm, auto]
+	\centering
+	\begin{tikzpicture}[node distance = 0.3cm and 0.7cm, auto]
 
-\node (prodeng) [wbsblock] {Engenharia de produto};
-\node (devenv) [wbsblock, right = of prodeng, xshift=2.5em] {Ambiente de desenvolvimento};
-\node (constraints) [wbsblock, right = of devenv, xshift=2.5em] {Restrições};
-% Engenharia de Produto
-\node (req) [wbsblock, below right = of prodeng, xshift=-6em] {Requisitos};
-\node (design) [wbsblock, below = of req] {Projeto};
-\node (code) [wbsblock, below = of design] {Código e testes unitários};
-\node (integ) [wbsblock, below = of code] {Testes de integração};
-\node (engattr) [wbsblock, below = of integ] {Propriedades de Engenharia};
-% Ambiente de Desenvolvimento
-\node (devproc) [wbsblock, below right = of devenv, xshift=-6em] {Processo de desenvolvimento};
-\node (devsys) [wbsblock, below = of devproc] {Sistema de desenvolvimento};
-\node (mngtproc) [wbsblock, below = of devsys] {Processo de gerenciamento};
-\node (mngtmet) [wbsblock, below = of mngtproc] {Métodos de gerenciamento};
-\node (workenv) [wbsblock, below = of mngtmet] {Ambiente de trabalho};
-% Restrições
-\node (resources) [wbsblock, below right = of constraints, xshift=-6em] {Recursos};
-\node (contracts) [wbsblock, below = of resources] {Contratos};
-\node (interfaces) [wbsblock, below = of contracts] {Interfaces};
-% RBS root
-\node (projrisk) [wbsblock, above = of devenv, yshift=3em] {Risco do Projeto};
+		\node (prodeng) [wbsblock] {Engenharia de produto};
+		\node (devenv) [wbsblock, right = of prodeng, xshift=2.5em] {Ambiente de desenvolvimento};
+		\node (constraints) [wbsblock, right = of devenv, xshift=2.5em] {Restrições};
+		% Engenharia de Produto
+		\node (req) [wbsblock, below right = of prodeng, xshift=-6em] {Requisitos};
+		\node (design) [wbsblock, below = of req] {Projeto};
+		\node (code) [wbsblock, below = of design] {Código e testes unitários};
+		\node (integ) [wbsblock, below = of code] {Testes de integração};
+		\node (engattr) [wbsblock, below = of integ] {Propriedades de Engenharia};
+		% Ambiente de Desenvolvimento
+		\node (devproc) [wbsblock, below right = of devenv, xshift=-6em] {Processo de desenvolvimento};
+		\node (devsys) [wbsblock, below = of devproc] {Sistema de desenvolvimento};
+		\node (mngtproc) [wbsblock, below = of devsys] {Processo de gerenciamento};
+		\node (mngtmet) [wbsblock, below = of mngtproc] {Métodos de gerenciamento};
+		\node (workenv) [wbsblock, below = of mngtmet] {Ambiente de trabalho};
+		% Restrições
+		\node (resources) [wbsblock, below right = of constraints, xshift=-6em] {Recursos};
+		\node (contracts) [wbsblock, below = of resources] {Contratos};
+		\node (interfaces) [wbsblock, below = of contracts] {Interfaces};
+		% RBS root
+		\node (projrisk) [wbsblock, above = of devenv, yshift=3em] {Risco do Projeto};
 
-\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (prodeng);
-\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (devenv);
-\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (constraints);
+		\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (prodeng);
+		\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (devenv);
+		\path [simpleline] (projrisk.south) |- ++(0,-1cm) -| (constraints);
 
-\path [simpleline] (prodeng.215) |- (req);
-\path [simpleline] (prodeng.215) |- (design);
-\path [simpleline] (prodeng.215) |- (code);
-\path [simpleline] (prodeng.215) |- (integ);
-\path [simpleline] (prodeng.215) |- (engattr);
+		\path [simpleline] (prodeng.215) |- (req);
+		\path [simpleline] (prodeng.215) |- (design);
+		\path [simpleline] (prodeng.215) |- (code);
+		\path [simpleline] (prodeng.215) |- (integ);
+		\path [simpleline] (prodeng.215) |- (engattr);
 
-\path [simpleline] (devenv.215) |- (devproc);
-\path [simpleline] (devenv.215) |- (devsys);
-\path [simpleline] (devenv.215) |- (mngtproc);
-\path [simpleline] (devenv.215) |- (mngtmet);
-\path [simpleline] (devenv.215) |- (workenv);
+		\path [simpleline] (devenv.215) |- (devproc);
+		\path [simpleline] (devenv.215) |- (devsys);
+		\path [simpleline] (devenv.215) |- (mngtproc);
+		\path [simpleline] (devenv.215) |- (mngtmet);
+		\path [simpleline] (devenv.215) |- (workenv);
 
-\path [simpleline] (constraints.215) |- (resources);
-\path [simpleline] (constraints.215) |- (contracts);
-\path [simpleline] (constraints.215) |- (interfaces);
+		\path [simpleline] (constraints.215) |- (resources);
+		\path [simpleline] (constraints.215) |- (contracts);
+		\path [simpleline] (constraints.215) |- (interfaces);
 
-\end{tikzpicture}
-\caption{Estrutura analítica de riscos.}
-\label{fig:rbs}
+	\end{tikzpicture}
+	\caption{Estrutura analítica de riscos.}
+	\label{fig:rbs}
 \end{figure}
 
 \section{Riscos identificados}
+\label{sec:identified-risks}
 
 Os riscos identificados no projeto, segundo a EAP do projeto e a EAR apresentada, estão listados a seguir.
-\todo[inline,color=red]{Identificar riscos.}
 
-\begin{enumerate}
-\item Projeto Vaga Livre
-\begin{enumerate}
-\item Gerenciamento do projeto
-\item Infraestrutura
-\item Web API
-\item Aplicativo do motorista
-\item Aplicativo do estacionamento
-\item Auditoria da qualidade
-\end{enumerate}
-\end{enumerate}
+\begin{description}
+	\item[Projeto Vaga Livre] \hfill
+	\begin{enumerate}[label=\arabic*.]
+		\item \textbf{Gerenciamento do projeto}
+		      \begin{enumerate}[label*=\arabic*.]
+			      \item Recusa do patrocinador em aprovar o termo de abertura.
+			      \item Atraso nas entregas dos planos ou da linha de base do escopo.
+			      \item Planos e linha de base do escopo não aprovados.
+			      \item Termo de encerramento não aprovado.
+			      \item Indisponibilidade do patrocinador para as reuniões e acompanhamento do \foreign{status} do projeto.
+			      \item Férias de algum membro da equipe.
+			      \item Indisponibilidade de membro da equipe devido a doença.
+			      \item Estouro do orçamento.
+			      \item Atrasos nos prazos de execução do projeto.
+			      \item Mudanças de governo, ocasionando reformas que influenciam nos planos de projeto.
+			      \item Controles e grenciamento do projeto inadequados ou insuficientes.
+			      \item Problemas de comunicação entre a equipe e o gerente do projeto.
+			      \item Mudança constante de requisitos.
+			      \item Corte no orçamento.
+			      \item Cancelamento ou suspensão do projeto.
+			      \item Plano de comunicação débil.
+			      \item Responsabilidades da equipe não delineadas.
+		      \end{enumerate}
+		\item \textbf{Infraestrutura}
+		      \begin{enumerate}[label*=\arabic*.]
+			      \item Identificação de novas aquisições necessárias para os ambientes de desenvolvimento, testes ou produção, ocasionando gastos não previstos na linha de base dos custos.
+			      \item Atraso na contratação do servidor em nuvem.
+			      \item Quebra de contrato do servidor em nuvem.
+			      \item Aumento do custo do servidor em nuvem, visto que não é um contrato de preço fixo.
+			      \item Indisponibilidade dos membros da equipe para a análise de necessidades de cada ambiente.
+			      \item Ambiente de desenvolvimento insuficiente em relação às necessidades dos membros da equipe.
+		      \end{enumerate}
+		\item \textbf{Web API}
+		      \begin{enumerate}[label*=\arabic*.]
+			      \item Pouca disponibilidade de fornecedores preparados para oferecer o servidor em nuvem conforme requisitos desejados.
+			      \item Custos com fornecedor do servidor em nuvem maior que o orçado.
+			      \item Indisponibilidade de membros da equipe para suporte no levantamento requisitos para estrutura de banco de dados.
+			      \item Grande quantidade de erros encontrados nos testes.
+			      \item Atraso nos testes.
+			      \item Reaproveitamento de código e ferramentas já desenvolvidas.
+		      \end{enumerate}
+		\item \textbf{Aplicativo do motorista}
+		      \begin{enumerate}[label*=\arabic*.]
+			      \item Performance do aplicativo do motorista insuficiente.
+			      \item Grande quantidade de erros encontrados nos testes.
+			      \item Atraso nos testes.
+			      \item Reaproveitamento de código e ferramentas já desenvolvidas.
+		      \end{enumerate}
+		\item \textbf{Aplicativo do estacionamento}
+		      \begin{enumerate}[label*=\arabic*.]
+			      \item Performance do aplicativo do estacionamento insuficiente.
+			      \item Grande quantidade de erros encontrados nos testes.
+			      \item Atraso nos testes.
+			      \item Indisponibilidade de documentação para desenvolver integração com DETRAN.
+			      \item Integração com DETRAN muito complexa.
+			      \item Integração com sistema de automação muito complexa.
+			      \item Reaproveitamento de código e ferramentas já desenvolvidas.
+		      \end{enumerate}
+		\item \textbf{Auditoria da qualidade}
+		      \begin{enumerate}[label*=\arabic*.]
+			      \item Auditoria não representa corretamente os processos de qualidade aplicados pelo projeto.
+		      \end{enumerate}
+	\end{enumerate}
+\end{description}
 
 \section{Qualificação dos riscos}
+\label{sec:risk-qualification}
 
-Os riscos identificados serão classificados de acordo com sua probabilidade de ocorrência e impacto de seus resultados, conforme descrito a seguir.
+Os riscos identificados serão classificados de acordo com sua probabilidade de ocorrência e impacto de seus resultados, conforme descrito abaixo:
 
 \subsection{Probabilidade de ocorrência}
 
 \begin{description}
-\item [Baixa] A probabilidade de o risco ocorrer é considerada pequena, menor que 25\%.
-\item [Média] Existe razoável probabilidade de o risco ocorrer, entre 25\% e 60\%.
-\item [Alta] O risco possui alta probabilidade de ocorrência, maior que 60\%. 
+	\item [Baixa] A probabilidade de o risco ocorrer é considerada pequena, menor que 25\%.
+	\item [Média] Existe razoável probabilidade de o risco ocorrer, entre 25\% e 60\%.
+	\item [Alta] O risco possui alta probabilidade de ocorrência, maior que 60\%.
 \end{description}
 
 \subsection{Impacto}
 
 \begin{description}
-\item [Baixo] Caso o evento venha a ocorrer, o impacto no projeto é insignificante, podendo ser facilmente resolvido.
-\item [Médio] A ocorrência do evento de risco pode causar impacto relevante no projeto, sendo necessário um gerenciamento mais preciso, sob pena de prejudicar o resultado do projeto.
-\item [Alto] A ocorrência do evento de risco impacta de forma extremamente significativa no projeto, exigindo ação precisa e imediata por parte da equipe do projeto, os resultados estarão comprometidos.
+	\item [Baixo] Caso o evento venha a ocorrer, o impacto no projeto é insignificante, podendo ser facilmente resolvido.
+	\item [Médio] A ocorrência do evento de risco pode causar impacto relevante no projeto, sendo necessário um gerenciamento mais preciso, sob pena de prejudicar o resultado do projeto.
+	\item [Alto] A ocorrência do evento de risco impacta de forma extremamente significativa no projeto, exigindo ação precisa e imediata por parte da equipe do projeto, os resultados estarão comprometidos.
 \end{description}
 
-\todo[inline,color=red]{Criar gráfico PxI.}
+As análises para os riscos classificados como oportunidade ou ameaça podem ser vistas nas figuras \ref{fig:probability-impact-matrix-oportunity} e \ref{fig:probability-impact-matrix-threats}, respectivamente.
+
+\begin{figure}[h]
+	\begin{tabularx}{\textwidth}{ c | >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X l}
+		\textbf{Probabilidade} &                                     &                                       &                                  &                  \\
+		\cellcolor{red!30!}\textbf{Alta} &
+		% Probabilidade Alta e Impacto Baixo
+		\cellcolor{yellow!10!} &
+		% Probabilidade Alta e Impacto Médio
+		\cellcolor{red!10!} &
+		% Probabilidade Alta e Impacto Alto
+		\cellcolor{red!10!}3.6 &   \\
+		\cellcolor{yellow!30!}\textbf{Média}&
+		% Probabilidade Média e Impacto Baixo
+		\cellcolor{green!10!} &
+		% Probabilidade Média e Impacto Médio
+		\cellcolor{yellow!10!} &
+		% Probabilidade Média e Impacto Alto
+		\cellcolor{red!10!} 4.4 &   \\
+		\cellcolor{green!30!}\textbf{Baixa}&
+		% Probabilidade Baixa e Impacto Baixo
+		\cellcolor{green!10!} &
+		% Probabilidade Baixa e Impacto Médio
+		\cellcolor{green!10!} &
+		% Probabilidade Baixa e Impacto Alto
+		\cellcolor{yellow!10!} 5.7 &   \\
+		\hline
+		                       & \cellcolor{green!30!}\textbf{Baixo} & \cellcolor{yellow!30!}\textbf{Médio} & \cellcolor{red!30!}\textbf{Alto} & \textbf{Impacto} \\
+	\end{tabularx}
+	\caption{Matriz de probabilidade e impacto para oportunidades.}
+	\label{fig:probability-impact-matrix-oportunity}
+	\centering
+\end{figure}
+
+\begin{figure}[h]
+	\begin{tabularx}{\textwidth}{ c | >{\centering\arraybackslash}X >{\centering\arraybackslash}X >{\centering\arraybackslash}X l}
+		\textbf{Probabilidade} &                                     &                                       &                                  &                  \\
+		\cellcolor{red!30!}\textbf{Alta} &
+		% Probabilidade Alta e Impacto Baixo
+		\cellcolor{yellow!10!} &
+		% Probabilidade Alta e Impacto Médio
+		\cellcolor{red!10!} 1.6, 5.6  &
+		% Probabilidade Alta e Impacto Alto
+		\cellcolor{red!10!} 1.12  &   \\
+		\cellcolor{yellow!30!}\textbf{Média}&
+		% Probabilidade Média e Impacto Baixo
+		\cellcolor{green!10!} 2.6 &
+		% Probabilidade Média e Impacto Médio
+		\cellcolor{yellow!10!} 1.3, 1.7, 1.9, 1.10, 1.16, 2.5, 3.3, 5.4, 5.5 &
+		% Probabilidade Média e Impacto Alto
+		\cellcolor{red!10!} 1.5, 1.17, 2.1, 2.4, 3.4 &   \\
+		\cellcolor{green!30!}\textbf{Baixa}&
+		% Probabilidade Baixa e Impacto Baixo
+		\cellcolor{green!10!} 2.2, 3.5 &
+		% Probabilidade Baixa e Impacto Médio
+		\cellcolor{green!10!} 1.11, 2.3, 3.1, 3.2, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1 &
+		% Probabilidade Baixa e Impacto Alto
+		\cellcolor{yellow!10!} 1.1, 1.2, 1.4, 1.8, 1.12, 1.14, 1.15, 4.1 &   \\
+		\hline
+		                       & \cellcolor{green!30!}\textbf{Baixo} & \cellcolor{yellow!30!}\textbf{Médio} & \cellcolor{red!30!}\textbf{Alto} & \textbf{Impacto} \\
+	\end{tabularx}
+	\caption{Matriz de probabilidade e impacto para ameaças.}
+	\label{fig:probability-impact-matrix-threats}
+	\centering
+\end{figure}
 
 \section{Quantificação dos riscos}
+\label{sec:risk-quantification}
 
-Não foi realizada a análise quantitativa dos riscos.
+\todo[inline,color=red]{Preencher tabela VME.}
+
+A quantificação dos riscos do projeto foi realizada utilizando a técnica do valor monetário esperado, confrome pode ser visto na tabela \ref{tab:risk-answers}.
+
+\newcounter{prob}
+\newcounter{cost}
+
+\begin{longtable}{ c p{0.4\textwidth} c c c }
+	\toprule
+	\thead[c]{\textbf{Item}} & \thead[c]{\textbf{Risco}} & \thead[c]{\textbf{Probabilidade}} & \thead[c]{\textbf{Impacto em Custo}} & \thead[c]{\textbf{VME}} \\
+	\midrule
+	\endhead
+	\multicolumn{5}{c}{{\textit{Continua na próxima página.}}} \\
+	\caption{Análise quantitativa dos riscos: valor monetário esperado.}
+	\endfoot
+	\endlastfoot
+	
+	1.1                      & Recusa do patrocinador em aprovar o termo de abertura.                                                                                                                        &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.2                      & Atraso nas entregas dos planos ou da linha de base do escopo.                                                                                                                &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.3                      & Planos e linha de base do escopo não aprovados.                                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.4                      & Termo de encerramento não aprovado.                                                                                                                                         &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.5                      & Indisponibilidade do patrocinador para as reuniões e acompanhamento do \foreign{status} do projeto.                                                                         &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.6                      & Férias de algum membro da equipe.                                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.7                      & Indisponibilidade de membro da equipe devido a doença.                                                                                                                     &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.8                      & Estouro do orçamento.                                                                                                                                                        &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.9                      & Atrasos nos prazos de execução do projeto.                                                                                                                                  &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.10                     & Mudanças de governo, ocasionando reformas que influenciam nos planos de projeto.                                                                                            &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.11                     & Controles e grenciamento do projeto inadequados ou insuficientes.                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.12                     & Problemas de comunicação entre a equipe e o gerente do projeto.                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.13                     & Mudança constante de requisitos.                                                                                                                                            &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.14                     & Corte no orçamento.                                                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.15                     & Cancelamento ou suspensão do projeto.                                                                                                                                        &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.16                     & Plano de comunicação débil.                                                                                                                                                &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	1.17                     & Responsabilidades da equipe não delineadas.                                                                                                                                &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	2.1                      & Identificação de novas aquisições necessárias para os ambientes de desenvolvimento, testes ou produção, ocasionando gastos não previstos na linha de base dos custos. &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	2.2                      & traso na contratação do servidor em nuvem.                                                                                                                                  &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	2.3                      & Quebra de contrato do servidor em nuvem.                                                                                                                                      &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	2.4                      & Aumento do custo do servidor em nuvem, visto que não é um contrato de preço fixo.                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	2.5                      & Indisponibilidade dos membros da equipe para a análise de necessidades de cada ambiente.                                                                                     &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	2.6                      & Ambiente de desenvolvimento insuficiente em relação às necessidades dos membros da equipe.                                                                                 &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	3.1                      & Pouca disponibilidade de fornecedores preparados para oferecer o servidor em nuvem conforme requisitos desejados.                                                            &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	3.2                      & Custos com fornecedor do servidor em nuvem maior que o orçado.                                                                                                               &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	3.3                      & Indisponibilidade de membros da equipe para suporte no levantamento requisitos para estrutura de banco de dados.                                                              &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	3.4                      & Grande quantidade de erros encontrados nos testes.                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	3.5                      & Atraso nos testes.                                                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	3.6                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	4.1                      & Performance do aplicativo do motorista insuficiente.                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	4.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	4.3                      & Atraso nos testes.                                                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	4.4                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.1                      & Performance do aplicativo do estacionamento insuficiente.                                                                                                                    &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.3                      & Atraso nos testes.                                                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.4                      & Indisponibilidade de documentação para desenvolver integração com DETRAN.                                                                                               &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.5                      & Integração com DETRAN muito complexa.                                                                                                                                   &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.6                      & Integração com sistema de automação muito complexa.                                                                                                                      &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	5.7                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                 &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\midrule
+	6.1                      & Auditoria não representa corretamente os processos de qualidade aplicados pelo projeto.                                                                                      &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
+	\bottomrule
+
+	\bottomrule
+	\caption{Análise quantitativa dos riscos: valor monetário esperado.}
+	\centering
+	\label{tab:risk-answers}
+\end{longtable}
 
 \section{Sistema de controle de mudanças de riscos}
 \label{sec:risk-change-control-system}
 
-Toda identificação de riscos e alterações em riscos já identificados devem ser tratados segundo o fluxo apresentado na figura \ref{fig:risk-change-control-system}, o qual deve ter suas conclusões apresentadas durante a reunião semanal do CCM, com suas conclusões prioridades e ações relacionadas.
+Toda identificação de novos riscos ou alterações em riscos já identificados devem ser incluídas na lista de riscos identificados (ver seção \ref{sec:identified-risks}), em seguida deve ser atualizada a qualificação dos riscos (ver seção \ref{sec:risk-qualification}), a resposta aos riscos (ver seção \ref{risk-answers}) e a análise de valor monetário esperado(ver seção \ref{sec:risk-quantification}). Esta análise deve ser apresentada durante a reunião semanal do CCM, em conjunto com os detalhes sobre os riscos atualizados ou incluídos.
 
-\todo[inline,color=red]{Criar sistema de crontrole de mudanças de riscos ou remeter a plano integrado de mudanças.}
 
-\begin{figure}[h]
-\centering
-\begin{tikzpicture}[node distance = 0.3cm and 0.7cm, auto]
-
-\node (begin) [startstop] {Início};
-
-\node (end) [startstop] {Fim};
-
-\end{tikzpicture}
-\caption{Sistema de controle de mudanças de riscos.}
-\label{fig:risk-change-control-system}
-\end{figure}
+%\begin{figure}[h]
+%	\centering
+%	\begin{tikzpicture}[node distance = 0.3cm and 0.7cm, auto]
+%
+%		\node (begin) [startstop] {Início};
+%
+%		\node (end) [startstop] {Fim};
+%
+%	\end{tikzpicture}
+%	\caption{Sistema de controle de mudanças de riscos.}
+%	\label{fig:risk-change-control-system}
+%\end{figure}
 
 \section{Respostas planejadas aos riscos}
+\label{risk-answers}
 
 Para os riscos identificados e qualificados, optou-se por diferentes estratégias de resposta para cada necessidade, conforme pode ser visto na tabela \ref{tab:risk-answers}.
 
-\todo[inline,color=red]{Preencher tabela com resposta a riscos.}
-
-\begin{longtable}{ l l l l l l l l }
+\begin{longtable}{ c p{0.4\textwidth} c p{0.35\textwidth} }
 	\toprule
-	\textbf{Item} & \textbf{Fase} & \textbf{Risco} & \textbf{Probabilidade} & \textbf{Gravidade} & \textbf{Resposta} & \textbf{Descrição} & \textbf{Custo} \\
+	\thead[c]{\textbf{Item}} & \thead[c]{\textbf{Risco}}                                                                                                                                                     & \thead[c]{\textbf{Ação}} & \thead[c]{\textbf{Descrição da Ação}}                                                                                              \\
 	\midrule
 	\endhead
-	\multicolumn{8}{c}{{\textit{Continua na próxima página.}}} \\
+	\multicolumn{4}{c}{{\textit{Continua na próxima página.}}} \\
 	\caption{Respostas planejadas aos riscos.}
 	\endfoot
 	\endlastfoot
-	  &   &   &   &   &   &   &   \\
+	1.1                      & Recusa do patrocinador em aprovar o termo de abertura.                                                                                                                        & Mitigar                    & Alinhar, periodicamente, as informações contidas no plano com o patrocinador.                                                        \\
+	\midrule
+	1.2                      & Atraso nas entregas dos planos ou da linha de base do escopo.                                                                                                                 & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.3                      & Planos e linha de base do escopo não aprovados.                                                                                                                              & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.4                      & Termo de encerramento não aprovado.                                                                                                                                          & Mitigar                    & Incentivar a cultura de qualidade durante toda execução do projeto. Definir claramente critérios de aceitação.                    \\
+	\midrule
+	1.5                      & Indisponibilidade do patrocinador para as reuniões e acompanhamento do \foreign{status} do projeto.                                                                          & Mitigar                    & Alinhar com patrocinador sua dispoibilidade no projeto.                                                                                \\
+	\midrule
+	1.6                      & Férias de algum membro da equipe.                                                                                                                                            & Mitigar                    & Buscar definir as férias dos recursos o quanto antes.                                                                                 \\
+	\midrule
+	1.7                      & Indisponibilidade de membro da equipe devido a doença.                                                                                                                       & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.8                      & Estouro do orçamento.                                                                                                                                                        & Mitigar                    & Acompanhamento diário do orçamento.                                                                                                  \\
+	\midrule
+	1.9                      & Atrasos nos prazos de execução do projeto.                                                                                                                                  & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.10                     & Mudanças de governo, ocasionando reformas que influenciam nos planos de projeto.                                                                                             & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.11                     & Controles e grenciamento do projeto inadequados ou insuficientes.                                                                                                             & Mitigar                    & Periodicamente, alinhar com a equipe os questionamentos relacionados ao gerenciamento e monitoramento do projeto.                      \\
+	\midrule
+	1.12                     & Problemas de comunicação entre a equipe e o gerente do projeto.                                                                                                             & Mitigar                    & Diariamente, o gerente do projeto deve buscar saber os obstáculo encontrados pela equipe.                                             \\
+	\midrule
+	1.13                     & Mudança constante de requisitos.                                                                                                                                             & Mitigar                    & Garantir que o plano integrado de mudanças trate destes casos de forma adequada, prevendo as mudanças de custo e prazo necessárias. \\
+	\midrule
+	1.14                     & Corte no orçamento.                                                                                                                                                          & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.15                     & Cancelamento ou suspensão do projeto.                                                                                                                                        & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	1.16                     & Plano de comunicação débil.                                                                                                                                                & Mitigar                    & Verificar periodicamente o plano de gerenciamento das comunicações.                                                                  \\
+	\midrule
+	1.17                     & Responsabilidades da equipe não delineadas.                                                                                                                                  & Mitigar                    & Durante a reunião de kick-off apresentar os membros da equipe e suas responsabilidades.                                               \\
+	\midrule
+	2.1                      & Identificação de novas aquisições necessárias para os ambientes de desenvolvimento, testes ou produção, ocasionando gastos não previstos na linha de base dos custos. & Mitigar                    & Gerente do projeto deve alinhar com todos membros da equipe as aquisições necessárias no início do projeto.                        \\
+	\midrule
+	2.2                      & Atraso na contratação do servidor em nuvem.                                                                                                                                 & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	2.3                      & Quebra de contrato do servidor em nuvem.                                                                                                                                      & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	2.4                      & Aumento do custo do servidor em nuvem, visto que não é um contrato de preço fixo.                                                                                          & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	2.5                      & Indisponibilidade dos membros da equipe para a análise de necessidades de cada ambiente.                                                                                     & Mitigar                    & Gerente do projeto deve verificar agenda dos recursos ao criar o cronograma.                                                           \\
+	\midrule
+	2.6                      & Ambiente de desenvolvimento insuficiente em relação às necessidades dos membros da equipe.                                                                                 & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	3.1                      & Pouca disponibilidade de fornecedores preparados para oferecer o servidor em nuvem conforme requisitos desejados.                                                             & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	3.2                      & Custos com fornecedor do servidor em nuvem maior que o orçado.                                                                                                               & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	3.3                      & Indisponibilidade de membros da equipe para suporte no levantamento de requisitos para estrutura de banco de dados.                                                           & Mitigar                    & Gerente do projeto deve verificar agenda dos recursos no início do projeto e criar o cronograma de acordo.                            \\
+	\midrule
+	3.4                      & Grande quantidade de erros encontrados nos testes.                                                                                                                            & Mitigar                    & Incentivar a cultura de qualidade no processo de desenvolvimento.                                                                      \\
+	\midrule
+	3.5                      & Atraso nos testes.                                                                                                                                                            & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	3.6                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  & Explorar                   & Incentivar a cultura de código reaproveitável na equipe.                                                                             \\
+	\midrule
+	4.1                      & Performance do aplicativo do motorista insuficiente.                                                                                                                          & Mitigar                    & Revisar código periodicamente em busca de gargalos de performance.                                                                    \\
+	\midrule
+	4.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                            & Mitigar                    & Incentivar a cultura de qualidade no processo de desenvolvimento.                                                                      \\
+	\midrule
+	4.3                      & Atraso nos testes.                                                                                                                                                            & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	4.4                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  & Explorar                   & Incentivar a cultura de código reaproveitável na equipe.                                                                             \\
+	\midrule
+	5.1                      & Performance do aplicativo do estacionamento insuficiente.                                                                                                                     & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	5.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                            & Mitigar                    & Incentivar a cultura de qualidade no processo de desenvolvimento.                                                                      \\
+	\midrule
+	5.3                      & Atraso nos testes.                                                                                                                                                            & Aceitar                    & Risco não será respondido e verba de contingência será utilizada em caso de necessidade.                                           \\
+	\midrule
+	5.4                      & Indisponibilidade de documentação para desenvolver integração com DETRAN.                                                                                                 & Mitigar                    & Entrar em contato com DETRAN o quanto antes em busca de documentação para API.                                                       \\
+	\midrule
+	5.5                      & Integração com DETRAN muito complexa.                                                                                                                                       & Mitigar                    & Realizar a integração o mais cedo possível.                                                                                         \\
+	\midrule
+	5.6                      & Integração com sistema de automação muito complexa.                                                                                                                       & Mitigar                    & Realizar a integração o mais cedo possível.                                                                                         \\
+	\midrule
+	5.7                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  & Explorar                   & Incentivar a cultura de código reaproveitável na equipe.                                                                             \\
+	\midrule
+	6.1                      & Auditoria não representa corretamente os processos de qualidade aplicados pelo projeto.                                                                                      & Mitigar                    & Reavaliar a lista de verificação de qualidade após cada processo de auditoria.                                                      \\
 	\bottomrule
 	\caption{Respostas planejadas aos riscos.}
 	\centering
-    \label{tab:risk-answers}
+	\label{tab:risk-answers}
 \end{longtable}
 
 \section{Reservas de contingência}
 
-Conforme descrito no plano de gerenciamento de custos (ver capítulo \ref{ch:cost-management-plan}), as reservas de contingências estão reservadas para uso exclusivo do processo de gerenciamento de riscos.
-\todo[inline,color=red]{Revisar reservas de contingência.}
-%As reservas de contingência totalizam ........, o gerente de projeto possui as autonomias descritas na tabela \ref{} para utilização das reservas.
+Conforme descrito no plano de gerenciamento de custos (ver capítulo \ref{ch:cost-management-plan}), as reservas de contingências estão reservadas para uso exclusivo do processo de gerenciamento de riscos, para os eventos de riscos aceitos ou mitigados.
+
+As reservas de contingência totalizam \contingencyBudget{} \todo[inline,color=red]{Revisar valor de reservas de contingência.}, o gerente de projeto possui as autonomias descritas no plano de gerenciamento de custos para utilização das reservas.
 
 \section{Frequência de avaliação dos riscos do projeto}
 
@@ -209,7 +508,7 @@ Solicitações não previstas neste plano deverão passar pela aprovação do CC
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | X |}
 		\hline
-		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão} \\
 		\hline
 		1                &               & \projectManagerName{} & Criação do documento     \\
 		\hline
@@ -222,7 +521,7 @@ Solicitações não previstas neste plano deverão passar pela aprovação do CC
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | c |}
 		\hline
-		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
 		\hline
 		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
 		\hline
