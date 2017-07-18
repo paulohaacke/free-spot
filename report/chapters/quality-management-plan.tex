@@ -35,11 +35,11 @@
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | X |}
 		\hline
-		\textbf{Papel}     & \textbf{Responsabilidade}                            \\
+		\textbf{Papel}      & \textbf{Responsabilidade}                                                                                                                                    \\
 		\hline
-		Gerente de projeto & Especificar o cronograma do projeto incluindo testes \\
+		Gerente de projeto  & Especificar o cronograma do projeto incluindo testes                                                                                                         \\
 		\hline
-		Desenvolvedores & Desenvolver e realizar testes unitários  \\
+		Desenvolvedores     & Desenvolver e realizar testes unitários                                                                                                                     \\
 		\hline
 		Analistas de Testes & Definir os testes necessários, realizar testes de integração, gerenciar os dados resultantes dos testes e e coletar indicadores de métricas de qualidade \\
 		\hline
@@ -56,13 +56,13 @@
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | X |}
 		\hline
-		\textbf{Papel}     & \textbf{Responsabilidade}                            \\
+		\textbf{Papel}     & \textbf{Responsabilidade}                                           \\
 		\hline
-		Gerente de projeto & Especificar o cronograma do projeto incluindo auditorias \\
+		Gerente de projeto & Especificar o cronograma do projeto incluindo auditorias            \\
 		\hline
-		Analista de testes & Realizar auditorias \\
+		Analista de testes & Realizar auditorias                                                 \\
 		\hline
-		Equipe do Projeto & Realizar reuniões para levantar sugestões de melhoria no processo \\
+		Equipe do Projeto  & Realizar reuniões para levantar sugestões de melhoria no processo \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -75,36 +75,36 @@
 O processo de gerenciamento da qualidade deve seguir o fluxo mostrado na figura \ref{fig:quality-management-process}.
 
 \begin{figure}[h]
-\centering
-\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
-	\node (begin) [startstop] {Início};
-	\node (new-module) [process, below= of begin] {Novo Módulo};
-	\node (project) [process, right= of new-module] {Projeto e Arquitetura};
-	\node (develop) [process, below= of project] {Desenvolver Módulo};
-	\node (unit-test) [process, right= of develop] {Testes Unitários};
-	\node (is-unit-test-done) [decision, below= of unit-test] {Passou?};
-	\node (integration-test) [process, below= of is-unit-test-done] {Teste Integrado (Inclui Teste de Aceitação)};
-	\node (is-integ-test-done) [decision, left= of integration-test] {Passou?};
-	\node (end-of-module) [process, below= of is-integ-test-done] {Módulo Finalizado};
-	\node (more-modules) [decision, left= of end-of-module] {Existem módulos para desenvolver?};
-	\node (end) [startstop, below= of more-modules] {Fim};
+	\centering
+	\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
+		\node (begin) [startstop] {Início};
+		\node (new-module) [process, below= of begin] {Novo Módulo};
+		\node (project) [process, right= of new-module] {Projeto e Arquitetura};
+		\node (develop) [process, below= of project] {Desenvolver Módulo};
+		\node (unit-test) [process, right= of develop] {Testes Unitários};
+		\node (is-unit-test-done) [decision, below= of unit-test] {Passou?};
+		\node (integration-test) [process, below= of is-unit-test-done] {Teste Integrado (Inclui Teste de Aceitação)};
+		\node (is-integ-test-done) [decision, left= of integration-test] {Passou?};
+		\node (end-of-module) [process, below= of is-integ-test-done] {Módulo Finalizado};
+		\node (more-modules) [decision, left= of end-of-module] {Existem módulos para desenvolver?};
+		\node (end) [startstop, below= of more-modules] {Fim};
 
-	\path [line] (begin) -- (new-module);
-	\path [line] (new-module) -- (project);
-	\path [line] (project) -- (develop);
-	\path [line] (develop) -- (unit-test);
-	\path [line] (unit-test) -- (is-unit-test-done);
-	\path [line] (is-unit-test-done) -- node [near start] {sim} (integration-test);
-	\path [line] (is-unit-test-done) -| node [near start] {não} (develop);
-	\path [line] (integration-test) -- (is-integ-test-done);
-	\path [line] (is-integ-test-done) -- node [near start] {sim} (end-of-module);
-	\path [line] (is-integ-test-done) -- node [near start] {não} ++(-3cm,0) |- (develop);
-	\path [line] (end-of-module) -- (more-modules);
-	\path [line] (more-modules) -- node [near start] {sim} (new-module);
-	\path [line] (more-modules) -- node [near start] {não} (end);
-\end{tikzpicture}
-\caption{Processo de gerenciamento da qualidade.}
-\label{fig:quality-management-process}
+		\path [line] (begin) -- (new-module);
+		\path [line] (new-module) -- (project);
+		\path [line] (project) -- (develop);
+		\path [line] (develop) -- (unit-test);
+		\path [line] (unit-test) -- (is-unit-test-done);
+		\path [line] (is-unit-test-done) -- node [near start] {sim} (integration-test);
+		\path [line] (is-unit-test-done) -| node [near start] {não} (develop);
+		\path [line] (integration-test) -- (is-integ-test-done);
+		\path [line] (is-integ-test-done) -- node [near start] {sim} (end-of-module);
+		\path [line] (is-integ-test-done) -- node [near start] {não} ++(-3cm,0) |- (develop);
+		\path [line] (end-of-module) -- (more-modules);
+		\path [line] (more-modules) -- node [near start] {sim} (new-module);
+		\path [line] (more-modules) -- node [near start] {não} (end);
+	\end{tikzpicture}
+	\caption{Processo de gerenciamento da qualidade.}
+	\label{fig:quality-management-process}
 \end{figure}
 
 \section{Planejamento de avaliação de qualidade}
@@ -201,9 +201,13 @@ Solicitações não previstas neste plano deverão passar pela aprovação do CC
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | X |}
 		\hline
-		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão}         \\
 		\hline
-		1                &               & \projectManagerName{} & Criação do documento     \\
+		1                & 23/04/2017    & \projectManagerName{} & Criação do documento             \\
+		\hline
+		2                & 05/05/2017    & \projectManagerName{} & Adicionando métricas de qualidade \\
+		\hline
+		3                & 10/05/2017    & \projectManagerName{} & Revisão do documento              \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -214,11 +218,11 @@ Solicitações não previstas neste plano deverão passar pela aprovação do CC
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | c |}
 		\hline
-		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
+		\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
 		\hline
-		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
+		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} & 06/06/2017    \\
 		\hline
-		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
+		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} & 06/06/2017    \\
 		\hline
 	\end{tabularx}
 	\centering

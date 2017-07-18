@@ -20,7 +20,7 @@
 	\item \softArcName{} - Arquiteto de software
 	\item \testAnalOneName{} - Analista de Testes 1
 	\item \testAnalTwoName{} - Analista de Testes 2
-	\item \dbAnalName{} - Analista de Banco de Dados 
+	\item \dbAnalName{} - Analista de Banco de Dados
 	\item \projectSponsorName{} - Patrocinador
 \end{itemize}
 
@@ -40,7 +40,7 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 \subsubsection{Requisitos funcionais}
 
 \begin{itemize}
-		% Android App
+	% Android App
 	\item Qualquer pessoa deve poder criar um conta usando o aplicativo \projectName{}. Para se registrar o consumidor deve entrar com seu endereço de e-mail, uma senha, o primeiro e último nomes, a placa do veículo e um cartão de crédito válido antes que possam fazer qualquer reserva.
 	\item Um consumidor registrado pode realizar reservas nos estacionamentos listados pelo aplicativo, contanto que realize o pagamento de forma antecipada.
 	\item Um consumidor registrado deve ocupar sua vaga no estacionamento para que uma reserva seja considerada realizada.
@@ -48,14 +48,14 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item O usuário deve ter a possibilidade de verificar o dinheiro gasto até o momento.
 	\item O sistema deve ser capaz de processar pagamentos.
 	\item O consumidor pode cancelar sua reserva em até 1 hora antes do início da mesma.
-	    % Web app
+	      % Web app
 	\item O sistema deve permitir ao gerente ou dono do estacionamento visualizar o perfil do cliente.
 	\item O sistema deve permitir a criação de um cadastro do estacionamento através de um registro.
 	\item O sistema deve permitir a definição de usuários com permissão para acessar as telas de gerenciamento do estacionamento.
 	\item O sistema deve processar o pagamento baseado no tempo em que o usuário ficou estacionado.
 	\item O sistema deve oferecer opções para gerenciar o estacionamento: definir preço por hora ou mês, multas entre outras definições sobre as características do mesmo.
 	\item O sistema deve identificar tendências em relação a ocupação do estacionamento.
-	%\item O sistema deve possuir integração com aplicativos web e mobile.
+	      %\item O sistema deve possuir integração com aplicativos web e mobile.
 	\item O sistema deve estar integrado com o banco de dados do detran para buscar informações de licença do motorista.
 	\item O administrador do sistema pode verificar a ocupação das vagas no estacionamento.
 \end{itemize}
@@ -73,11 +73,11 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 
 \begin{itemize}
 	\item O cliente irá manter o registro de seu perfil, incluindo a placa do veículo, devidamente atualizados.
-    \item Em casos que o sistema não possa acomodar o usuário ou o usuário não concorde com os termos de uso e condições do sistema, o usuário será aconselhado a deixar o estacionamento. Nestes casos assume-se que o usuário sempre obedecerá e sairá do estacionamento.
-    \item Um consumidor estaciona sempre na vaga correta, e nunca ocupará duas vagas ao mesmo tempo.
-    \item Os sistemas de detecção de ocupação de vagas sempre funcionarão de maneira correta. Os sistemas reconhecerão uma vaga como ocupada apenas quando houver um carro na vaga.
-    \item O usuário sairá do estacionamento imediatamente após retirar seu carro da vaga utilizada.
-    % From project-charter
+	\item Em casos que o sistema não possa acomodar o usuário ou o usuário não concorde com os termos de uso e condições do sistema, o usuário será aconselhado a deixar o estacionamento. Nestes casos assume-se que o usuário sempre obedecerá e sairá do estacionamento.
+	\item Um consumidor estaciona sempre na vaga correta, e nunca ocupará duas vagas ao mesmo tempo.
+	\item Os sistemas de detecção de ocupação de vagas sempre funcionarão de maneira correta. Os sistemas reconhecerão uma vaga como ocupada apenas quando houver um carro na vaga.
+	\item O usuário sairá do estacionamento imediatamente após retirar seu carro da vaga utilizada.
+	      % From project-charter
 	\item Os estacionamentos privados de Porto Alegre estão prontos para aderir a este tipo de tecnologia.
 	\item Utilizar base de dados em cloud.
 	\item Utilizar um framework multi-plataforma para o desenvolvimento do aplicativo para dispositivos móveis.
@@ -88,7 +88,7 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 
 \begin{itemize}
 	\item O orçamento é limitado a \maximumBudget{}.
-	%\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
+	      %\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
 	\item Data de conclusão do projeto: \maximumDeadline{}.
 	\item Investimentos em infraestrutura estão fora do escopo.
 	\item O aplicativo web para o estacionamento deverá ser acessado através dos seguintes navegadores: firefox e chrome.
@@ -97,8 +97,8 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 \subsection{Limites do projeto e exclusões específicas}
 
 \begin{itemize}
-\item O projeto não tem como objetivo a implantação da solução, apenas a criação de especificações técnicas que possibilitem a implantação do sistema.
-\item Questões de marketing e divulgação do produto não serão tratados neste projeto.
+	\item O projeto não tem como objetivo a implantação da solução, apenas a criação de especificações técnicas que possibilitem a implantação do sistema.
+	\item Questões de marketing e divulgação do produto não serão tratados neste projeto.
 \end{itemize}
 
 \section{Estrutura Analítica do Projeto}
@@ -117,30 +117,30 @@ O orçamento previsto pelo projeto é de \maximumBudget{}, incluindo reservas ge
 
 A tabela \ref{tab:entregas} descreve os principais marcos de entrega do projeto.
 
-\begin{table}[h]
+\begin{table}[H]
 	\begin{tabularx}{.9\textwidth}{| X | X | c |}
 		\hline
-		\textbf{Marco}                               & \textbf{Critério de Aceitação}                     & \textbf{Prazo} \\
+		\textbf{Marco}                        & \textbf{Critério de Aceitação}                                                                   & \textbf{Prazo} \\
 		\hline
-		Planejamento realizado & Planos de projeto criados & 20/06/2017 \\
+		Planejamento realizado                & Planos de projeto criados                                                                           & 05/06/2017     \\
 		\hline
-		Ambiente de desenvolvimento preparado & Ambiente para desenvolvimento do aplicativo móvel, web e do software de centralização preparados & 13/06/2017 \\
+		Ambiente de desenvolvimento preparado & Ambiente para desenvolvimento do aplicativo móvel, web e do software de centralização preparados & 13/06/2017     \\
 		\hline
-		Ambiente de testes preparado & Ambiente para testes para o aplicativo móvel, web e software de centralização preparados & 15/06/2017 \\
+		Ambiente de testes preparado          & Ambiente para testes para o aplicativo móvel, web e software de centralização preparados         & 15/06/2017     \\
 		\hline
-		Ambiente de produção preparado & Ambiente de produção para o aplicativo móvel, web e o software de centralização preparados & 19/07/2017 \\
+		Ambiente de produção preparado      & Ambiente de produção para o aplicativo móvel, web e o software de centralização preparados     & 19/07/2017     \\
 		\hline
-		Plataforma de nuvem contratada & Selecionada e contratada o servidor em nuvem & 22/06/2017 \\
+		Plataforma de nuvem contratada        & Selecionada e contratada o servidor em nuvem                                                        & 22/06/2017     \\
 		\hline
-		Banco de dados criado & Banco de dados planejado e criado & 12/07/2017\\
+		Banco de dados criado                 & Banco de dados planejado e criado                                                                   & 12/07/2017     \\
 		\hline
-		Web API pronta & Web API desenvolvida e devidamente testada & 29/08/2017 \\
+		Web API pronta                        & Web API desenvolvida e devidamente testada                                                          & 29/08/2017     \\
 		\hline
-		Aplicativo do motorista pronto & Aplicativo do motorista desenvolvido e devidamente testado & 25/12/2017 \\
+		Aplicativo do motorista pronto        & Aplicativo do motorista desenvolvido e devidamente testado                                          & 20/10/2017     \\
 		\hline
-		Aplicativo do estacionamento pronto & Aplicativo do estacionamento desenvolvido e devidamente testado & 20/10/2017 \\
+		Aplicativo do estacionamento pronto   & Aplicativo do estacionamento desenvolvido e devidamente testado                                     & 25/12/2017     \\
 		\hline
-		Projeto Finalizado & Projeto executado, entregas realizadas, encerramento realizado e aprovado & 01/01/2018 \\
+		Projeto Finalizado                    & Projeto executado, entregas realizadas, encerramento realizado e aprovado                           & 01/01/2018     \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -153,9 +153,11 @@ A tabela \ref{tab:entregas} descreve os principais marcos de entrega do projeto.
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | X |}
 		\hline
-		\textbf{Versão} & \textbf{Data} & \textbf{Autor}      & \textbf{Notas de Revisão} \\
+		\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão} \\
 		\hline
-		1                &               & \projectManagerName{} & Criação do documento     \\
+		1                & 23/04/2017    & \projectManagerName{} & Criação do documento     \\
+		\hline
+		2                & 05/05/2017    & \projectManagerName{} & Revisão de requisitos     \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -166,11 +168,11 @@ A tabela \ref{tab:entregas} descreve os principais marcos de entrega do projeto.
 \begin{table}[H]
 	\begin{tabularx}{\textwidth}{| c | c | X | c |}
 		\hline
-		\textbf{Função}  & \textbf{Nome}       & \textbf{Assinatura}      & \textbf{Data} \\
-        \hline
-		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
+		\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
 		\hline
-		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
+		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} & 06/06/2017    \\
+		\hline
+		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} & 06/06/2017    \\
 		\hline
 	\end{tabularx}
 	\centering

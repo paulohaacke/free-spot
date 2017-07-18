@@ -232,14 +232,14 @@ As análises para os riscos classificados como oportunidade ou ameaça podem ser
 		% Probabilidade Média e Impacto Baixo
 		\cellcolor{green!10!} 2.6 &
 		% Probabilidade Média e Impacto Médio
-		\cellcolor{yellow!10!} 1.3, 1.7, 1.9, 1.10, 1.16, 2.5, 3.3, 5.4, 5.5 &
+		\cellcolor{yellow!10!} 1.7, 1.9, 1.10, 1.16, 2.5, 3.3, 5.4, 5.5 &
 		% Probabilidade Média e Impacto Alto
-		\cellcolor{red!10!} 1.5, 1.17, 2.1, 2.4, 3.4 &   \\
+		\cellcolor{red!10!} 1.3, 1.5, 1.17, 2.1, 2.4, 3.4 &   \\
 		\cellcolor{green!30!}\textbf{Baixa}&
 		% Probabilidade Baixa e Impacto Baixo
 		\cellcolor{green!10!} 2.2, 3.5 &
 		% Probabilidade Baixa e Impacto Médio
-		\cellcolor{green!10!} 1.11, 2.3, 3.1, 3.2, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1 &
+		\cellcolor{green!10!} 1.11, 1.13, 2.3, 3.1, 3.2, 4.2, 4.3, 5.1, 5.2, 5.3, 6.1 &
 		% Probabilidade Baixa e Impacto Alto
 		\cellcolor{yellow!10!} 1.1, 1.2, 1.4, 1.8, 1.12, 1.14, 1.15, 4.1 &   \\
 		\hline
@@ -253,106 +253,106 @@ As análises para os riscos classificados como oportunidade ou ameaça podem ser
 \section{Quantificação dos riscos}
 \label{sec:risk-quantification}
 
-\todo[inline,color=red]{Preencher tabela VME.}
-
 A quantificação dos riscos do projeto foi realizada utilizando a técnica do valor monetário esperado, confrome pode ser visto na tabela \ref{tab:risk-answers}.
 
 \newcounter{prob}
 \newcounter{cost}
+\newcounter{total}
+\newcounter{parSum}
 
-\begin{longtable}{ c p{0.4\textwidth} c c c }
+\begin{longtable}{ c p{0.35\textwidth} c c c }
 	\toprule
-	\thead[c]{\textbf{Item}} & \thead[c]{\textbf{Risco}} & \thead[c]{\textbf{Probabilidade}} & \thead[c]{\textbf{Impacto em Custo}} & \thead[c]{\textbf{VME}} \\
+	\thead[c]{\textbf{Item}} & \thead[c]{\textbf{Risco}}                                                                                                                                                     & \thead[c]{\textbf{Probabilidade}}    & \thead[c]{\textbf{Impacto}}                 & \thead[c]{\textbf{VME}}                                                                                                  \\
 	\midrule
 	\endhead
 	\multicolumn{5}{c}{{\textit{Continua na próxima página.}}} \\
 	\caption{Análise quantitativa dos riscos: valor monetário esperado.}
 	\endfoot
 	\endlastfoot
-	
-	1.1                      & Recusa do patrocinador em aprovar o termo de abertura.                                                                                                                        &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.2                      & Atraso nas entregas dos planos ou da linha de base do escopo.                                                                                                                &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.3                      & Planos e linha de base do escopo não aprovados.                                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.4                      & Termo de encerramento não aprovado.                                                                                                                                         &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.5                      & Indisponibilidade do patrocinador para as reuniões e acompanhamento do \foreign{status} do projeto.                                                                         &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.6                      & Férias de algum membro da equipe.                                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.7                      & Indisponibilidade de membro da equipe devido a doença.                                                                                                                     &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.8                      & Estouro do orçamento.                                                                                                                                                        &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.9                      & Atrasos nos prazos de execução do projeto.                                                                                                                                  &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.10                     & Mudanças de governo, ocasionando reformas que influenciam nos planos de projeto.                                                                                            &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.11                     & Controles e grenciamento do projeto inadequados ou insuficientes.                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.12                     & Problemas de comunicação entre a equipe e o gerente do projeto.                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.13                     & Mudança constante de requisitos.                                                                                                                                            &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.14                     & Corte no orçamento.                                                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.15                     & Cancelamento ou suspensão do projeto.                                                                                                                                        &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.16                     & Plano de comunicação débil.                                                                                                                                                &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	1.17                     & Responsabilidades da equipe não delineadas.                                                                                                                                &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	2.1                      & Identificação de novas aquisições necessárias para os ambientes de desenvolvimento, testes ou produção, ocasionando gastos não previstos na linha de base dos custos. &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	2.2                      & traso na contratação do servidor em nuvem.                                                                                                                                  &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	2.3                      & Quebra de contrato do servidor em nuvem.                                                                                                                                      &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	2.4                      & Aumento do custo do servidor em nuvem, visto que não é um contrato de preço fixo.                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	2.5                      & Indisponibilidade dos membros da equipe para a análise de necessidades de cada ambiente.                                                                                     &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	2.6                      & Ambiente de desenvolvimento insuficiente em relação às necessidades dos membros da equipe.                                                                                 &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	3.1                      & Pouca disponibilidade de fornecedores preparados para oferecer o servidor em nuvem conforme requisitos desejados.                                                            &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	3.2                      & Custos com fornecedor do servidor em nuvem maior que o orçado.                                                                                                               &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	3.3                      & Indisponibilidade de membros da equipe para suporte no levantamento requisitos para estrutura de banco de dados.                                                              &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	3.4                      & Grande quantidade de erros encontrados nos testes.                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	3.5                      & Atraso nos testes.                                                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	3.6                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	4.1                      & Performance do aplicativo do motorista insuficiente.                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	4.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	4.3                      & Atraso nos testes.                                                                                                                                                           &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	4.4                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                             &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.1                      & Performance do aplicativo do estacionamento insuficiente.                                                                                                                    &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.3                      & Atraso nos testes.                                                                                                                                                          &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.4                      & Indisponibilidade de documentação para desenvolver integração com DETRAN.                                                                                               &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.5                      & Integração com DETRAN muito complexa.                                                                                                                                   &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.6                      & Integração com sistema de automação muito complexa.                                                                                                                      &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	5.7                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                 &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\midrule
-	6.1                      & Auditoria não representa corretamente os processos de qualidade aplicados pelo projeto.                                                                                      &        \setcounter{prob}{50}\arabic{prob}\%                      &   R\$ \setcounter{cost}{1250}\arabic{cost},00         &    R\$ \the\numexpr\value{prob}*\value{cost}/100\relax                \\
-	\bottomrule
 
+	1.1                      & Recusa do patrocinador em aprovar o termo de abertura.                                                                                                                        & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*2055/10000}\arabic{cost},00 & R\$ \setcounter{total}{\value{prob}*\value{cost}/100}\arabic{total},00                                                   \\
+	\midrule
+	1.2                      & Atraso nas entregas dos planos ou da linha de base do escopo.                                                                                                                 & \setcounter{prob}{25}\arabic{prob}\% & R\$ \setcounter{cost}{60*65*11926/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.3                      & Planos e linha de base do escopo não aprovados.                                                                                                                              & \setcounter{prob}{35}\arabic{prob}\% & R\$ \setcounter{cost}{60*75*11926/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.4                      & Termo de encerramento não aprovado.                                                                                                                                          & \setcounter{prob}{10}\arabic{prob}\% & R\$ \setcounter{cost}{60*80*90000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.5                      & Indisponibilidade do patrocinador para as reuniões e acompanhamento do \foreign{status} do projeto.                                                                          & \setcounter{prob}{40}\arabic{prob}\% & R\$ \setcounter{cost}{60*75*19000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.6                      & Férias de algum membro da equipe.                                                                                                                                            & \setcounter{prob}{90}\arabic{prob}\% & R\$ \setcounter{cost}{60*35*7000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.7                      & Indisponibilidade de membro da equipe devido a doença.                                                                                                                       & \setcounter{prob}{60}\arabic{prob}\% & R\$ \setcounter{cost}{60*30*1500/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.8                      & Estouro do orçamento.                                                                                                                                                        & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*75*15000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.9                      & Atrasos nos prazos de execução do projeto.                                                                                                                                  & \setcounter{prob}{50}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*10000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.10                     & Mudanças de governo, ocasionando reformas que influenciam nos planos de projeto.                                                                                             & \setcounter{prob}{60}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*15000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.11                     & Controles e grenciamento do projeto inadequados ou insuficientes.                                                                                                             & \setcounter{prob}{10}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*9456/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.12                     & Problemas de comunicação entre a equipe e o gerente do projeto.                                                                                                             & \setcounter{prob}{70}\arabic{prob}\% & R\$ \setcounter{cost}{60*75*7500/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.13                     & Mudança constante de requisitos.                                                                                                                                             & \setcounter{prob}{20}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*8500/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.14                     & Corte no orçamento.                                                                                                                                                          & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*2350/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.15                     & Cancelamento ou suspensão do projeto.                                                                                                                                        & \setcounter{prob}{3}\arabic{prob}\% & R\$ \setcounter{cost}{60*100*10000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.16                     & Plano de comunicação débil.                                                                                                                                                & \setcounter{prob}{40}\arabic{prob}\% & R\$ \setcounter{cost}{60*60*8345/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	1.17                     & Responsabilidades da equipe não delineadas.                                                                                                                                  & \setcounter{prob}{25}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*9250/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	2.1                      & Identificação de novas aquisições necessárias para os ambientes de desenvolvimento, testes ou produção, ocasionando gastos não previstos na linha de base dos custos. & \setcounter{prob}{30}\arabic{prob}\% & R\$ \setcounter{cost}{60*75*10000/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	2.2                      & Atraso na contratação do servidor em nuvem.                                                                                                                                  & \setcounter{prob}{20}\arabic{prob}\% & R\$ \setcounter{cost}{60*20*9500/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	2.3                      & Quebra de contrato do servidor em nuvem.                                                                                                                                      & \setcounter{prob}{5}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*9750/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	2.4                      & Aumento do custo do servidor em nuvem, visto que não é um contrato de preço fixo.                                                                                          & \setcounter{prob}{30}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*8500/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	2.5                      & Indisponibilidade dos membros da equipe para a análise de necessidades de cada ambiente.                                                                                     & \setcounter{prob}{30}\arabic{prob}\% & R\$ \setcounter{cost}{60*65*9650/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	2.6                      & Ambiente de desenvolvimento insuficiente em relação às necessidades dos membros da equipe.                                                                                 & \setcounter{prob}{40}\arabic{prob}\% & - R\$ \setcounter{cost}{60*15*10000/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	3.1                      & Pouca disponibilidade de fornecedores preparados para oferecer o servidor em nuvem conforme requisitos desejados.                                                             & \setcounter{prob}{20}\arabic{prob}\% & R\$ \setcounter{cost}{60*40*9625/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	3.2                      & Custos com fornecedor do servidor em nuvem maior que o orçado.                                                                                                               & \setcounter{prob}{5}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*9900/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	3.3                      & Indisponibilidade de membros da equipe para suporte no levantamento requisitos para estrutura de banco de dados.                                                              & \setcounter{prob}{30}\arabic{prob}\% & R\$ \setcounter{cost}{60*60*8900/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	3.4                      & Grande quantidade de erros encontrados nos testes.                                                                                                                            & \setcounter{prob}{40}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*9400/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	3.5                      & Atraso nos testes.                                                                                                                                                            & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*15*7950/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	3.6                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  & \setcounter{prob}{70}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*16494/10000}\arabic{cost},00 & + R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}-\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	4.1                      & Performance do aplicativo do motorista insuficiente.                                                                                                                          & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*80*20000/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	4.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                            & \setcounter{prob}{20}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*9400/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	4.3                      & Atraso nos testes.                                                                                                                                                            & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*55*7950/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	4.4                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  & \setcounter{prob}{50}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*25590/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}-\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.1                      & Performance do aplicativo do estacionamento insuficiente.                                                                                                                     & \setcounter{prob}{18}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*20000/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.2                      & Grande quantidade de erros encontrados nos testes.                                                                                                                            & \setcounter{prob}{20}\arabic{prob}\% & R\$ \setcounter{cost}{60*40*9400/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.3                      & Atraso nos testes.                                                                                                                                                            & \setcounter{prob}{15}\arabic{prob}\% & R\$ \setcounter{cost}{60*45*7950/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.4                      & Indisponibilidade de documentação para desenvolver integração com DETRAN.                                                                                                 & \setcounter{prob}{40}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*9950/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.5                      & Integração com DETRAN muito complexa.                                                                                                                                       & \setcounter{prob}{40}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*9600/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.6                      & Integração com sistema de automação muito complexa.                                                                                                                       & \setcounter{prob}{65}\arabic{prob}\% & R\$ \setcounter{cost}{60*40*9230/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	5.7                      & Reaproveitamento de código e ferramentas já desenvolvidas.                                                                                                                  & \setcounter{prob}{20}\arabic{prob}\% & R\$ \setcounter{cost}{60*70*39619/10000}\arabic{cost},00 & R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}-\value{parSum}}\arabic{parSum},00 \\
+	\midrule
+	6.1                      & Auditoria não representa corretamente os processos de qualidade aplicados pelo projeto.                                                                                      & \setcounter{prob}{10}\arabic{prob}\% & R\$ \setcounter{cost}{60*50*7250/10000}\arabic{cost},00 & - R\$ \setcounter{parSum}{\value{prob}*\value{cost}/100}\setcounter{total}{\value{total}+\value{parSum}}\arabic{parSum},00 \\
+	\bottomrule
+	                         &                                                                                                                                                                               &                                      & \thead[r]{\textbf{Total:}}                  & \textbf{- R\$ \arabic{total},00}                                                                                                    \\
 	\bottomrule
 	\caption{Análise quantitativa dos riscos: valor monetário esperado.}
 	\centering
@@ -483,7 +483,7 @@ Para os riscos identificados e qualificados, optou-se por diferentes estratégia
 
 Conforme descrito no plano de gerenciamento de custos (ver capítulo \ref{ch:cost-management-plan}), as reservas de contingências estão reservadas para uso exclusivo do processo de gerenciamento de riscos, para os eventos de riscos aceitos ou mitigados.
 
-As reservas de contingência totalizam \contingencyBudget{} \todo[inline,color=red]{Revisar valor de reservas de contingência.}, o gerente de projeto possui as autonomias descritas no plano de gerenciamento de custos para utilização das reservas.
+As reservas de contingência totalizam \contingencyBudget{}, o gerente de projeto possui as autonomias descritas no plano de gerenciamento de custos para utilização das reservas.
 
 \section{Frequência de avaliação dos riscos do projeto}
 
@@ -510,7 +510,19 @@ Solicitações não previstas neste plano deverão passar pela aprovação do CC
 		\hline
 		\textbf{Versão} & \textbf{Data} & \textbf{Autor}        & \textbf{Notas de Revisão} \\
 		\hline
-		1                &               & \projectManagerName{} & Criação do documento     \\
+		1                &    23/04/2017           & \projectManagerName{} & Criação do documento     \\
+		\hline
+		2                &    27/04/2017           & \projectManagerName{} & Identificação dos riscos     \\
+		\hline
+		3                &    02/05/2017           & \projectManagerName{} & Adicionando novos riscos     \\
+		\hline
+		4                &    05/05/2017           & \projectManagerName{} & Realizando qualificação dos riscos     \\
+		\hline
+		5                &    17/05/2017           & \projectManagerName{} & Realizando quantificação dos riscos      \\
+		\hline
+		6                &    24/05/2017           & \projectManagerName{} & Planejando respostas aos riscos     \\
+		\hline
+		7                &    05/06/2017           & \projectManagerName{} & Revisão do documento     \\
 		\hline
 	\end{tabularx}
 	\centering
@@ -523,9 +535,9 @@ Solicitações não previstas neste plano deverão passar pela aprovação do CC
 		\hline
 		\textbf{Função}  & \textbf{Nome}         & \textbf{Assinatura}        & \textbf{Data} \\
 		\hline
-		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &               \\
+		Patrocinador       & \projectSponsorName{} & \projectSponsorSignature{} &      06/06/2017         \\
 		\hline
-		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &               \\
+		Gerente de projeto & \projectManagerName{} & \projectManagerSignature{} &      06/06/2017         \\
 		\hline
 	\end{tabularx}
 	\centering
