@@ -22,11 +22,10 @@
 \begin{itemize}
 	%\item Atividades de alto risco deverão tornar-se prioritárias, de modo que sejam desenvolvidas o mais cedo possível durante a execução do projeto.
 	%\item Projetos de software com ciclo de vida adaptativo escolhem requisitos e histórias de usuário do backlog, o qual pode sofrer frequentes repriorizações; o que permite o gerenciamento de risco o mais cedo possível no projeto, minimizando efeitos de atraso e composição.
-	\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da EAR (ver seção \ref{sec:rbs}), sugere-se a utilização das seguintes técnicas:
+	\item Os riscos do projeto serão identificados pelo time do projeto, utilizando-se da estrutura analítica de riscos (EAR) (ver seção \ref{sec:rbs}), sugere-se a utilização das seguintes técnicas:
 	      \begin{itemize}
 		      \item \foreign{Brainstorming}.
 		      \item Grupo nominal.
-		      \item \foreign{Slip} de \foreign{Crawford}.
 	      \end{itemize}
 	\item Os riscos do projeto serão gerenciados com base nos riscos identificados previamente, assim como no monitoramento e controle de novos riscos que podem não ter sido identificados oportunamente.
 	\item Todos os riscos não previstos no plano devem ser incluídos ao projeto de acordo com sistema de controle de mudanças de riscos (ver seção \ref{sec:risk-change-control-system}).
@@ -253,7 +252,7 @@ As análises para os riscos classificados como oportunidade ou ameaça podem ser
 \section{Quantificação dos riscos}
 \label{sec:risk-quantification}
 
-A quantificação dos riscos do projeto foi realizada utilizando a técnica do valor monetário esperado, confrome pode ser visto na tabela \ref{tab:risk-answers}.
+A quantificação dos riscos do projeto foi realizada utilizando a técnica do valor monetário esperado (VME), confrome pode ser visto na tabela \ref{tab:risk-answers}.
 
 \newcounter{prob}
 \newcounter{cost}
@@ -266,7 +265,7 @@ A quantificação dos riscos do projeto foi realizada utilizando a técnica do v
 	\midrule
 	\endhead
 	\multicolumn{5}{c}{{\textit{Continua na próxima página.}}} \\
-	\caption{Análise quantitativa dos riscos: valor monetário esperado.}
+	\caption{Análise quantitativa dos riscos: VME.}
 	\endfoot
 	\endlastfoot
 
@@ -354,7 +353,7 @@ A quantificação dos riscos do projeto foi realizada utilizando a técnica do v
 	\bottomrule
 	                         &                                                                                                                                                                               &                                      & \thead[r]{\textbf{Total:}}                  & \textbf{- R\$ \arabic{total},00}                                                                                                    \\
 	\bottomrule
-	\caption{Análise quantitativa dos riscos: valor monetário esperado.}
+	\caption{Análise quantitativa dos riscos: VME.}
 	\centering
 	\label{tab:risk-answers}
 \end{longtable}
@@ -362,7 +361,7 @@ A quantificação dos riscos do projeto foi realizada utilizando a técnica do v
 \section{Sistema de controle de mudanças de riscos}
 \label{sec:risk-change-control-system}
 
-Toda identificação de novos riscos ou alterações em riscos já identificados devem ser incluídas na lista de riscos identificados (ver seção \ref{sec:identified-risks}), em seguida deve ser atualizada a qualificação dos riscos (ver seção \ref{sec:risk-qualification}), a resposta aos riscos (ver seção \ref{risk-answers}) e a análise de valor monetário esperado(ver seção \ref{sec:risk-quantification}). Esta análise deve ser apresentada durante a reunião semanal do CCM, em conjunto com os detalhes sobre os riscos atualizados ou incluídos.
+Toda identificação de novos riscos ou alterações em riscos já identificados devem ser incluídas na lista de riscos identificados (ver seção \ref{sec:identified-risks}), em seguida deve ser atualizada a qualificação dos riscos (ver seção \ref{sec:risk-qualification}), a resposta aos riscos (ver seção \ref{risk-answers}) e a análise de VME (ver seção \ref{sec:risk-quantification}). Esta análise deve ser apresentada durante a reunião semanal do CCM, em conjunto com os detalhes sobre os riscos atualizados ou incluídos.
 
 
 %\begin{figure}[h]
@@ -483,8 +482,8 @@ Para os riscos identificados e qualificados, optou-se por diferentes estratégia
 
 Conforme descrito no plano de gerenciamento de custos (ver capítulo \ref{ch:cost-management-plan}), as reservas de contingências estão reservadas para uso exclusivo do processo de gerenciamento de riscos, para os eventos de riscos aceitos ou mitigados.
 
-As reservas de contingência totalizam \contingencyBudget{}, o gerente de projeto possui as autonomias descritas no plano de gerenciamento de custos para utilização das reservas.
 
+As reservas de contingência totalizam \contingencyBudget{}, o gerente de projeto possui as autonomias descritas no plano de gerenciamento de custos para utilização das reservas.
 \section{Frequência de avaliação dos riscos do projeto}
 
 Os riscos identificados no projeto devem ser avaliados durante a reunião do CCM, previsto no plano de gerenciamento das comunicações (ver capítulo \ref{ch:communication-management-plan}).

@@ -56,17 +56,18 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item O sistema deve oferecer opções para gerenciar o estacionamento: definir preço por hora ou mês, multas entre outras definições sobre as características do mesmo.
 	\item O sistema deve identificar tendências em relação a ocupação do estacionamento.
 	      %\item O sistema deve possuir integração com aplicativos web e mobile.
-	\item O sistema deve estar integrado com o banco de dados do detran para buscar informações de licença do motorista.
+	\item O sistema deve estar integrado com a base de dados do Departamento Estadual de Trânsito (DETRAN) para buscar informações de licença do motorista.
 	\item O administrador do sistema pode verificar a ocupação das vagas no estacionamento.
+	\item O sistema deve estar integrado com um sistema de automação presente no mercado.
 \end{itemize}
 
 \subsubsection{Requisitos não funcionais}
 
 \begin{itemize}
 	\item Utilizar base de dados em cloud.
-	\item Utilizar um framework multi-plataforma para o desenvolvimento do aplicativo para dispositivos móveis.
 	\item A solução deverá utilizar uma plataforma em nuvem para o banco de dados e servidor web.
 	\item O aplicativo móvel deverá rodar sobre a plataforma Android versão 4.0 ou superior.
+	\item O aplicativo web para o estacionamento deverá ser acessado através dos seguintes navegadores: firefox e chrome.
 \end{itemize}
 
 \subsection{Premissas}
@@ -75,13 +76,11 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item O cliente irá manter o registro de seu perfil, incluindo a placa do veículo, devidamente atualizados.
 	\item Em casos que o sistema não possa acomodar o usuário ou o usuário não concorde com os termos de uso e condições do sistema, o usuário será aconselhado a deixar o estacionamento. Nestes casos assume-se que o usuário sempre obedecerá e sairá do estacionamento.
 	\item Um consumidor estaciona sempre na vaga correta, e nunca ocupará duas vagas ao mesmo tempo.
-	\item Os sistemas de detecção de ocupação de vagas sempre funcionarão de maneira correta. Os sistemas reconhecerão uma vaga como ocupada apenas quando houver um carro na vaga.
 	\item O usuário sairá do estacionamento imediatamente após retirar seu carro da vaga utilizada.
 	      % From project-charter
 	\item Os estacionamentos privados de Porto Alegre estão prontos para aderir a este tipo de tecnologia.
-	\item Utilizar base de dados em cloud.
-	\item Utilizar um framework multi-plataforma para o desenvolvimento do aplicativo para dispositivos móveis.
 	\item Disponibilidade do patrocinador: durante o planejamento no mínimo 40\% do tempo, e durante a execução no mínimo 80\% do tempo.
+	\item Investimentos em infraestrutura estão fora do escopo.
 \end{itemize}
 
 \subsection{Restrições}
@@ -90,8 +89,6 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item O orçamento é limitado a \maximumBudget{}.
 	      %\item O modo de funcionamento básico do sistema não deve depender de qualquer tipo de tecnologia de ponta. \todo[inline,color=orange]{Verificar se esta restrição é plausível.}
 	\item Data de conclusão do projeto: \maximumDeadline{}.
-	\item Investimentos em infraestrutura estão fora do escopo.
-	\item O aplicativo web para o estacionamento deverá ser acessado através dos seguintes navegadores: firefox e chrome.
 \end{itemize}
 
 \subsection{Limites do projeto e exclusões específicas}
@@ -101,13 +98,13 @@ A seguir estão especificados os requisitos que deverão ser implementados para 
 	\item Questões de marketing e divulgação do produto não serão tratados neste projeto.
 \end{itemize}
 
-\section{Estrutura Analítica do Projeto}
+\section{Estrutura Analítica do Projeto (EAP)}
 
 Verificar apêndice \ref{ch:wbs}.
 
-\section{Dicionário da EAP}
+\section{Dicionário da EAP e Critérios de Aceitação}
 
-Verificar apêndice \ref{ch:wbs-dictionary}.
+O dicionário da EAP, bem como os critérios de aceitação do projeto, podem ser encontrados no apêndice \ref{ch:wbs-dictionary}.
 
 \section{Orçamento do projeto}
 
@@ -117,7 +114,7 @@ O orçamento previsto pelo projeto é de \maximumBudget{}, incluindo reservas ge
 
 A tabela \ref{tab:entregas} descreve os principais marcos de entrega do projeto.
 
-\begin{table}[H]
+\begin{table}[h]
 	\begin{tabularx}{.9\textwidth}{| X | X | c |}
 		\hline
 		\textbf{Marco}                        & \textbf{Critério de Aceitação}                                                                   & \textbf{Prazo} \\
