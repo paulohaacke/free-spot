@@ -78,7 +78,9 @@ O orçamento, assim como o uso de reservas gerenciais, do projeto será avaliado
 
 \section{Orçamento do projeto}
 
-O orçamento do projeto é de \realBudget{}, o que abrange os gastos internos com recursos, aquisições e reservas gerenciais.
+ A linha de base de custos é formada por \resourcesBudget{} de gastos internos com recursos e aquisições e \contingencyBudget{} para reservas de contingência (calculada de acordo com o plano de gerenciamento de riscos, apresentado no capítulo \ref{ch:risk-management-plan}). Sobre a linha de base foi adicionado o valor de \managementBudget{} utilizado para reserva gerencial, conforme descrito na seção \ref{ch:management-budget}.
+
+ Somando o valor da linha de base de custos e a reserva gerencial forma-se o orçamento do projeto, que é de \realBudget{}.
 
 \section{Taxa padrão dos recursos}
 
@@ -93,31 +95,31 @@ O orçamento do projeto é de \realBudget{}, o que abrange os gastos internos co
 	\endlastfoot
 	\ceoName{}            & CEO                         & N/A                  & Trabalho      & R\$ 0,00/hr           \\
 	\midrule
-	\projectManagerName{} & Gerente do projeto          & Pleno                & Trabalho      & R\$ 67,00/hr          \\
+	\projectManagerName{} & Gerente do projeto          & Pleno                & Trabalho      & R\$ 83,00/hr          \\
 	\midrule
-	\mobDevOneName{}      & Desenvolvedor mobile        & Pleno                & Trabalho      & R\$ 50,00/hr          \\
+	\mobDevOneName{}      & Desenvolvedor mobile        & Pleno                & Trabalho      & R\$ 65,00/hr          \\
 	\midrule
-	\mobDevTwoName{}      & Desenvolvedor mobile        & Pleno                & Trabalho      & R\$ 50,00/hr          \\
+	\mobDevTwoName{}      & Desenvolvedor mobile        & Pleno                & Trabalho      & R\$ 65,00/hr          \\
 	\midrule
-	\frontWebDevName{}    & Desenvolvedor web front-end & Pleno                & Trabalho      & R\$ 44,00/hr          \\
+	\frontWebDevName{}    & Desenvolvedor web front-end & Pleno                & Trabalho      & R\$ 61,00/hr          \\
 	\midrule
-	\backWebDevName{}     & Desenvolvedor web back-end  & Pleno                & Trabalho      & R\$ 51,00/hr          \\
+	\backWebDevName{}     & Desenvolvedor web back-end  & Pleno                & Trabalho      & R\$ 66,00/hr          \\
 	\midrule
-	\softEngName{}        & Engenheiro de software      & Sênior              & Trabalho      & R\$ 67,00/hr          \\
+	\softEngName{}        & Engenheiro de software      & Sênior              & Trabalho      & R\$ 83,00/hr          \\
 	\midrule
-	\softArcName{}        & Arquiteto de software       & Pleno                & Trabalho      & R\$ 52,00/hr          \\
+	\softArcName{}        & Arquiteto de software       & Pleno                & Trabalho      & R\$ 71,00/hr          \\
 	\midrule
-	\testAnalOneName{}    & Analista de testes          & Sênior              & Trabalho      & R\$ 45,00/hr          \\
+	\testAnalOneName{}    & Analista de testes          & Sênior              & Trabalho      & R\$ 60,00/hr          \\
 	\midrule
-	\testAnalTwoName{}    & Analista de testes          & Pleno                & Trabalho      & R\$ 45,00/hr          \\
+	\testAnalTwoName{}    & Analista de testes          & Pleno                & Trabalho      & R\$ 60,00/hr          \\
 	\midrule
-	\dbAnalName{}         & Analista de banco de dados  & Sênior              & Trabalho      & R\$ 66,00/hr          \\
+	\dbAnalName{}         & Analista de banco de dados  & Sênior              & Trabalho      & R\$ 81,00/hr          \\
 	\bottomrule
 	\caption{Taxa padrão dos recursos.}
 	\centering
 \end{longtable}
 
-\section{Custos dos recursos do projeto por atividade}
+\section{Custos dos recursos e aquisições do projeto por atividade}
 
 O documento descrevendo o custo de cada atividade no projeto encontra-se no apêndice \ref{ch:activities-cost}.
 
@@ -126,8 +128,109 @@ O documento descrevendo o custo de cada atividade no projeto encontra-se no apê
 Conforme descrito no plano de gerenciamento das aquisições o projeto, estima-se que o projeto terá um gasto de \procurementBudget{} para a contratação do servidor em nuvem durante o período do projeto. Este valor estará incluso no orçamento do projeto.
 
 \section{Reservas gerenciais}
+\label{ch:management-budget}
 
 Além da linha de base de custos, o gerente do projeto contará com uma reserva gerencial de 10\% sobre o valor da linha de base, a qual estará diponível em casos de riscos desconhecidos e atividades não identificadas no escopo.
+
+\section{Estrutura Analítica de Custos}
+
+Para estimar o custo dos pacotes de trabalho foi utilizado como ferramenta a estimativa \foreign{bottom-up}. O diagrama gerado como resultado da estimativa é a estrutura analítica de custos, a qual pode ser vista na figura \ref{fig:cbs}.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance = 0.18cm and 0.1cm, auto, scale=0.75, every node/.style={scale=0.75}]
+	% Project management
+	\node (project-management) [wbsblock] {Gerenciamento do projeto\\R\$ 48.187,17};
+	\node (initiation) [wbsblock, below right= of project-management, xshift=-6em] {Iniciação\\R\$ 2.576,33};
+	\node (planning) [wbsblock, below = of initiation] {Planejamento\\R\$ 14.774,00};
+	\node (scope-approval) [wbsblock, below = of planning] {Aprovação do escopo\\R\$ 539,50};
+	\node (project-monitoring) [wbsblock, below = of scope-approval] {Monitoramento do projeto\\R\$ 24.298,00};
+	\node (closure) [wbsblock, below = of project-monitoring] {Encerramento\\R\$ 5.999,33};
+	% Infraestrutura
+	\node (infrastructure) [wbsblock, right = of project-management, xshift=1.5em] {Infraestrutura\\R\$ 10.067,67};
+	\node (dev-env) [wbsblock, below right = of infrastructure, xshift=-6em] {Ambiente de desenvolvimento\\R\$ 2.369,67};
+	\node (test-env) [wbsblock, below = of dev-env] {Ambiente de testes\\R\$ 2.292,00};
+	\node (prod-env) [wbsblock, below = of test-env] {Ambiente de produção\\R\$ 5.406,00};
+	% Banco de dados
+	\node (webapi) [wbsblock, right = of infrastructure, xshift=1.5em] {Web API\\R\$ 31.689,33};
+	\node (cloudplat) [wbsblock, below right = of webapi, xshift=-6em] {Contratar plataforma na nuvem\\R\$ 13.634,33};
+	\node (database) [wbsblock, below = of cloudplat] {Banco de dados\\R\$ 6.211,00};
+	\node (apistruct) [wbsblock, below = of database] {Definir estrutura da API\\R\$ 1.176,00};
+	\node (resroute) [wbsblock, below = of apistruct] {Criar rotas para recursos\\R\$ 3.168,00};
+	\node (wa-tests) [wbsblock, below = of resroute] {Testes\\R\$ 7.500,00};
+	% Aplicativo do motorista
+	\node (drivers-app) [wbsblock, right = of webapi, xshift=1.5em] {Aplicativo do motorista\\R\$ 33.180,67};
+	\node (authentication) [wbsblock, below right = of drivers-app, xshift=-6em] {Autenticação\\R\$ 3.764,00};
+	\node (spot-reservation) [wbsblock, below = of authentication] {Reserva de vagas\\R\$ 5.129,00};
+	\node (parking-list) [wbsblock, below = of spot-reservation] {Lista de estacionamentos\\R\$ 3.172,00};
+	\node (payment-process) [wbsblock, below = of parking-list] {Processamento de pagamento\\R\$ 5.259,00};
+	\node (user-management) [wbsblock, below = of payment-process] {Gerência de usuário\\R\$ 3.190,00};
+	\node (am-tests) [wbsblock, below = of user-management] {Testes\\R\$ 12.666,67};
+	% Aplicativo do estacionamento
+	\node (parking-app) [wbsblock, right = of drivers-app, xshift=1.5em] {Aplicativo do estacionamento\\R\$ 52.436,52};
+	\node (user-auth-management) [wbsblock, below right = of parking-app, xshift=-6em] {Autenticação e gerência de usuários\\R\$ 5.872,50};
+	\node (client-management) [wbsblock, below = of user-auth-management] {Gerenciamento dos clientes\\R\$ 4.264,00};
+	\node (system-register) [wbsblock, below = of client-management] {Solicitação de cadastro no sistema\\R\$ 2.401,50};
+	\node (parking-management) [wbsblock, below = of system-register] {Gerenciamento do estacionamento\\R\$ 14.820,00};
+	\node (garage-register) [wbsblock, below right = of parking-management, xshift=-6em] {Cadastro e gerência de garagens\\R\$ 4.467,50};
+	\node (spot-state) [wbsblock, below = of garage-register] {Situação das vagas\\R\$ 4.010,00};
+	\node (automation-integration) [wbsblock, below = of spot-state] {Integração com sistema de automação\\R\$ 4.957,00};
+	\node (parking-configuration) [wbsblock, below = of automation-integration] {Configurações do estacionamento\\R\$ 1385,50};
+	\node (reports) [wbsblock, below left = of parking-configuration, xshift=6em] {Relatórios\\R\$ 4.962,50};
+	\node (DETRAN-integration) [wbsblock, below = of reports] {Integração com DETRAN\\R\$ 3.153,50};
+	\node (ae-tests) [wbsblock, below = of DETRAN-integration] {Testes\\R\$ 16.962,52};
+	% Garantia da qualidade
+	\node (quality-assurance) [wbsblock, right = of parking-app, xshift=1.5em] {Auditoria da qualidade\\R\$ 4.560,00};
+	% WBS root
+	\node (free-spot) [wbsblock, above = of webapi, yshift=2em] {Vaga livre\\R\$ 180.121,35};
+
+	\path [simpleline] (free-spot.south) |- ++(0,-0.7cm) -| (project-management);
+	\path [simpleline] (free-spot.south) |- ++(0,-0.7cm) -| (infrastructure);
+	\path [simpleline] (free-spot.south) |- ++(0,-0.7cm) -| (webapi);
+	\path [simpleline] (free-spot.south) |- ++(0,-0.7cm) -| (drivers-app);
+	\path [simpleline] (free-spot.south) |- ++(0,-0.7cm) -| (parking-app);
+	\path [simpleline] (free-spot.south) |- ++(0,-0.7cm) -| (quality-assurance);
+
+	\path [simpleline] (project-management.215) |- (initiation);
+	\path [simpleline] (project-management.215) |- (planning);
+	\path [simpleline] (project-management.215) |- (scope-approval);
+	\path [simpleline] (project-management.215) |- (project-monitoring);
+	\path [simpleline] (project-management.215) |- (closure);
+
+	\path [simpleline] (infrastructure.215) |- (dev-env);
+	\path [simpleline] (infrastructure.215) |- (test-env);
+	\path [simpleline] (infrastructure.215) |- (prod-env);
+
+	\path [simpleline] (webapi.215) |- (cloudplat);
+	\path [simpleline] (webapi.215) |- (database);
+	\path [simpleline] (webapi.215) |- (apistruct);
+	\path [simpleline] (webapi.215) |- (resroute);
+	\path [simpleline] (webapi.215) |- (wa-tests);
+
+	\path [simpleline] (drivers-app.215) |- (authentication);
+	\path [simpleline] (drivers-app.215) |- (spot-reservation);
+	\path [simpleline] (drivers-app.215) |- (parking-list);
+	\path [simpleline] (drivers-app.215) |- (payment-process);
+	\path [simpleline] (drivers-app.215) |- (user-management);
+	\path [simpleline] (drivers-app.215) |- (am-tests);
+
+	\path [simpleline] (parking-app.215) |- (user-auth-management);
+	\path [simpleline] (parking-app.215) |- (client-management);
+	\path [simpleline] (parking-app.215) |- (system-register);
+	\path [simpleline] (parking-app.215) |- (parking-management);
+	\path [simpleline] (parking-app.215) |- (reports);
+	\path [simpleline] (parking-app.215) |- (DETRAN-integration);
+	\path [simpleline] (parking-app.215) |- (ae-tests);
+
+	\path [simpleline] (parking-management.215) |- (garage-register);
+	\path [simpleline] (parking-management.215) |- (spot-state);
+	\path [simpleline] (parking-management.215) |- (automation-integration);
+	\path [simpleline] (parking-management.215) |- (parking-configuration);
+
+\end{tikzpicture}
+\caption{Estrutura analítica de custos.}
+\label{fig:cbs}
+\end{figure}
 
 \section{Autonomias}
 
