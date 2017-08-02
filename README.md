@@ -32,5 +32,5 @@ O sistema para os gerente permite integração com seu sistema de controle de va
 | 19/05/2017              | Entrega das avaliações de relatório de andamento           | Avaliador          | **OK** |
 | 26/06/2017              | Definição da banca de avaliação                            | Orientador         | **OK** |
 | 17/07/2017              | Entrega do projeto                                         | Aluno              | **OK** |
-| 31/07/2017 a 04/08/2017 | Defesa do trabalho                                         | Aluno              |        |
+| 01/08/2017              | Defesa do trabalho                                         | Aluno              | **OK** |
 | 14/08/2017              | Entrega da monografia revisada e autorização de publicação | Aluno e orientador |        |

@@ -27,20 +27,20 @@ O organograma do projeto é apresentado na figura \ref{fig:organization-chart}.
 \begin{figure}[h]
 	\centering
 	\begin{tikzpicture}[node distance = 0.7cm and 0.7cm, auto]
-		\node (mobile-dev-one) [process] {Desenvolvedor mobile 1};
-		\node (mobile-dev-two) [process, right= of mobile-dev-one] {Desenvolvedor mobile 2};
-		\node (front-end-web-dev) [process, right= of mobile-dev-two] {Desenvolvedor web front-end};
-		\node (back-end-web-dev) [process, right= of front-end-web-dev] {Desenvolvedor web back-end};
-		\node (test-analyst-1) [process, below= of back-end-web-dev, xshift=-5.25em] {Analista de testes 1};
-		\node (test-analyst-2) [process, left= of test-analyst-1] {Analista de testes 2};
-		\node (database-analyst) [process, left= of test-analyst-2] {Analista de banco de dados};
+		\node (mobile-dev-one) [process] {{\tiny \textbf{Desenvolvedor mobile 1}}\\\mobDevOneName{}};
+		\node (mobile-dev-two) [process, right= of mobile-dev-one] {{\tiny \textbf{Desenvolvedor mobile 2}}\\\mobDevTwoName{}};
+		\node (front-end-web-dev) [process, right= of mobile-dev-two] {{\tiny \textbf{Desenvolvedor web front-end}}\\\frontWebDevName{}};
+		\node (back-end-web-dev) [process, right= of front-end-web-dev] {{\tiny \textbf{Desenvolvedor web back-end}}\\\backWebDevName{}};
+		\node (test-analyst-1) [process, below= of back-end-web-dev, xshift=-5.25em] {{\tiny \textbf{Analista de testes 1}}\\\testAnalOneName{}};
+		\node (test-analyst-2) [process, left= of test-analyst-1] {{\tiny \textbf{Analista de testes 2}}\\\testAnalTwoName{}};
+		\node (database-analyst) [process, left= of test-analyst-2] {{\tiny \textbf{Analista de banco de dados}}\\\dbAnalName{}};
 
-		\node (software-engineer) [process, above= of database-analyst, yshift=6em] {Engenheiro de software};
-		\node (software-architect) [process, above= of test-analyst-1, yshift=6em] {Arquiteto de software};
+		\node (software-engineer) [process, above= of database-analyst, yshift=6em] {{\tiny \textbf{Engenheiro de software}}\\\softEngName{}};
+		\node (software-architect) [process, above= of test-analyst-1, yshift=6.4em] {{\tiny \textbf{Arquiteto de software}}\\\softArcName{}};
 
-		\node (project-manager) [process, above right= of software-engineer] {Gerente do Projeto};
+		\node (project-manager) [process, above right= of software-engineer] {{\tiny \textbf{Gerente do Projeto}}\\\projectManagerName{}};
 
-		\node (sponsor) [process, above= of project-manager] {Patrocinador};
+		\node (sponsor) [process, above= of project-manager] {{\tiny \textbf{Patrocinador}}\\\ceoName{}};
 
 		\path [simpleline] (sponsor) -- (project-manager);
 		\path [simpleline] (project-manager) |- ++(0,-3em) -| (software-engineer);
